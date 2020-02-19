@@ -64,20 +64,70 @@
             </objects>
             <point key="canvasLocation" x="1073.913043478261" y="30.803571428571427"/>
         </scene>
-        <!--View Controller-->
+        <!--Tutorial Question View Controller-->
         <scene sceneID="5vX-Ot-g9Y">
             <objects>
-                <viewController id="oXI-zw-iXa" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TutorialQuestionViewControllerID" id="oXI-zw-iXa" customClass="TutorialQuestionViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oRJ-xg-ct5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxM-Ze-AOW">
+                                <rect key="frame" x="48" y="248" width="318" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sUb-Iv-xnx">
+                                <rect key="frame" x="76" y="404" width="263" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I8x-b4-WNV">
+                                <rect key="frame" x="121" y="119" width="173" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3J3-97-7ol">
+                                <rect key="frame" x="169" y="526" width="76" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="oXI-zw-iXa" eventType="touchUpInside" id="0Ft-fG-Wwb"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="hK7-Uh-fQk"/>
                     </view>
+                    <navigationItem key="navigationItem" id="pVT-fW-pnU"/>
+                    <connections>
+                        <outlet property="answerText" destination="sUb-Iv-xnx" id="Tzf-p6-i9l"/>
+                        <outlet property="nextButton" destination="3J3-97-7ol" id="I0f-bf-0f9"/>
+                        <outlet property="progressView" destination="I8x-b4-WNV" id="1SU-Rq-GAH"/>
+                        <outlet property="questionLabel" destination="GxM-Ze-AOW" id="sWY-MU-BQa"/>
+                        <segue destination="NOg-Fx-v7m" kind="showDetail" identifier="TutorialPageControl" id="yYX-VU-WXZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Bj-mM-m2n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2078" y="31"/>
+            <point key="canvasLocation" x="2075.36231884058" y="30.803571428571427"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5TL-78-hH2">
+            <objects>
+                <viewController id="NOg-Fx-v7m" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5NL-XW-OEX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="i81-MX-V85"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CVT-vc-3sY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FhY-9C-ag9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3062" y="31"/>
         </scene>
     </scenes>
 </document>

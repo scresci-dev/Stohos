@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DD84143723FD58F100478319 /* QuestionsDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84143623FD58F100478319 /* QuestionsDatabase.swift */; };
+		DD84143B23FD77FF00478319 /* TutorialQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84143A23FD77FF00478319 /* TutorialQuestionViewController.swift */; };
 		DDC2F09A23FAEA9000BD4C45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2F09923FAEA9000BD4C45 /* AppDelegate.swift */; };
 		DDC2F09C23FAEA9000BD4C45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2F09B23FAEA9000BD4C45 /* SceneDelegate.swift */; };
 		DDC2F09E23FAEA9000BD4C45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2F09D23FAEA9000BD4C45 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		DD84143623FD58F100478319 /* QuestionsDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsDatabase.swift; sourceTree = "<group>"; };
+		DD84143A23FD77FF00478319 /* TutorialQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialQuestionViewController.swift; sourceTree = "<group>"; };
 		DDC2F09623FAEA9000BD4C45 /* MC3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MC3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDC2F09923FAEA9000BD4C45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDC2F09B23FAEA9000BD4C45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				DDC2F0AA23FAEA9200BD4C45 /* Info.plist */,
 				DDC2F0A223FAEA9000BD4C45 /* MC3.xcdatamodeld */,
 				DD84143623FD58F100478319 /* QuestionsDatabase.swift */,
+				DD84143A23FD77FF00478319 /* TutorialQuestionViewController.swift */,
 			);
 			path = MC3;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				DDC2F09E23FAEA9000BD4C45 /* ViewController.swift in Sources */,
 				DDC2F09A23FAEA9000BD4C45 /* AppDelegate.swift in Sources */,
 				DD84143723FD58F100478319 /* QuestionsDatabase.swift in Sources */,
+				DD84143B23FD77FF00478319 /* TutorialQuestionViewController.swift in Sources */,
 				DDC2F09C23FAEA9000BD4C45 /* SceneDelegate.swift in Sources */,
 				DDC2F0A423FAEA9000BD4C45 /* MC3.xcdatamodeld in Sources */,
 			);
