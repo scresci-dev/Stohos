@@ -16,30 +16,35 @@ class TutorialQuestionViewController: UIViewController {
     @IBOutlet weak var progressView: UIImageView!
     @IBOutlet weak var nextButton: UIButton!
     
-    var counter = 0
+    var counter: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         nextButton.setTitle("Next", for: .normal)
-        nextButton.setTitle("Done", for: .highlighted)
-        
+        buttonPressed(self)
+    }
     
+
+    @IBAction func buttonPressed(_ sender: Any) {
+        //counter += 1
+        exitTutorial()
+        counter += 1
+    }
+
+    func exitTutorial() {
+        if (counter > 3 ) {
+            performSegue(withIdentifier: "TutorialPageControl", sender: self)
+        }
+        else {
         questionLabel.text = questionArray[counter].question
         questionArray[counter].answer = answerText.text ?? ""
         progressView.image = questionArray[counter].progress
         print(questionArray[counter].answer)
-
+        print(counter)
+        if (counter == 3) {
+            nextButton.setTitle("Done", for: .normal)
+        }
+        }
     }
-
-    @IBAction func buttonPressed(_ sender: Any) {
-        counter += 1
-            if (counter == 2) {
-                nextButton.isHighlighted = true
-            }
-            if (counter == 3) {
-                performSegue(withIdentifier: "TutorialPageControl", sender: self)
-            }
-    }
-
 }
+

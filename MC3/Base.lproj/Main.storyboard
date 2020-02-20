@@ -106,7 +106,7 @@
                         <outlet property="nextButton" destination="3J3-97-7ol" id="I0f-bf-0f9"/>
                         <outlet property="progressView" destination="I8x-b4-WNV" id="1SU-Rq-GAH"/>
                         <outlet property="questionLabel" destination="GxM-Ze-AOW" id="sWY-MU-BQa"/>
-                        <segue destination="NOg-Fx-v7m" kind="showDetail" identifier="TutorialPageControl" id="yYX-VU-WXZ"/>
+                        <segue destination="NOg-Fx-v7m" kind="show" identifier="TutorialPageControl" id="yYX-VU-WXZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Bj-mM-m2n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -118,7 +118,7 @@
             <objects>
                 <viewController id="NOg-Fx-v7m" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5NL-XW-OEX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="i81-MX-V85"/>
