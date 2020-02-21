@@ -12,7 +12,7 @@ import UIKit
 class TutorialQuestionViewController: UIViewController {
     
     @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var answerText: UITextField!
+    @IBOutlet weak var answerText: UITextView!
     @IBOutlet weak var progressView: UIImageView!
     @IBOutlet weak var nextButton: UIButton!
     
@@ -20,13 +20,12 @@ class TutorialQuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        answerText.layer.borderWidth = 1.0
         nextButton.setTitle("Next", for: .normal)
         buttonPressed(self)
     }
-    
 
     @IBAction func buttonPressed(_ sender: Any) {
-        //counter += 1
         exitTutorial()
         counter += 1
     }
@@ -46,5 +45,12 @@ class TutorialQuestionViewController: UIViewController {
         }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        (segue.destination as! EvaluationViewController).userAnswer = answerText.text
+        (segue.destination as! EvaluationViewController).count = counter
+           // Get the new view controller using segue.destination.
+           // Pass the selected object to the new view controller.
+       }
 }
 

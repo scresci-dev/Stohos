@@ -11,19 +11,31 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var initialView: UIView!
-
+    @IBOutlet weak var textView: UITextView!
+    
+    var counter: Int = 0
     
     override func viewDidLoad() {
-         let gestureRec = UITapGestureRecognizer(target: self, action:  #selector (self.someAction (_:)))
+        //navigationItem.title = "Root View"
+        let gestureRec = UITapGestureRecognizer(target: self, action:  #selector (self.someAction (_:)))
         initialView.addGestureRecognizer(gestureRec)
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
-    @objc func someAction(_ sender:UITapGestureRecognizer){
-
-       // this is the function that lets us perform the segue
-       performSegue(withIdentifier: "TutorialQuestion", sender: self)
+    @objc func someAction(_ sender:UITapGestureRecognizer) {
+        showMessages()
+        counter += 1
+    }
+    
+    
+    func showMessages() {
+        if (counter > 4 ) {
+            performSegue(withIdentifier: "TutorialQuestion", sender: self)
+        }
+        else {
+            textView.text = messageArray[counter].textMessage
+            
+        }
     }
 }
 
