@@ -12,6 +12,8 @@ struct TutorialMessage {
     var textMessage: String = " "
 }
 
+var counter: Int = 0
+
 let message1 = TutorialMessage(textMessage: "Welcome")
 let message2 = TutorialMessage(textMessage: "You are beautiful and mindfull")
 let message3 = TutorialMessage(textMessage: "Esential is...")

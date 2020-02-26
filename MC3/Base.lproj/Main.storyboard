@@ -71,7 +71,7 @@
             <objects>
                 <viewController storyboardIdentifier="TutorialQuestionViewControllerID" id="oXI-zw-iXa" customClass="TutorialQuestionViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oRJ-xg-ct5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxM-Ze-AOW">
@@ -110,22 +110,38 @@
                         <outlet property="nextButton" destination="3J3-97-7ol" id="0Id-dK-cgq"/>
                         <outlet property="progressView" destination="I8x-b4-WNV" id="QJH-nR-Ovy"/>
                         <outlet property="questionLabel" destination="GxM-Ze-AOW" id="snB-U4-OdE"/>
-                        <segue destination="NOg-Fx-v7m" kind="show" identifier="TutorialPageControl" id="yYX-VU-WXZ"/>
+                        <segue destination="NOg-Fx-v7m" kind="show" identifier="Evaluation Control" id="yYX-VU-WXZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Bj-mM-m2n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2026" y="31"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="5pG-4D-das">
+            <objects>
+                <viewController id="N1m-Em-c1a" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FX1-nz-ET1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="a6h-nS-OeH"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dqK-6m-OI8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L0I-4L-YQU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3003" y="877"/>
+        </scene>
         <!--Evaluation View Controller-->
         <scene sceneID="5TL-78-hH2">
             <objects>
                 <viewController id="NOg-Fx-v7m" customClass="EvaluationViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5NL-XW-OEX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Ciao Gianna e Francesca" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpj-Zy-BQZ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpj-Zy-BQZ">
                                 <rect key="frame" x="87" y="384" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -141,15 +157,35 @@
                                 <rect key="frame" x="0.0" y="718" width="414" height="873"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgf-Oz-Zkq">
+                                <rect key="frame" x="87" y="625" width="89" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Essential"/>
+                                <connections>
+                                    <action selector="nextMove:" destination="NOg-Fx-v7m" eventType="touchUpInside" id="aiA-9Y-i7W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4j-4h-jFK">
+                                <rect key="frame" x="223" y="625" width="104" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Not essential"/>
+                                <connections>
+                                    <action selector="nextMove:" destination="NOg-Fx-v7m" eventType="touchUpInside" id="1Y5-jp-Dii"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="i81-MX-V85"/>
                     </view>
                     <navigationItem key="navigationItem" id="CVT-vc-3sY"/>
                     <connections>
+                        <outlet property="essentialButton" destination="Xgf-Oz-Zkq" id="pgM-u4-wTg"/>
                         <outlet property="essentialView" destination="b1O-xl-66b" id="Ve8-3h-gYZ"/>
+                        <outlet property="notEssentialButton" destination="Q4j-4h-jFK" id="pRL-St-4tI"/>
                         <outlet property="notEssentialView" destination="Ilg-V8-zX4" id="FzQ-o5-AHF"/>
                         <outlet property="textAnswer" destination="zpj-Zy-BQZ" id="5zb-lj-N1P"/>
+                        <segue destination="oXI-zw-iXa" kind="show" identifier="Next Question" id="7AL-Qv-aAv"/>
+                        <segue destination="N1m-Em-c1a" kind="showDetail" identifier="Main View" id="Uop-nK-5MC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FhY-9C-ag9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -160,4 +196,7 @@
     <resources>
         <image name="blob" width="1261" height="2598"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="7AL-Qv-aAv"/>
+    </inferredMetricsTieBreakers>
 </document>

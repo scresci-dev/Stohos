@@ -14,68 +14,23 @@ class EvaluationViewController: UIViewController {
     @IBOutlet weak var textAnswer: UITextView!
     @IBOutlet weak var essentialView: UIImageView!
     @IBOutlet weak var notEssentialView: UIImageView!
+    @IBOutlet weak var notEssentialButton: UIButton!
+    @IBOutlet weak var essentialButton: UIButton!
     
     var userAnswer: String!
     var count: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let pan = UIPanGestureRecognizer(target: self, action: #selector(important))
-        essentialView.addGestureRecognizer(pan)
+        textAnswer.text = userAnswer
     }
     
-//    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        let touch = touches.first!
-//        let location = touch.location(in: view)
-//
-//        let notessentialy = notEssentialView.center.x
-//        if essentialView.frame.contains(location){
-//            essentialView.transform = CGAffineTransform(translationX: 0, y: location.y)
-//        }
-//        if notEssentialView.frame.contains(location) {
-//            notEssentialView.center = CGPoint(x: notessentialy, y: location.y)
-//        }
-//    }
-//
+    @IBAction func nextMove(_ sender: Any) {
+        if (count <= 3) {
+                      performSegue(withIdentifier: "Next Question", sender: self)
+                  } else if (count > 3) {
+                      performSegue(withIdentifier: "Main View", sender: self)
+                  }
+    }
     
-    @objc func important(sender: UIPanGestureRecognizer){
-           let transformation = sender.translation(in: view)
-           if sender.state == .began {
-               print("began")
-           }
-           else if sender.state == .changed {
-            essentialView.transform = CGAffineTransform(translationX: 0, y: transformation.y)
-           }
-           else if sender.state == .ended {
-            if transformation.y <= 100
-            {
-                UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
-                    self.essentialView.transform = .identity
-                })
-
-            }
-            else {
-                UIView.animate(withDuration: 1, delay: 0, options: .curveEaseIn, animations: {
-                    self.essentialView.transform = CGAffineTransform(translationX: 0, y: -200)
-                    self.textAnswer.transform = CGAffineTransform(translationX: 0, y: -200)
-                }, completion: {
-                    _ in
-                    print("ended")
-
-                }
-                )
-            }
-        }
-    }
-       
 }
-
-extension EvaluationViewController: UIGestureRecognizerDelegate {
-    func gestureRecognizer(
-      _ gestureRecognizer: UIGestureRecognizer,
-      shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer
-    ) -> Bool {
-      return true
-    }
-}
-
