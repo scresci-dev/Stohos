@@ -70,3 +70,12 @@ class EvaluationViewController: UIViewController {
        
 }
 
+extension EvaluationViewController: UIGestureRecognizerDelegate {
+    func gestureRecognizer(
+      _ gestureRecognizer: UIGestureRecognizer,
+      shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer
+    ) -> Bool {
+      return true
+    }
+}
+
