@@ -77,9 +77,8 @@ class TutorialQuestionViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         (segue.destination as! EvaluationViewController).userAnswer = answerText.text
-        let destinationVC1 = segue.destination as! EvaluationViewController
-        destinationVC1.count = counter
-           // Get the new view controller using segue.destination.
-           // Pass the selected object to the new view controller.
+        (segue.destination as! EvaluationViewController).count = counter
+//        (segue.destination as! ThoughtsViewController).essentialThoughtCount = essentialCount
+//        (segue.destination as! ThoughtsViewController).notEssentialThoughtCount = notEssentialCount
        }
 }

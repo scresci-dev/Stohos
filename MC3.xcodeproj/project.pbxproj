@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD64247B2406B1A400A07D1C /* ThoughtsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD64247A2406B1A400A07D1C /* ThoughtsViewController.swift */; };
 		DD84143723FD58F100478319 /* QuestionsDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84143623FD58F100478319 /* QuestionsDatabase.swift */; };
 		DD84143B23FD77FF00478319 /* TutorialQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84143A23FD77FF00478319 /* TutorialQuestionViewController.swift */; };
 		DD84143D23FED79E00478319 /* EvaluationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84143C23FED79E00478319 /* EvaluationViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD64247A2406B1A400A07D1C /* ThoughtsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtsViewController.swift; sourceTree = "<group>"; };
 		DD84143623FD58F100478319 /* QuestionsDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsDatabase.swift; sourceTree = "<group>"; };
 		DD84143A23FD77FF00478319 /* TutorialQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialQuestionViewController.swift; sourceTree = "<group>"; };
 		DD84143C23FED79E00478319 /* EvaluationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				DD84143C23FED79E00478319 /* EvaluationViewController.swift */,
 				DD84143E23FFD8F400478319 /* MessagesDatabase.swift */,
 				DD84144023FFF99F00478319 /* SwipeEvaluation.swift */,
+				DD64247A2406B1A400A07D1C /* ThoughtsViewController.swift */,
 			);
 			path = MC3;
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD64247B2406B1A400A07D1C /* ThoughtsViewController.swift in Sources */,
 				DDC2F09E23FAEA9000BD4C45 /* ViewController.swift in Sources */,
 				DDC2F09A23FAEA9000BD4C45 /* AppDelegate.swift in Sources */,
 				DD84143723FD58F100478319 /* QuestionsDatabase.swift in Sources */,

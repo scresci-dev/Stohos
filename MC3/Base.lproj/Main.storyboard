@@ -117,10 +117,10 @@
             </objects>
             <point key="canvasLocation" x="2026" y="31"/>
         </scene>
-        <!--View Controller-->
+        <!--Thoughts View Controller-->
         <scene sceneID="5pG-4D-das">
             <objects>
-                <viewController id="N1m-Em-c1a" sceneMemberID="viewController">
+                <viewController id="N1m-Em-c1a" customClass="ThoughtsViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FX1-nz-ET1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -162,6 +162,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Essential"/>
                                 <connections>
+                                    <action selector="essentialButton:" destination="NOg-Fx-v7m" eventType="touchUpInside" id="H3F-YN-Hds"/>
                                     <action selector="nextMove:" destination="NOg-Fx-v7m" eventType="touchUpInside" id="aiA-9Y-i7W"/>
                                 </connections>
                             </button>
@@ -171,6 +172,7 @@
                                 <state key="normal" title="Not essential"/>
                                 <connections>
                                     <action selector="nextMove:" destination="NOg-Fx-v7m" eventType="touchUpInside" id="1Y5-jp-Dii"/>
+                                    <action selector="notEssentialButton:" destination="NOg-Fx-v7m" eventType="touchUpInside" id="Zkt-0D-16P"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -185,7 +187,7 @@
                         <outlet property="notEssentialView" destination="Ilg-V8-zX4" id="FzQ-o5-AHF"/>
                         <outlet property="textAnswer" destination="zpj-Zy-BQZ" id="5zb-lj-N1P"/>
                         <segue destination="oXI-zw-iXa" kind="show" identifier="Next Question" id="7AL-Qv-aAv"/>
-                        <segue destination="N1m-Em-c1a" kind="showDetail" identifier="Main View" id="Uop-nK-5MC"/>
+                        <segue destination="N1m-Em-c1a" kind="show" identifier="Main View" id="Uop-nK-5MC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FhY-9C-ag9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

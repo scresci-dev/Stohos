@@ -15,6 +15,10 @@ struct TutorialQuestion {
     var progress: UIImage!
 }
 
+var counter: Int = 0
+var essentialCount: Int = 0
+var notEssentialCount: Int = 0
+
 let question1 = TutorialQuestion(question: "Share a thought of today", answer: " ", progress: UIImage(named: "image1"))
 let question2 = TutorialQuestion(question: "What is your today goal?", answer: " ", progress: UIImage(named: "image2"))
 let question3 = TutorialQuestion(question: "Tell me your thoughts", answer: " ", progress: UIImage(named: "image3"))
