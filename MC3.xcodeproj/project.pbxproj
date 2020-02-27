@@ -21,6 +21,7 @@
 		DDC2F0A923FAEA9200BD4C45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDC2F0A723FAEA9200BD4C45 /* LaunchScreen.storyboard */; };
 		DDC2F0B123FAEAED00BD4C45 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DDC2F0B023FAEAED00BD4C45 /* .gitignore */; };
 		DDDA47D42407FE25005950CF /* UserThoughtsDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA47D32407FE25005950CF /* UserThoughtsDatabase.swift */; };
+		DDDA47D624082E3A005950CF /* EditThoughtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA47D524082E3A005950CF /* EditThoughtViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		DDC2F0AA23FAEA9200BD4C45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDC2F0B023FAEAED00BD4C45 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DDDA47D32407FE25005950CF /* UserThoughtsDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserThoughtsDatabase.swift; sourceTree = "<group>"; };
+		DDDA47D524082E3A005950CF /* EditThoughtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditThoughtViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				DD84143E23FFD8F400478319 /* MessagesDatabase.swift */,
 				DD64247A2406B1A400A07D1C /* UserThoughtsViewController.swift */,
 				DDDA47D32407FE25005950CF /* UserThoughtsDatabase.swift */,
+				DDDA47D524082E3A005950CF /* EditThoughtViewController.swift */,
 			);
 			path = MC3;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 				DD84143F23FFD8F400478319 /* MessagesDatabase.swift in Sources */,
 				DDC2F0A423FAEA9000BD4C45 /* MC3.xcdatamodeld in Sources */,
 				DDDA47D42407FE25005950CF /* UserThoughtsDatabase.swift in Sources */,
+				DDDA47D624082E3A005950CF /* EditThoughtViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

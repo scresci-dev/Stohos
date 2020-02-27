@@ -28,10 +28,12 @@ class EvaluationViewController: UIViewController {
     }
     
     @IBAction func essentialButton(_ sender: Any) {
+        arrayCheck.append("blob0")
         essentialCount += 1
     }
     
     @IBAction func notEssentialButton(_ sender: Any) {
+        arrayCheck.append("blob1")
         notEssentialCount += 1
     }
     
@@ -39,7 +41,7 @@ class EvaluationViewController: UIViewController {
     @IBAction func nextMove(_ sender: Any) {
         if (count <= 3) {
             performSegue(withIdentifier: "Next Question", sender: self) }
-        else if (count > 3) {
+        else if (count == 4) {
             performSegue(withIdentifier: "Main View", sender: self)
         }
     }
@@ -51,11 +53,4 @@ class EvaluationViewController: UIViewController {
             (segue.destination as! UserThoughtsViewController).userThought = allAnswer
         }
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let destinationVC2 = segue.destination as! ThoughtsViewController
-//        destinationVC2.essentialThoughtCount = essentialCount
-//        let destinationVC3 = segue.destination as! ThoughtsViewController
-//        destinationVC3.notEssentialThoughtCount = essentialCount
-//          }
 }
