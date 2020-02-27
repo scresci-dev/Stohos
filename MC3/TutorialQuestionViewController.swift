@@ -66,9 +66,7 @@ class TutorialQuestionViewController: UIViewController {
     
     func displayView() {
            questionLabel.text = questionArray[counter].question
-           questionArray[counter].answer = answerText.text ?? ""
            progressView.image = questionArray[counter].progress
-           print(questionArray[counter].answer)
            print(counter)
            if (counter == 3) {
                nextButton.setTitle("Done", for: .normal)

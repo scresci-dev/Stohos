@@ -117,21 +117,70 @@
             </objects>
             <point key="canvasLocation" x="2026" y="31"/>
         </scene>
-        <!--Thoughts View Controller-->
+        <!--User Thoughts View Controller-->
         <scene sceneID="5pG-4D-das">
             <objects>
-                <viewController id="N1m-Em-c1a" customClass="ThoughtsViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="N1m-Em-c1a" customClass="UserThoughtsViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FX1-nz-ET1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7S-kb-dhb">
+                                <rect key="frame" x="57" y="92" width="88" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Thought 1"/>
+                                <connections>
+                                    <action selector="press1:" destination="N1m-Em-c1a" eventType="touchUpInside" id="1ot-cS-P6r"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMG-gY-tkA">
+                                <rect key="frame" x="190" y="148" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Thought 2"/>
+                                <connections>
+                                    <action selector="press2:" destination="N1m-Em-c1a" eventType="touchUpInside" id="dBF-g4-JvT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDs-ji-BXy">
+                                <rect key="frame" x="87" y="236" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Thought 3"/>
+                                <connections>
+                                    <action selector="press3:" destination="N1m-Em-c1a" eventType="touchUpInside" id="2pG-ro-nSD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Pe-fp-tZD">
+                                <rect key="frame" x="241" y="286" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Thought 4"/>
+                                <connections>
+                                    <action selector="press4:" destination="N1m-Em-c1a" eventType="touchUpInside" id="END-Qx-mXz"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="r76-aG-CIf">
+                                <rect key="frame" x="87" y="607" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="a6h-nS-OeH"/>
                     </view>
                     <navigationItem key="navigationItem" id="dqK-6m-OI8"/>
+                    <connections>
+                        <outlet property="button1" destination="B7S-kb-dhb" id="626-7A-79f"/>
+                        <outlet property="button2" destination="mMG-gY-tkA" id="OMO-ev-Oyc"/>
+                        <outlet property="button3" destination="mDs-ji-BXy" id="gCB-wb-Vn7"/>
+                        <outlet property="button4" destination="4Pe-fp-tZD" id="4QU-fk-mho"/>
+                        <outlet property="thoughtView" destination="r76-aG-CIf" id="LCs-Ka-G79"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L0I-4L-YQU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3003" y="877"/>
+            <point key="canvasLocation" x="3002.898550724638" y="876.5625"/>
         </scene>
         <!--Evaluation View Controller-->
         <scene sceneID="5TL-78-hH2">

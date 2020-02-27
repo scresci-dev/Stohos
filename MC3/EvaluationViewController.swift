@@ -23,6 +23,8 @@ class EvaluationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textAnswer.text = userAnswer
+        allAnswer.append(userAnswer)
+        print(allAnswer)
     }
     
     @IBAction func essentialButton(_ sender: Any) {
@@ -44,8 +46,9 @@ class EvaluationViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "Main View") {
-        (segue.destination as! ThoughtsViewController).essentialThoughtCount = essentialCount
-        (segue.destination as! ThoughtsViewController).notEssentialThoughtCount = notEssentialCount
+            (segue.destination as! UserThoughtsViewController).essentialThoughtCount = essentialCount
+            (segue.destination as! UserThoughtsViewController).notEssentialThoughtCount = notEssentialCount
+            (segue.destination as! UserThoughtsViewController).userThought = allAnswer
         }
     }
     
