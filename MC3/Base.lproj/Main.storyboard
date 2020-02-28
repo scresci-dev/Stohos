@@ -181,6 +181,16 @@
                                     <action selector="editButton:" destination="N1m-Em-c1a" eventType="touchUpInside" id="kPY-8u-90Y"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5R3-sg-Y6u">
+                                <rect key="frame" x="112" y="492" width="190" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add a new thought">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Dpr-gq-uDj" kind="show" identifier="Add New Thought" id="cMM-Xe-oqc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="a6h-nS-OeH"/>
@@ -198,7 +208,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L0I-4L-YQU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3002.898550724638" y="876.5625"/>
+            <point key="canvasLocation" x="3992.753623188406" y="30.803571428571427"/>
+        </scene>
+        <!--Add Thought View Controller-->
+        <scene sceneID="HYo-nO-oDX">
+            <objects>
+                <viewController id="Dpr-gq-uDj" customClass="AddThoughtViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Rm-2c-pGB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z6K-0x-nDt">
+                                <rect key="frame" x="87" y="164" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7gD-1W-TV9">
+                                <rect key="frame" x="87" y="511" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="TQX-g2-Pas"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6uP-68-SUe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FsG-QR-OZX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5229" y="1285"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="e1h-vg-cec">
@@ -214,7 +255,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="St6-Ov-q89" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3499" y="1675"/>
+            <point key="canvasLocation" x="6341" y="-476"/>
         </scene>
         <!--Edit Thought View Controller-->
         <scene sceneID="QJy-h5-jo7">
@@ -247,7 +288,6 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="doneButton:" destination="HVM-I5-GwL" eventType="touchUpInside" id="4qG-38-eIC"/>
                                     <segue destination="H0d-PG-Xds" kind="show" identifier="Evaluate Again" id="zT4-yt-IDc"/>
                                 </connections>
                             </button>
@@ -262,7 +302,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5RT-uK-pry" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4044.9275362318845" y="876.5625"/>
+            <point key="canvasLocation" x="5229" y="-755"/>
         </scene>
         <!--Evaluation View Controller-->
         <scene sceneID="5TL-78-hH2">
@@ -294,7 +334,6 @@
                                 <state key="normal" title="Essential"/>
                                 <connections>
                                     <action selector="essentialButton:" destination="NOg-Fx-v7m" eventType="touchUpInside" id="H3F-YN-Hds"/>
-                                    <action selector="nextMove:" destination="NOg-Fx-v7m" eventType="touchUpInside" id="aiA-9Y-i7W"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4j-4h-jFK">
@@ -302,7 +341,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Not essential"/>
                                 <connections>
-                                    <action selector="nextMove:" destination="NOg-Fx-v7m" eventType="touchUpInside" id="1Y5-jp-Dii"/>
                                     <action selector="notEssentialButton:" destination="NOg-Fx-v7m" eventType="touchUpInside" id="Zkt-0D-16P"/>
                                 </connections>
                             </button>
@@ -323,7 +361,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FhY-9C-ag9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3002.898550724638" y="30.803571428571427"/>
+            <point key="canvasLocation" x="2965" y="31"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

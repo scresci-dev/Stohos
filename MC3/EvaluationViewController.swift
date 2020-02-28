@@ -18,30 +18,33 @@ class EvaluationViewController: UIViewController {
     @IBOutlet weak var notEssentialButton: UIButton!
     
     var userAnswer: String!
-    var count: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         textAnswer.text = userAnswer
         allAnswer.append(userAnswer)
-        print(allAnswer)
     }
     
     @IBAction func essentialButton(_ sender: Any) {
-        arrayCheck.append("blob0")
+        view.endEditing(true)
         essentialCount += 1
+        arrayCheck.append("blob0")
+        nextMove()
     }
     
     @IBAction func notEssentialButton(_ sender: Any) {
-        arrayCheck.append("blob1")
+        view.endEditing(true)
         notEssentialCount += 1
+        arrayCheck.append("blob1")
+        nextMove()
     }
     
     
-    @IBAction func nextMove(_ sender: Any) {
+    func nextMove() {
+        count += 1
         if (count <= 3) {
             performSegue(withIdentifier: "Next Question", sender: self) }
-        else if (count == 4) {
+        else if (count > 3) {
             performSegue(withIdentifier: "Main View", sender: self)
         }
     }

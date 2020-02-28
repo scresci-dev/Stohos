@@ -77,16 +77,16 @@ class UserThoughtsViewController: UIViewController {
     }
     
     @IBAction func deleteAction(_ sender: Any) {
-        if (button1.isSelected) {
+        if (button1.isTouchInside == true) {
             button1.isHidden = true
         }
-        else if (button2.isSelected) {
+        else if (button2.isTouchInside == true) {
             button2.isHidden = true
         }
-        else if (button3.isSelected) {
+        else if (button3.isTouchInside == true) {
             button3.isHidden = true
         }
-        else if (button4.isSelected) {
+        else if (button4.isTouchInside == true) {
             button4.isHidden = true
         }
     }

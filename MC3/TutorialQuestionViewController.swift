@@ -55,28 +55,24 @@ class TutorialQuestionViewController: UIViewController {
     }
 
     func exitTutorial() {
-        if (counter > 3 ) {
-            performSegue(withIdentifier: "Normal Flow", sender: self)
-        }
-        else {
         counter += 1
         performSegue(withIdentifier: "Evaluation Control", sender: self)
-        }
     }
     
     func displayView() {
+        if (counter <= 3) {
            questionLabel.text = questionArray[counter].question
            progressView.image = questionArray[counter].progress
            print(counter)
            if (counter == 3) {
                nextButton.setTitle("Done", for: .normal)
            }
+        }
+        //counter += 1
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         (segue.destination as! EvaluationViewController).userAnswer = answerText.text
-        (segue.destination as! EvaluationViewController).count = counter
-//        (segue.destination as! ThoughtsViewController).essentialThoughtCount = essentialCount
-//        (segue.destination as! ThoughtsViewController).notEssentialThoughtCount = notEssentialCount
+        //(segue.destination as! EvaluationViewController).count = counter
        }
 }

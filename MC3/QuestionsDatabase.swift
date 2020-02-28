@@ -14,11 +14,12 @@ struct TutorialQuestion {
     var progress: UIImage!
 }
 
-var allAnswer: [String] = []
 var counter: Int = 0
+var count: Int = 0
 var essentialCount: Int = 0
 var notEssentialCount: Int = 0
 var arrayCheck: [String] = []
+var allAnswer: [String] = []
 
 let question1 = TutorialQuestion(question: "Share a thought of today", progress: UIImage(named: "image1"))
 let question2 = TutorialQuestion(question: "What is your today goal?", progress: UIImage(named: "image2"))
