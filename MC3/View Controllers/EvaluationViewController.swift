@@ -38,8 +38,7 @@ class EvaluationViewController: UIViewController {
         arrayCheck.append("not-essential")
         nextMove()
     }
-    
-    
+     
     func nextMove() {
         count += 1
         if (count <= 3) {
@@ -52,6 +51,7 @@ class EvaluationViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "Main View") {
             (segue.destination as! UserThoughtsViewController).essentialThoughtCount = essentialCount
-            (segue.destination as! UserThoughtsViewController).notEssentialThoughtCount = notEssentialCount        }
+            (segue.destination as! UserThoughtsViewController).notEssentialThoughtCount = notEssentialCount
+        }
     }
 }
