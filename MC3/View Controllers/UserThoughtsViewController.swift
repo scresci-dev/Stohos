@@ -12,7 +12,6 @@ import SpriteKit
 
 class UserThoughtsViewController: UIViewController {
     
-    var userThought = [String]()
     var essentialThoughtCount: Int = 0
     var notEssentialThoughtCount: Int = 0
     var currentThought: String = " "
@@ -29,6 +28,12 @@ class UserThoughtsViewController: UIViewController {
     @IBOutlet weak var thoughtView: UITextView!
     @IBOutlet weak var deleteButton: UIButton!
     
+//    let thought1 = UserThoughts(evaluation: "\(arrayCheck[0])", thought: "\(allAnswer[1])", x_position: 30, y_position: 200)
+//    let thought2 = UserThoughts(evaluation: "\(arrayCheck[1])", thought: "\(allAnswer[2])", x_position: 200, y_position: 250)
+//    let thought3 = UserThoughts(evaluation: "\(arrayCheck[2])", thought: "\(allAnswer[1])", x_position: 30, y_position: 200)
+//    let thought4 = UserThoughts(evaluation: "\(arrayCheck[3])", thought: "\(allAnswer[1])", x_position: 30, y_position: 200)
+    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         button1.setImage(image1, for: .normal)
@@ -93,7 +98,10 @@ class UserThoughtsViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "Edit Thought") {
-        (segue.destination as! EditThoughtViewController).editedUserThought = currentThought
+            (segue.destination as! EditThoughtViewController).editedUserThought = currentThought
         }
+//        if (segue.identifier == "Add Thought") {
+//            (segue.destination as! AddThoughtViewController).
+//        }
     }
 }

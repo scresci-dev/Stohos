@@ -22,7 +22,9 @@
 		DDC2F0B123FAEAED00BD4C45 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DDC2F0B023FAEAED00BD4C45 /* .gitignore */; };
 		DDDA47D42407FE25005950CF /* UserThoughtsDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA47D32407FE25005950CF /* UserThoughtsDatabase.swift */; };
 		DDDA47D624082E3A005950CF /* EditThoughtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA47D524082E3A005950CF /* EditThoughtViewController.swift */; };
-		DDDA47D82409BFB3005950CF /* AddUserThought.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA47D72409BFB3005950CF /* AddUserThought.swift */; };
+		DDDA47D82409BFB3005950CF /* AddUserThoughtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA47D72409BFB3005950CF /* AddUserThoughtViewController.swift */; };
+		DDDA47E3240A974C005950CF /* Thought+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA47E1240A974C005950CF /* Thought+CoreDataClass.swift */; };
+		DDDA47E8240A99CD005950CF /* Thought+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA47E7240A99CD005950CF /* Thought+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +45,9 @@
 		DDC2F0B023FAEAED00BD4C45 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DDDA47D32407FE25005950CF /* UserThoughtsDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserThoughtsDatabase.swift; sourceTree = "<group>"; };
 		DDDA47D524082E3A005950CF /* EditThoughtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditThoughtViewController.swift; sourceTree = "<group>"; };
-		DDDA47D72409BFB3005950CF /* AddUserThought.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserThought.swift; sourceTree = "<group>"; };
+		DDDA47D72409BFB3005950CF /* AddUserThoughtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserThoughtViewController.swift; sourceTree = "<group>"; };
+		DDDA47E1240A974C005950CF /* Thought+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Thought+CoreDataClass.swift"; sourceTree = "<group>"; };
+		DDDA47E7240A99CD005950CF /* Thought+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Thought+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,19 +86,45 @@
 				DDC2F09D23FAEA9000BD4C45 /* ViewController.swift */,
 				DDC2F09F23FAEA9000BD4C45 /* Main.storyboard */,
 				DDC2F0A523FAEA9200BD4C45 /* Assets.xcassets */,
+				DDDA47E0240A9705005950CF /* View Controllers */,
+				DDDA47DF240A96E2005950CF /* Data */,
+				DDDA47DE240A96AE005950CF /* Database */,
 				DDC2F0A723FAEA9200BD4C45 /* LaunchScreen.storyboard */,
 				DDC2F0AA23FAEA9200BD4C45 /* Info.plist */,
 				DDC2F0A223FAEA9000BD4C45 /* MC3.xcdatamodeld */,
-				DD84143623FD58F100478319 /* QuestionsDatabase.swift */,
-				DD84143A23FD77FF00478319 /* TutorialQuestionViewController.swift */,
-				DD84143C23FED79E00478319 /* EvaluationViewController.swift */,
-				DD84143E23FFD8F400478319 /* MessagesDatabase.swift */,
-				DD64247A2406B1A400A07D1C /* UserThoughtsViewController.swift */,
-				DDDA47D32407FE25005950CF /* UserThoughtsDatabase.swift */,
-				DDDA47D524082E3A005950CF /* EditThoughtViewController.swift */,
-				DDDA47D72409BFB3005950CF /* AddUserThought.swift */,
 			);
 			path = MC3;
+			sourceTree = "<group>";
+		};
+		DDDA47DE240A96AE005950CF /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				DDDA47D32407FE25005950CF /* UserThoughtsDatabase.swift */,
+				DD84143E23FFD8F400478319 /* MessagesDatabase.swift */,
+				DD84143623FD58F100478319 /* QuestionsDatabase.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		DDDA47DF240A96E2005950CF /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DDDA47E7240A99CD005950CF /* Thought+CoreDataProperties.swift */,
+				DDDA47E1240A974C005950CF /* Thought+CoreDataClass.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		DDDA47E0240A9705005950CF /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD84143A23FD77FF00478319 /* TutorialQuestionViewController.swift */,
+				DD84143C23FED79E00478319 /* EvaluationViewController.swift */,
+				DD64247A2406B1A400A07D1C /* UserThoughtsViewController.swift */,
+				DDDA47D72409BFB3005950CF /* AddUserThoughtViewController.swift */,
+				DDDA47D524082E3A005950CF /* EditThoughtViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,13 +203,15 @@
 				DDC2F09E23FAEA9000BD4C45 /* ViewController.swift in Sources */,
 				DDC2F09A23FAEA9000BD4C45 /* AppDelegate.swift in Sources */,
 				DD84143723FD58F100478319 /* QuestionsDatabase.swift in Sources */,
+				DDDA47E8240A99CD005950CF /* Thought+CoreDataProperties.swift in Sources */,
 				DD84143B23FD77FF00478319 /* TutorialQuestionViewController.swift in Sources */,
 				DDC2F09C23FAEA9000BD4C45 /* SceneDelegate.swift in Sources */,
 				DD84143D23FED79E00478319 /* EvaluationViewController.swift in Sources */,
 				DD84143F23FFD8F400478319 /* MessagesDatabase.swift in Sources */,
 				DDC2F0A423FAEA9000BD4C45 /* MC3.xcdatamodeld in Sources */,
 				DDDA47D42407FE25005950CF /* UserThoughtsDatabase.swift in Sources */,
-				DDDA47D82409BFB3005950CF /* AddUserThought.swift in Sources */,
+				DDDA47D82409BFB3005950CF /* AddUserThoughtViewController.swift in Sources */,
+				DDDA47E3240A974C005950CF /* Thought+CoreDataClass.swift in Sources */,
 				DDDA47D624082E3A005950CF /* EditThoughtViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

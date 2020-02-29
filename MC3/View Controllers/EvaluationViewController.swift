@@ -28,14 +28,14 @@ class EvaluationViewController: UIViewController {
     @IBAction func essentialButton(_ sender: Any) {
         view.endEditing(true)
         essentialCount += 1
-        arrayCheck.append("blob0")
+        arrayCheck.append("essential")
         nextMove()
     }
     
     @IBAction func notEssentialButton(_ sender: Any) {
         view.endEditing(true)
         notEssentialCount += 1
-        arrayCheck.append("blob1")
+        arrayCheck.append("not-essential")
         nextMove()
     }
     
@@ -52,8 +52,6 @@ class EvaluationViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "Main View") {
             (segue.destination as! UserThoughtsViewController).essentialThoughtCount = essentialCount
-            (segue.destination as! UserThoughtsViewController).notEssentialThoughtCount = notEssentialCount
-            (segue.destination as! UserThoughtsViewController).userThought = allAnswer
-        }
+            (segue.destination as! UserThoughtsViewController).notEssentialThoughtCount = notEssentialCount        }
     }
 }

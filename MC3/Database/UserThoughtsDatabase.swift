@@ -11,4 +11,8 @@ import Foundation
 struct UserThoughts {
     var evaluation: String = " "
     var thought: String = " "
+    var x_position: Int = 0
+    var y_position: Int = 0
 }
+
+
