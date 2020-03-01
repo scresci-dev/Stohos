@@ -8,44 +8,38 @@
 
 import Foundation
 import UIKit
-import SpriteKit
+import CoreData
 
 class UserThoughtsViewController: UIViewController {
     
     var essentialThoughtCount: Int = 0
     var notEssentialThoughtCount: Int = 0
     var currentThought: String = " "
+    var newThought: String = " "
     
     let image1 = UIImage(named: "\(arrayCheck[0])")
     let image2 = UIImage(named: "\(arrayCheck[1])")
     let image3 = UIImage(named: "\(arrayCheck[2])")
-    let image4 = UIImage(named: "\(arrayCheck[3])")
     
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     @IBOutlet weak var button3: UIButton!
-    @IBOutlet weak var button4: UIButton!
     @IBOutlet weak var thoughtView: UITextView!
     @IBOutlet weak var deleteButton: UIButton!
-    
-//    let thought1 = UserThoughts(evaluation: "\(arrayCheck[0])", thought: "\(allAnswer[1])", x_position: 30, y_position: 200)
-//    let thought2 = UserThoughts(evaluation: "\(arrayCheck[1])", thought: "\(allAnswer[2])", x_position: 200, y_position: 250)
-//    let thought3 = UserThoughts(evaluation: "\(arrayCheck[2])", thought: "\(allAnswer[1])", x_position: 30, y_position: 200)
-//    let thought4 = UserThoughts(evaluation: "\(arrayCheck[3])", thought: "\(allAnswer[1])", x_position: 30, y_position: 200)
-    
-        
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        allAnswer.append(currentThought)
+        displayMainView()
+    }
+    
+    func displayMainView() {
         button1.setImage(image1, for: .normal)
         button1.frame = CGRect(x: 30, y: 200, width: 100, height: 100)
         button2.setImage(image2, for: .normal)
         button2.frame = CGRect(x: 200, y: 200, width: 100, height: 100)
         button3.setImage(image3, for: .normal)
         button3.frame = CGRect(x: 200, y: 300, width: 100, height: 100)
-        button4.setImage(image1, for: .normal)
-        button4.frame = CGRect(x: 30, y: 300, width: 100, height: 100)
-        print(essentialThoughtCount)
-        print(notEssentialThoughtCount)
     }
     
     @IBAction func press1(_ sender: Any) {
@@ -56,26 +50,13 @@ class UserThoughtsViewController: UIViewController {
     @IBAction func press2(_ sender: Any) {
         thoughtView.text = allAnswer[1]
         currentThought = allAnswer[1]
-        if (deleteButton.isSelected) {
-            button2.isHidden = true
-        }
     }
     
     @IBAction func press3(_ sender: Any) {
         thoughtView.text = allAnswer[2]
         currentThought = allAnswer[2]
-        if (deleteButton.isSelected) {
-            button3.isHidden = true
-        }
     }
-    
-    @IBAction func press4(_ sender: Any) {
-        thoughtView.text = allAnswer[3]
-        currentThought = allAnswer[3]
-        if (deleteButton.isSelected) {
-            button4.isHidden = true
-        }
-    }
+
     
     @IBAction func editButton(_ sender: Any) {
         performSegue(withIdentifier: "Edit Thought", sender: self)
@@ -90,9 +71,6 @@ class UserThoughtsViewController: UIViewController {
         }
         else if (button3.isTouchInside == true) {
             button3.isHidden = true
-        }
-        else if (button4.isTouchInside == true) {
-            button4.isHidden = true
         }
     }
     

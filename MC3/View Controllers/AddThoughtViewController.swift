@@ -11,8 +11,13 @@ import UIKit
 
 class AddThoughtViewController: UIViewController {
     
+    @IBOutlet weak var newThought: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     (segue.destination as! EvaluationThoughtViewController).finalThought = newThought.text
+    }
 }

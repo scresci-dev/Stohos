@@ -60,19 +60,17 @@ class TutorialQuestionViewController: UIViewController {
     }
     
     func displayView() {
-        if (counter <= 3) {
+        if (counter <= 2) {
            questionLabel.text = questionArray[counter].question
            progressView.image = questionArray[counter].progress
            print(counter)
-           if (counter == 3) {
+           if (counter == 2) {
                nextButton.setTitle("Done", for: .normal)
            }
         }
-        //counter += 1
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        (segue.destination as! EvaluationViewController).userAnswer = answerText.text
-        //(segue.destination as! EvaluationViewController).count = counter
+        (segue.destination as! TutorialEvaluationViewController).userAnswer = answerText.text
        }
 }

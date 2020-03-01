@@ -20,14 +20,11 @@ class EditThoughtViewController: UIViewController {
         editField.text = editedUserThought
     }
     
-//    @IBAction func doneButton(_ sender: Any) {
-//        performSegue(withIdentifier: "Evaluate Again", sender: self)
-//    }
+    @IBAction func donePressed(_ sender: Any) {
+        performSegue(withIdentifier: "Evaluate Again", sender: self)
+    }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if (segue.identifier == "Evaluate Again") {
-//        (segue.destination as! EditThoughtViewController).editedUserThought = currentThought
-//        }
-//    }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     (segue.destination as! EvaluationThoughtViewController).finalThought = editField.text
+    }
 }

@@ -5,7 +5,7 @@
         <attribute name="image" attributeType="String" defaultValueString=""/>
         <attribute name="text" attributeType="String" defaultValueString=""/>
         <attribute name="xpos" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="ypos" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="ypos" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <elements>
         <element name="Thought" positionX="-63" positionY="-18" width="128" height="118"/>

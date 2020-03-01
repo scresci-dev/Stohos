@@ -23,10 +23,10 @@
             </objects>
             <point key="canvasLocation" x="132" y="31"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="MQg-fX-bCx">
             <objects>
-                <viewController id="Gau-gt-GGf" customClass="ViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Welcome" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Gau-gt-GGf" customClass="WelcomeViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4kC-Hi-o7V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,7 +120,7 @@
         <!--User Thoughts View Controller-->
         <scene sceneID="5pG-4D-das">
             <objects>
-                <viewController id="N1m-Em-c1a" customClass="UserThoughtsViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="N1m-Em-c1a" customClass="UserThoughtsViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FX1-nz-ET1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -145,20 +145,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="press2:" destination="N1m-Em-c1a" eventType="touchUpInside" id="dBF-g4-JvT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDs-ji-BXy">
-                                <rect key="frame" x="44" y="318" width="135" height="134"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="press3:" destination="N1m-Em-c1a" eventType="touchUpInside" id="2pG-ro-nSD"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Pe-fp-tZD">
-                                <rect key="frame" x="209" y="318" width="152" height="121"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="press4:" destination="N1m-Em-c1a" eventType="touchUpInside" id="END-Qx-mXz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDE-oF-0J8">
@@ -188,7 +174,14 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Dpr-gq-uDj" kind="show" identifier="Add New Thought" id="cMM-Xe-oqc"/>
+                                    <segue destination="Dpr-gq-uDj" kind="show" identifier="Add Thought" id="7Vc-nS-284"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDs-ji-BXy">
+                                <rect key="frame" x="140" y="306" width="135" height="134"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="press3:" destination="N1m-Em-c1a" eventType="touchUpInside" id="2pG-ro-nSD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -200,15 +193,14 @@
                         <outlet property="button1" destination="B7S-kb-dhb" id="626-7A-79f"/>
                         <outlet property="button2" destination="mMG-gY-tkA" id="OMO-ev-Oyc"/>
                         <outlet property="button3" destination="mDs-ji-BXy" id="gCB-wb-Vn7"/>
-                        <outlet property="button4" destination="4Pe-fp-tZD" id="4QU-fk-mho"/>
                         <outlet property="deleteButton" destination="pDE-oF-0J8" id="nBG-bc-YMQ"/>
                         <outlet property="thoughtView" destination="r76-aG-CIf" id="LCs-Ka-G79"/>
-                        <segue destination="HVM-I5-GwL" kind="showDetail" identifier="Edit Thought" id="5Ga-of-WfJ"/>
+                        <segue destination="HVM-I5-GwL" kind="show" identifier="Edit Thought" id="MGA-JQ-vFt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L0I-4L-YQU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3992.753623188406" y="30.803571428571427"/>
+            <point key="canvasLocation" x="5051" y="31"/>
         </scene>
         <!--Add Thought View Controller-->
         <scene sceneID="HYo-nO-oDX">
@@ -224,38 +216,87 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7gD-1W-TV9">
-                                <rect key="frame" x="87" y="511" width="240" height="128"/>
+                                <rect key="frame" x="87" y="449" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6h-Mr-JDZ">
+                                <rect key="frame" x="171" y="640" width="73" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="donePressed:" destination="Dpr-gq-uDj" eventType="touchUpInside" id="itY-7e-Pu6"/>
+                                    <segue destination="H0d-PG-Xds" kind="show" identifier="Evaluate Next" id="AX1-50-xku"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="TQX-g2-Pas"/>
                     </view>
                     <navigationItem key="navigationItem" id="6uP-68-SUe"/>
+                    <connections>
+                        <outlet property="newThought" destination="7gD-1W-TV9" id="Lut-Hc-aLs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FsG-QR-OZX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5229" y="1285"/>
+            <point key="canvasLocation" x="6287" y="767"/>
         </scene>
-        <!--View Controller-->
+        <!--Evaluation Thought View Controller-->
         <scene sceneID="e1h-vg-cec">
             <objects>
-                <viewController id="H0d-PG-Xds" sceneMemberID="viewController">
+                <viewController id="H0d-PG-Xds" customClass="EvaluationThoughtViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AjP-IR-ltm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="lY6-bl-SuX">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqY-a0-aRS">
+                                <rect key="frame" x="87" y="653" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Essential"/>
+                                <connections>
+                                    <action selector="essButton:" destination="H0d-PG-Xds" eventType="touchUpInside" id="LQm-GS-e0v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vx8-mw-pcV">
+                                <rect key="frame" x="243" y="653" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Not Essential"/>
+                                <connections>
+                                    <action selector="notEssButton:" destination="H0d-PG-Xds" eventType="touchUpInside" id="blB-qQ-jaq"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VUN-0g-HNL">
+                                <rect key="frame" x="87" y="138" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="xxO-Pa-ub8"/>
                     </view>
                     <navigationItem key="navigationItem" id="kV9-nr-em2"/>
+                    <connections>
+                        <outlet property="ebutton" destination="MqY-a0-aRS" id="ctg-5y-qYK"/>
+                        <outlet property="nebutton" destination="vx8-mw-pcV" id="9U3-0l-a9y"/>
+                        <outlet property="thoughtText" destination="lY6-bl-SuX" id="ifU-ks-E6i"/>
+                        <outlet property="thoughtView" destination="VUN-0g-HNL" id="7t1-zj-XUg"/>
+                        <segue destination="N1m-Em-c1a" kind="show" identifier="Main View" id="LW6-wO-WU4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="St6-Ov-q89" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6341" y="-476"/>
+            <point key="canvasLocation" x="7654" y="31"/>
         </scene>
         <!--Edit Thought View Controller-->
         <scene sceneID="QJy-h5-jo7">
@@ -288,7 +329,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="H0d-PG-Xds" kind="show" identifier="Evaluate Again" id="zT4-yt-IDc"/>
+                                    <action selector="donePressed:" destination="HVM-I5-GwL" eventType="touchUpInside" id="WA9-8r-NRq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -298,16 +339,17 @@
                     <navigationItem key="navigationItem" id="gej-eB-XUp"/>
                     <connections>
                         <outlet property="editField" destination="Kh0-5d-1IL" id="9u0-nB-6QA"/>
+                        <segue destination="H0d-PG-Xds" kind="show" identifier="Evaluate Again" id="R3T-Od-V7C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5RT-uK-pry" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5229" y="-755"/>
+            <point key="canvasLocation" x="6287" y="-702"/>
         </scene>
-        <!--Evaluation View Controller-->
+        <!--Tutorial Evaluation View Controller-->
         <scene sceneID="5TL-78-hH2">
             <objects>
-                <viewController id="NOg-Fx-v7m" customClass="EvaluationViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NOg-Fx-v7m" customClass="TutorialEvaluationViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5NL-XW-OEX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -356,15 +398,53 @@
                         <outlet property="notEssentialView" destination="Ilg-V8-zX4" id="FzQ-o5-AHF"/>
                         <outlet property="textAnswer" destination="zpj-Zy-BQZ" id="5zb-lj-N1P"/>
                         <segue destination="oXI-zw-iXa" kind="show" identifier="Next Question" id="7AL-Qv-aAv"/>
-                        <segue destination="N1m-Em-c1a" kind="show" identifier="Main View" id="Uop-nK-5MC"/>
+                        <segue destination="nrh-bp-NIk" kind="show" identifier="Tutorial Well Done" id="dkB-pR-tBC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FhY-9C-ag9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2965" y="31"/>
         </scene>
+        <!--Well Done View Controller-->
+        <scene sceneID="ROT-sf-zKZ">
+            <objects>
+                <viewController id="nrh-bp-NIk" customClass="WellDoneViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NMi-YE-gRF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Well Done" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0L-WV-nN6">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
+                        <viewLayoutGuide key="safeArea" id="YAD-TK-bfg"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="qgh-ZW-QwB" appends="YES" id="vLB-ZS-k4g"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="uhS-Ri-6El"/>
+                    <connections>
+                        <outlet property="wellDoneView" destination="NMi-YE-gRF" id="YRP-0M-SH6"/>
+                        <segue destination="N1m-Em-c1a" kind="show" identifier="Main View" id="1V8-iC-Nfg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NLR-ct-Hrd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="qgh-ZW-QwB"/>
+            </objects>
+            <point key="canvasLocation" x="4020" y="31"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="MGA-JQ-vFt"/>
+        <segue reference="R3T-Od-V7C"/>
+        <segue reference="LW6-wO-WU4"/>
         <segue reference="7AL-Qv-aAv"/>
     </inferredMetricsTieBreakers>
 </document>

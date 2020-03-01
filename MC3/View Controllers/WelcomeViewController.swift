@@ -8,13 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var initialView: UIView!
     @IBOutlet weak var textView: UITextView!
     
     var counter: Int = 0
-    
+
     override func viewDidLoad() {
         //navigationItem.title = "Root View"
         let gestureRec = UITapGestureRecognizer(target: self, action:  #selector (self.someAction (_:)))
