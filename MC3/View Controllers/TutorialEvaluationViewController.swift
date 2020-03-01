@@ -4,17 +4,24 @@ import UIKit
 class TutorialEvaluationViewController: UIViewController {
 
     @IBOutlet weak var textAnswer: UITextView!
-    @IBOutlet weak var essentialView: UIImageView!
-    @IBOutlet weak var notEssentialView: UIImageView!
     @IBOutlet weak var essentialButton: UIButton!
     @IBOutlet weak var notEssentialButton: UIButton!
-
+    @IBOutlet weak var greyThought: UIImageView!
+    
     var userAnswer: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "greybackground.png")!)
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "greybackground.png")!)
+        greyThought.image = UIImage(named: "neutral")
         textAnswer.text = userAnswer
+        textAnswer.textAlignment = .center
+        textAnswer.textColor = lightGrey
+        textAnswer.font = UIFont(name: "New York Medium", size: 18)
+        let style = NSMutableParagraphStyle()
+        style.lineSpacing = 24
+        let attributes = [NSAttributedString.Key.paragraphStyle: style]
+        textAnswer.attributedText = NSAttributedString(string: textAnswer.text, attributes: attributes)
         allAnswer.append(userAnswer)
     }
 
@@ -22,6 +29,7 @@ class TutorialEvaluationViewController: UIViewController {
         view.endEditing(true)
         essentialCount += 1
         arrayCheck.append("essential")
+        greyThought.image = UIImage(named: "essential")
         nextMove()
     }
 
@@ -29,6 +37,7 @@ class TutorialEvaluationViewController: UIViewController {
         view.endEditing(true)
         notEssentialCount += 1
         arrayCheck.append("not-essential")
+        greyThought.image = UIImage(named: "not-essential")
         nextMove()
     }
 
@@ -36,9 +45,13 @@ class TutorialEvaluationViewController: UIViewController {
     func nextMove() {
         count += 1
         if (count <= 2) {
-            performSegue(withIdentifier: "Next Question", sender: self) }
+            DispatchQueue.main.asyncAfter(deadline:.now() + 2.0, execute: {
+               self.performSegue(withIdentifier: "Next Question",sender: self)
+            })}
         else if (count > 2) {
-            performSegue(withIdentifier: "Tutorial Well Done", sender: self)
+            DispatchQueue.main.asyncAfter(deadline:.now() + 2.0, execute: {
+               self.performSegue(withIdentifier: "Tutorial Well Done",sender: self)
+            })
         }
     }
 }

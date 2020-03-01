@@ -26,11 +26,31 @@ class UserThoughtsViewController: UIViewController {
     @IBOutlet weak var button3: UIButton!
     @IBOutlet weak var thoughtView: UITextView!
     @IBOutlet weak var deleteButton: UIButton!
-
+    @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var treeImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        essentialThoughtCount = essentialCount
+        notEssentialThoughtCount = notEssentialCount
+        editButton.setTitleColor(darkGrey, for: .normal)
+        deleteButton.setTitleColor(darkGrey, for: .normal)
+        thoughtView.textColor = lightGrey
         allAnswer.append(currentThought)
+        displayTree()
         displayMainView()
+    }
+    
+    func displayTree() {
+        if (essentialThoughtCount > notEssentialThoughtCount) {
+            treeImage.image = UIImage(named: "plant3")
+        }
+        else if (essentialThoughtCount < notEssentialThoughtCount) {
+            treeImage.image = UIImage(named: "plant1")
+        }
+        else {
+            treeImage.image = UIImage(named: "plant2")
+        }
     }
     
     func displayMainView() {

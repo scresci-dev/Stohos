@@ -19,10 +19,6 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "greybackground")
-        backgroundImage.contentMode =  UIView.ContentMode.scaleAspectFill
-        self.view.insertSubview(backgroundImage, at: 0)
         changeTextView()
         let gestureRec = UITapGestureRecognizer(target: self, action:  #selector (self.someAction (_:)))
         initialView.addGestureRecognizer(gestureRec)
@@ -34,7 +30,7 @@ class WelcomeViewController: UIViewController {
         userTextView.textAlignment = NSTextAlignment.center
            // Update UITextView font size and colour
         userTextView.font = UIFont.systemFont(ofSize: 18)
-        userTextView.textColor = UIColor(red: 0.65, green: 0.65, blue: 0.65, alpha: 1)
+        userTextView.textColor = lightGrey
         userTextView.font = UIFont(name: "New York Medium", size: 18)
         let style = NSMutableParagraphStyle()
         style.lineSpacing = 24

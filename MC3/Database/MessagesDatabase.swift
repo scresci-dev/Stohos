@@ -7,11 +7,15 @@
 //
 
 import Foundation
+import UIKit
 
 struct TutorialMessage {
     var textMessage: String = " "
     var imageName: String = " "
 }
+
+let darkGrey = UIColor(red: 0.43, green: 0.43, blue: 0.43, alpha: 1)
+let lightGrey = UIColor(red: 0.65, green: 0.65, blue: 0.65, alpha: 1)
 
 let message1 = TutorialMessage(textMessage: "Welcome to Stohos", imageName: " ")
 let message2 = TutorialMessage(textMessage: "According to Minimalism as a state of mind, a thought is Essential when it brings you joy and has a vital meaning for you", imageName: "essential")

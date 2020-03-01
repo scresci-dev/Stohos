@@ -21,8 +21,8 @@ var notEssentialCount: Int = 0
 var arrayCheck: [String] = []
 var allAnswer: [String] = []
 
-let question1 = TutorialQuestion(question: "Share a thought of today", progress: UIImage(named: "image1"))
-let question2 = TutorialQuestion(question: "What is your today goal?", progress: UIImage(named: "image2"))
-let question3 = TutorialQuestion(question: "Tell me your thoughts", progress: UIImage(named: "image3"))
+let question1 = TutorialQuestion(question: "Write down something that happened to you today", progress: UIImage(named: "image1"))
+let question2 = TutorialQuestion(question: "Write down something that worries you", progress: UIImage(named: "image2"))
+let question3 = TutorialQuestion(question: "Write down something that made you laugh", progress: UIImage(named: "image3"))
 
 var questionArray = [question1, question2, question3]
