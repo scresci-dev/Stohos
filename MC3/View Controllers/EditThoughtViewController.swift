@@ -17,6 +17,7 @@ class EditThoughtViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "greybackground.png")!)
         editField.text = editedUserThought
     }
     

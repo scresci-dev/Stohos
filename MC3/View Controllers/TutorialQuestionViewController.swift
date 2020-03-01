@@ -18,7 +18,7 @@ class TutorialQuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "greybackground")!)
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         
         view.addGestureRecognizer(tap)

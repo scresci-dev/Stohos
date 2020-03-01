@@ -15,6 +15,7 @@ class AddThoughtViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "greybackground.png")!)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

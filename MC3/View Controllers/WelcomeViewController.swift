@@ -12,11 +12,12 @@ class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var initialView: UIView!
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var imageView: UIImageView!
     
     var counter: Int = 0
 
     override func viewDidLoad() {
-        //navigationItem.title = "Root View"
+        
         let gestureRec = UITapGestureRecognizer(target: self, action:  #selector (self.someAction (_:)))
         initialView.addGestureRecognizer(gestureRec)
         super.viewDidLoad()
@@ -29,12 +30,14 @@ class WelcomeViewController: UIViewController {
     
     
     func showMessages() {
-        if (counter > 4 ) {
+        if (counter > 3 ) {
             performSegue(withIdentifier: "TutorialQuestion", sender: self)
         }
         else {
             textView.text = messageArray[counter].textMessage
-            
+            textView.textColor = UIColor(red: 0.65, green: 0.65, blue: 0.65, alpha: 1)
+            textView.font = UIFont(name: "New York Medium", size: 18)
+            imageView.image = UIImage(named: "\(messageArray[counter].imageName)")
         }
     }
 }
