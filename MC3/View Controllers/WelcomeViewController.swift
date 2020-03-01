@@ -11,17 +11,38 @@ import UIKit
 class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var initialView: UIView!
-    @IBOutlet weak var textView: UITextView!
+    
+    @IBOutlet weak var userTextView: UITextView!
     @IBOutlet weak var imageView: UIImageView!
     
     var counter: Int = 0
-
+    
     override func viewDidLoad() {
-        
+        super.viewDidLoad()
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "greybackground")
+        backgroundImage.contentMode =  UIView.ContentMode.scaleAspectFill
+        self.view.insertSubview(backgroundImage, at: 0)
+        changeTextView()
         let gestureRec = UITapGestureRecognizer(target: self, action:  #selector (self.someAction (_:)))
         initialView.addGestureRecognizer(gestureRec)
-        super.viewDidLoad()
     }
+    
+    func changeTextView() {
+        userTextView.allowsEditingTextAttributes = true
+        userTextView.frame = CGRect(x: 80.0, y: 450.0, width: 250.0, height: 100.0)
+        userTextView.textAlignment = NSTextAlignment.center
+           // Update UITextView font size and colour
+        userTextView.font = UIFont.systemFont(ofSize: 18)
+        userTextView.textColor = UIColor(red: 0.65, green: 0.65, blue: 0.65, alpha: 1)
+        userTextView.font = UIFont(name: "New York Medium", size: 18)
+        let style = NSMutableParagraphStyle()
+        style.lineSpacing = 24
+        let attributes = [NSAttributedString.Key.paragraphStyle: style]
+        userTextView.attributedText = NSAttributedString(string: userTextView.text, attributes: attributes)
+        self.view.addSubview(userTextView)
+        }
+    
     
     @objc func someAction(_ sender:UITapGestureRecognizer) {
         showMessages()
@@ -34,9 +55,7 @@ class WelcomeViewController: UIViewController {
             performSegue(withIdentifier: "TutorialQuestion", sender: self)
         }
         else {
-            textView.text = messageArray[counter].textMessage
-            textView.textColor = UIColor(red: 0.65, green: 0.65, blue: 0.65, alpha: 1)
-            textView.font = UIFont(name: "New York Medium", size: 18)
+            userTextView.text = messageArray[counter].textMessage
             imageView.image = UIImage(named: "\(messageArray[counter].imageName)")
         }
     }

@@ -17,7 +17,6 @@ let message1 = TutorialMessage(textMessage: "Welcome to Stohos", imageName: " ")
 let message2 = TutorialMessage(textMessage: "According to Minimalism as a state of mind, a thought is Essential when it brings you joy and has a vital meaning for you", imageName: "essential")
 let message3 = TutorialMessage(textMessage: "A thought is Non-Essential when it can lead you to focus only on the negative and waste valuable mental energy", imageName: "not-essential")
 let message4 = TutorialMessage(textMessage: "Ready to start your journey of mind decluttering?", imageName: " ")
-//let message5 = TutorialMessage(textMessage: "The session starts now")
 
 var messageArray = [message1, message2, message3, message4]
 
