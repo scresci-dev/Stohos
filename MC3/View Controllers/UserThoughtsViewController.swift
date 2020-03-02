@@ -133,7 +133,7 @@ class UserThoughtsViewController: UIViewController {
             if let _ = data
             {
                 let x = (data?.rotationRate.x ?? 0.0)
-               let y = (data?.rotationRate.y ?? 0.0)
+                let y = (data?.rotationRate.y ?? 0.0)
                 
                 
                 self.gravity.gravityDirection = CGVector(dx: y*0.1, dy: 0)
@@ -160,39 +160,22 @@ class UserThoughtsViewController: UIViewController {
             treeImage.image = UIImage(named: "plant2")
         }
     }
-//
-//
-//    @IBAction func press1(_ sender: Any) {
-//        thoughtView.text = allAnswer[0]
-//        currentThought = allAnswer[0]
-//    }
-//
-//    @IBAction func press2(_ sender: Any) {
-//        thoughtView.text = allAnswer[1]
-//        currentThought = allAnswer[1]
-//    }
-//
-//    @IBAction func press3(_ sender: Any) {
-//        thoughtView.text = allAnswer[2]
-//        currentThought = allAnswer[2]
-//    }
-
     
     @IBAction func editButton(_ sender: Any) {
         performSegue(withIdentifier: "Edit Thought", sender: self)
     }
     
-    @IBAction func deleteAction(_ sender: Any) {
-        if (button1.isTouchInside == true) {
-            button1.isHidden = true
-        }
-        else if (button2.isTouchInside == true) {
-            button2.isHidden = true
-        }
-        else if (button3.isTouchInside == true) {
-            button3.isHidden = true
-        }
-    }
+//    @IBAction func deleteAction(_ sender: Any) {
+//        if (button1.isTouchInside == true) {
+//            button1.isHidden = true
+//        }
+//        else if (button2.isTouchInside == true) {
+//            button2.isHidden = true
+//        }
+//        else if (button3.isTouchInside == true) {
+//            button3.isHidden = true
+//        }
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "Edit Thought") {

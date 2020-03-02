@@ -28,6 +28,7 @@
 		DDDA47D82409BFB3005950CF /* AddThoughtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA47D72409BFB3005950CF /* AddThoughtViewController.swift */; };
 		DDDA47E3240A974C005950CF /* Thought+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA47E1240A974C005950CF /* Thought+CoreDataClass.swift */; };
 		DDDA47E8240A99CD005950CF /* Thought+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA47E7240A99CD005950CF /* Thought+CoreDataProperties.swift */; };
+		DDF8CAA2240D60C80088B394 /* NewYorkMedium-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDF8CAA1240D60C80088B394 /* NewYorkMedium-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		DDDA47D72409BFB3005950CF /* AddThoughtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddThoughtViewController.swift; sourceTree = "<group>"; };
 		DDDA47E1240A974C005950CF /* Thought+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Thought+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DDDA47E7240A99CD005950CF /* Thought+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Thought+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DDF8CAA1240D60C80088B394 /* NewYorkMedium-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NewYorkMedium-Regular.otf"; path = "../../../../Downloads/NewYorkMedium-Regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			children = (
 				DDC2F09923FAEA9000BD4C45 /* AppDelegate.swift */,
 				DDC2F09B23FAEA9000BD4C45 /* SceneDelegate.swift */,
+				DDF8CAA1240D60C80088B394 /* NewYorkMedium-Regular.otf */,
 				DDC2F09F23FAEA9000BD4C45 /* Main.storyboard */,
 				DDC2F0A523FAEA9200BD4C45 /* Assets.xcassets */,
 				DDDA47E0240A9705005950CF /* View Controllers */,
@@ -194,6 +197,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDF8CAA2240D60C80088B394 /* NewYorkMedium-Regular.otf in Resources */,
 				DDC2F0B123FAEAED00BD4C45 /* .gitignore in Resources */,
 				DDC2F0A923FAEA9200BD4C45 /* LaunchScreen.storyboard in Resources */,
 				DDC2F0A623FAEA9200BD4C45 /* Assets.xcassets in Resources */,

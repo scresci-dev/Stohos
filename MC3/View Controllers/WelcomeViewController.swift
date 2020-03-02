@@ -25,18 +25,16 @@ class WelcomeViewController: UIViewController {
     }
     
     func changeTextView() {
-        userTextView.allowsEditingTextAttributes = true
-        userTextView.frame = CGRect(x: 80.0, y: 450.0, width: 250.0, height: 100.0)
-        userTextView.textAlignment = NSTextAlignment.center
-           // Update UITextView font size and colour
-        userTextView.font = UIFont.systemFont(ofSize: 18)
-        userTextView.textColor = lightGrey
-        userTextView.font = UIFont(name: "New York Medium", size: 18)
-        let style = NSMutableParagraphStyle()
+         let style = NSMutableParagraphStyle()
         style.lineSpacing = 24
         let attributes = [NSAttributedString.Key.paragraphStyle: style]
         userTextView.attributedText = NSAttributedString(string: userTextView.text, attributes: attributes)
         self.view.addSubview(userTextView)
+        userTextView.allowsEditingTextAttributes = true
+        userTextView.frame = CGRect(x: 80.0, y: 450.0, width: 250.0, height: 100.0)
+        userTextView.textAlignment = NSTextAlignment.center
+        userTextView.textColor = lightGrey
+        userTextView.font = UIFont(name: "NewYorkMedium-Regular", size: 30)
         }
     
     

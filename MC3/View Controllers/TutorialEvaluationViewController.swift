@@ -17,7 +17,7 @@ class TutorialEvaluationViewController: UIViewController {
         textAnswer.text = userAnswer
         textAnswer.textAlignment = .center
         textAnswer.textColor = lightGrey
-        textAnswer.font = UIFont(name: "New York Medium", size: 18)
+        textAnswer.font = UIFont(name: "NewYorkMedium-Regular", size: 18)
         let style = NSMutableParagraphStyle()
         style.lineSpacing = 24
         let attributes = [NSAttributedString.Key.paragraphStyle: style]

@@ -66,7 +66,7 @@ class TutorialQuestionViewController: UIViewController, UITextViewDelegate {
         //answerText.layer.borderWidth = 1.0
         answerText.textAlignment = .center
         answerText.textColor = lightGrey
-        answerText.font = UIFont(name: "New York Medium", size: 18)
+        answerText.font = UIFont(name: "NewYorkMedium-Regular", size: 18)
         let style = NSMutableParagraphStyle()
         style.lineSpacing = 24
         let attributes = [NSAttributedString.Key.paragraphStyle: style]
@@ -81,7 +81,7 @@ class TutorialQuestionViewController: UIViewController, UITextViewDelegate {
     func displayView() {
         if (counter <= 2) {
             questionLabel.textColor = darkGrey
-            questionLabel.font = UIFont(name: "New York Medium", size: 25)
+            questionLabel.font = UIFont(name: "NewYorkMedium-Regular", size: 25)
             questionLabel.textAlignment = .center
             let style1 = NSMutableParagraphStyle()
             style1.lineSpacing = 28
