@@ -12,27 +12,27 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-//    var window: UIWindow?
-//    var storyboard: UIStoryboard?
+    var window: UIWindow?
+    var storyboard: UIStoryboard?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-//        self.window = UIWindow(frame: UIScreen.main.bounds)
-//        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        var initialViewController: UIViewController
-//        if !UserDefaults.standard.bool(forKey: "LaunchedBefore") {
-//            initialViewController = mainStoryboard.instantiateViewController(withIdentifier: "Welcome") as! WelcomeViewController // 'LoginController' is the storyboard id of LoginViewController
-//            UserDefaults.standard.set(true, forKey: "LaunchedBefore")
-//        }
-//        else {
-//            initialViewController = mainStoryboard.instantiateViewController(withIdentifier: "Main") as! UserThoughtsViewController // 'MainController' is the storyboard id of MainViewController
-//              //If not logged in then show LoginViewController
-//        }
-//
-//            self.window?.rootViewController = initialViewController
-//
-//            self.window?.makeKeyAndVisible()
-//
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        var initialViewController: UIViewController
+        if !UserDefaults.standard.bool(forKey: "LaunchedBefore") {
+            initialViewController = mainStoryboard.instantiateViewController(withIdentifier: "Welcome") as! WelcomeViewController // 'LoginController' is the storyboard id of LoginViewController
+            UserDefaults.standard.set(true, forKey: "LaunchedBefore")
+        }
+        else {
+            initialViewController = mainStoryboard.instantiateViewController(withIdentifier: "Main") as! UserThoughtsViewController // 'MainController' is the storyboard id of MainViewController
+              //If not logged in then show LoginViewController
+        }
+
+            self.window?.rootViewController = initialViewController
+
+            self.window?.makeKeyAndVisible()
+
             return true
         }
     

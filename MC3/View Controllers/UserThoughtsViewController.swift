@@ -24,9 +24,8 @@ class UserThoughtsViewController: UIViewController {
     
     var numThoughts: Int = 0
     
-    let image1 = UIImage(named: "\(arrayCheck[0])")
-    let image2 = UIImage(named: "\(arrayCheck[1])")
-    let image3 = UIImage(named: "\(arrayCheck[2])")
+    var arr: [Thought] = [];
+    
     
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
@@ -51,7 +50,6 @@ class UserThoughtsViewController: UIViewController {
                   thoughtView.textColor = lightGrey
                   allAnswer.append(currentThought)
                   displayTree()
-                  displayMainView()
             // Do any additional setup after loading the view.
             animator = UIDynamicAnimator(referenceView: view)
             gravity = UIGravityBehavior(items: [])
@@ -64,63 +62,92 @@ class UserThoughtsViewController: UIViewController {
             self.animator.addBehavior(self.collision)
 //            DoppiaPalla.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(TextAppear)))
             
-    //        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(changeImg(button: pensiero1, start:4)), userInfo: nil, repeats: true)
-//            Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
-//                if(self.randomNumbers[0] == 162){
-//                    self.randomNumbers[0] = 1
-//                }
-//                self.changeImg(button: self.pensiero1, n: self.randomNumbers[0], state: "essential")
-//                self.randomNumbers[0] += 1
-//            }
-//            Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
-//                if(self.randomNumbers[1] == 253){
-//                               self.randomNumbers[1] = 1
-//                           }
-//                self.changeImg(button: self.pensiero2, n: self.randomNumbers[1], state: "not essential")
-//                self.randomNumbers[1] += 1
-//            }
-//            Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
-//                if(self.randomNumbers[2] == 162){
-//                               self.randomNumbers[2] = 1
-//                           }
-//                self.changeImg(button: self.pensiero3, n: self.randomNumbers[2], state: "essential")
-//                self.randomNumbers[2] += 1
-//
-//            }
-//            Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
-//                if(self.randomNumbers[3] == 253){
-//                               self.randomNumbers[3] = 1
-//                           }
-//                self.changeImg(button: self.pensiero4, n: self.randomNumbers[3], state: "not essential")
-//                self.randomNumbers[3] += 1
-//
-//            }
-//            Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
-//                if(self.randomNumbers[4] == 162){
-//                               self.randomNumbers[4] = 1
-//                           }
-//                self.changeImg(button: self.pensiero5, n: self.randomNumbers[4], state: "essential")
-//                self.randomNumbers[4] += 1
-//
-//            }
-//            Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
-//                if(self.randomNumbers[5] == 162){
-//                               self.randomNumbers[5] = 1
-//                           }
-//                self.changeImg(button: self.pensiero6, n: self.randomNumbers[5], state: "essential")
-//                self.randomNumbers[5] += 1
-//
-//            }
-//            Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
-//                if(self.randomNumbers[6] == 253){
-//                               self.randomNumbers[6] = 1
-//                           }
-//                self.changeImg(button: self.pensiero7, n: self.randomNumbers[6], state: "not essential")
-//                self.randomNumbers[6] += 1
-//
-//            }
 
         }
+    
+     
+     @objc func changeImg(button: UIButton, n: Int, state: String){
+         if(state == "essential"){
+            button.setImage(UIImage(named: "pink\(n)"), for: .normal)
+         } else{
+             button.setImage(UIImage(named: "blue\(n)"), for: .normal)
+         }
+        }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        arr = DatabaseHelper.istance.getAllThoughts()
+        
+        for i in 0..<arr.count{
+            
+          let SubView = UIView()
+          let button = UIButton()
+    
+          SubView.addSubview(button)
+    
+            if(arr[i].evaluation == "essential"){
+                
+                button.frame = CGRect(x: -15, y: -15, width: 150, height: 150)
+                button.tag = i;
+                button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
+                
+                SubView.frame = CGRect(x: 222, y: 40, width: 120, height: 120)
+                      DispatchQueue.main.async {
+                          self.collision.addItem(SubView)
+                          self.gravity.addItem(SubView)
+                      }
+                  Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
+                             if(self.randomNumbers[self.numThoughts] == 162){
+                                            self.randomNumbers[self.numThoughts] = 1
+                                        }
+                      self.changeImg(button: button, n: self.randomNumbers[self.numThoughts], state: "essential")
+                             self.randomNumbers[self.numThoughts] += 1
+
+                         }
+            }else{
+                
+                button.frame = CGRect(x: -15, y: -15, width: 120, height: 120)
+                button.tag = i;
+                button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
+                
+                SubView.frame = CGRect(x: 222, y: 40, width: 90, height: 90)
+                      DispatchQueue.main.async {
+                          self.collision.addItem(SubView)
+                          self.gravity.addItem(SubView)
+                      }
+                
+                Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
+                                          if(self.randomNumbers[self.numThoughts] == 253){
+                                                         self.randomNumbers[self.numThoughts] = 1
+                                                     }
+                                   self.changeImg(button: button, n: self.randomNumbers[self.numThoughts], state: "not-essential")
+                                          self.randomNumbers[self.numThoughts] += 1
+
+                                      }
+            }
+                  
+                  view.addSubview(SubView)
+        }
+        
+        motionManager.gyroUpdateInterval = 1.0 / 60.0
+        motionManager.startGyroUpdates(to: OperationQueue.current!) { (data, error) in
+            if let _ = data
+            {
+                let x = (data?.rotationRate.x ?? 0.0)
+               let y = (data?.rotationRate.y ?? 0.0)
+                
+                
+                self.gravity.gravityDirection = CGVector(dx: y*0.1, dy: 0)
+                
+            }
+    }
+
+    }
+    
+    @objc func buttonClicked(_ sender: UIButton){
+        thoughtView.text = arr[sender.tag].text
+
+    }
+
         
     func displayTree() {
         if (essentialThoughtCount > notEssentialThoughtCount) {
@@ -133,30 +160,22 @@ class UserThoughtsViewController: UIViewController {
             treeImage.image = UIImage(named: "plant2")
         }
     }
-    
-    func displayMainView() {
-        button1.setImage(image1, for: .normal)
-        button1.frame = CGRect(x: 30, y: 200, width: 100, height: 100)
-        button2.setImage(image2, for: .normal)
-        button2.frame = CGRect(x: 200, y: 200, width: 100, height: 100)
-        button3.setImage(image3, for: .normal)
-        button3.frame = CGRect(x: 200, y: 300, width: 100, height: 100)
-    }
-    
-    @IBAction func press1(_ sender: Any) {
-        thoughtView.text = allAnswer[0]
-        currentThought = allAnswer[0]
-    }
-    
-    @IBAction func press2(_ sender: Any) {
-        thoughtView.text = allAnswer[1]
-        currentThought = allAnswer[1]
-    }
-    
-    @IBAction func press3(_ sender: Any) {
-        thoughtView.text = allAnswer[2]
-        currentThought = allAnswer[2]
-    }
+//
+//
+//    @IBAction func press1(_ sender: Any) {
+//        thoughtView.text = allAnswer[0]
+//        currentThought = allAnswer[0]
+//    }
+//
+//    @IBAction func press2(_ sender: Any) {
+//        thoughtView.text = allAnswer[1]
+//        currentThought = allAnswer[1]
+//    }
+//
+//    @IBAction func press3(_ sender: Any) {
+//        thoughtView.text = allAnswer[2]
+//        currentThought = allAnswer[2]
+//    }
 
     
     @IBAction func editButton(_ sender: Any) {

@@ -18,7 +18,7 @@ class EvaluationThoughtViewController: UIViewController {
     @IBOutlet weak var thoughtView: UIImageView!
     @IBOutlet weak var ebutton: UIButton!
     @IBOutlet weak var nebutton: UIButton!
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +28,13 @@ class EvaluationThoughtViewController: UIViewController {
     
     @IBAction func essButton(_ sender: Any) {
         //change the image view to essential and delay 2 sec to see it
+        DatabaseHelper.istance.saveThoughtCoredata(text: finalThought, evaluation: "essential")
         performSegue(withIdentifier: "Main View", sender: self)
     }
     
     @IBAction func notEssButton(_ sender: Any) {
         //change the image view to not essential and delay 2 sec to see it
+        DatabaseHelper.istance.saveThoughtCoredata(text: finalThought, evaluation: "not-essential")
         performSegue(withIdentifier: "Main View", sender: self)
     }
     

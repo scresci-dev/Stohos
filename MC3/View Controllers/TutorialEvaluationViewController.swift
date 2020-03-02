@@ -28,7 +28,7 @@ class TutorialEvaluationViewController: UIViewController {
     @IBAction func essentialButton(_ sender: Any) {
         view.endEditing(true)
         essentialCount += 1
-        arrayCheck.append("essential")
+        DatabaseHelper.istance.saveThoughtCoredata(text: userAnswer, evaluation: "essential")
         greyThought.image = UIImage(named: "essential")
         nextMove()
     }
@@ -36,7 +36,7 @@ class TutorialEvaluationViewController: UIViewController {
     @IBAction func notEssentialButton(_ sender: Any) {
         view.endEditing(true)
         notEssentialCount += 1
-        arrayCheck.append("not-essential")
+        DatabaseHelper.istance.saveThoughtCoredata(text: userAnswer, evaluation: "not-essential")
         greyThought.image = UIImage(named: "not-essential")
         nextMove()
     }
