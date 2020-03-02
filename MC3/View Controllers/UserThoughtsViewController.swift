@@ -13,8 +13,7 @@ import CoreMotion
 
 class UserThoughtsViewController: UIViewController {
     
-    var essentialThoughtCount: Int = 0
-    var notEssentialThoughtCount: Int = 0
+
     var currentThought: String = " "
     var newThought: String = " "
     
@@ -22,14 +21,12 @@ class UserThoughtsViewController: UIViewController {
     
     var randomNumbers : [Int] = [Int.random(in: 1...200),Int.random(in: 1...200),Int.random(in: 1...200),Int.random(in: 1...200),Int.random(in: 1...200),Int.random(in: 1...200),Int.random(in: 1...200),Int.random(in: 1...200),Int.random(in: 1...200),Int.random(in: 1...200)]
     
-    var numThoughts: Int = 0
+    var numThoughts = 0
+    var numEssential = 0
+    var numNotEssential = 0
     
     var arr: [Thought] = [];
     
-    
-    @IBOutlet weak var button1: UIButton!
-    @IBOutlet weak var button2: UIButton!
-    @IBOutlet weak var button3: UIButton!
     @IBOutlet weak var thoughtView: UITextView!
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var editButton: UIButton!
@@ -41,12 +38,12 @@ class UserThoughtsViewController: UIViewController {
         var animator : UIDynamicAnimator!
          var gravity: UIGravityBehavior!
         var motionManager = CMMotionManager()
+    
         override func viewDidLoad() {
             super.viewDidLoad()
-            essentialThoughtCount = essentialCount
-                  notEssentialThoughtCount = notEssentialCount
-                  editButton.setTitleColor(darkGrey, for: .normal)
-                  deleteButton.setTitleColor(darkGrey, for: .normal)
+
+            editButton.setTitleColor(darkGrey, for: .normal)
+            deleteButton.setTitleColor(darkGrey, for: .normal)
                   thoughtView.textColor = lightGrey
                   allAnswer.append(currentThought)
                   displayTree()
@@ -85,7 +82,8 @@ class UserThoughtsViewController: UIViewController {
           SubView.addSubview(button)
     
             if(arr[i].evaluation == "essential"){
-                
+                numEssential += 1
+                numThoughts += 1
                 button.frame = CGRect(x: -15, y: -15, width: 150, height: 150)
                 button.tag = i;
                 button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
@@ -104,6 +102,8 @@ class UserThoughtsViewController: UIViewController {
 
                          }
             }else{
+                numNotEssential += 1
+                numThoughts += 1
                 
                 button.frame = CGRect(x: -15, y: -15, width: 120, height: 120)
                 button.tag = i;
@@ -150,10 +150,11 @@ class UserThoughtsViewController: UIViewController {
 
         
     func displayTree() {
-        if (essentialThoughtCount > notEssentialThoughtCount) {
+        
+        if (numEssential > numNotEssential) {
             treeImage.image = UIImage(named: "plant3")
         }
-        else if (essentialThoughtCount < notEssentialThoughtCount) {
+        else if (numEssential < numNotEssential) {
             treeImage.image = UIImage(named: "plant1")
         }
         else {
