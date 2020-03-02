@@ -30,7 +30,7 @@ class WelcomeViewController: UIViewController {
             userTextView.attributedText = NSAttributedString(string: userTextView.text, attributes: attributes)
             self.view.addSubview(userTextView)
             userTextView.allowsEditingTextAttributes = true
-            userTextView.frame = CGRect(x: 80.0, y: 400.0, width: 200.0, height: 150.0)
+            userTextView.frame = CGRect(x: 80.0, y: 400.0, width: 250.0, height: 100.0)
             userTextView.textAlignment = NSTextAlignment.center
             userTextView.textColor = lightGrey
             userTextView.font = UIFont(name: "NewYorkMedium-Regular", size: CGFloat(messageArray[counter].sizeFont))
