@@ -19,6 +19,7 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        showMessages()
         changeTextView()
         let gestureRec = UITapGestureRecognizer(target: self, action:  #selector (self.someAction (_:)))
         initialView.addGestureRecognizer(gestureRec)

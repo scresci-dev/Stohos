@@ -19,11 +19,11 @@ class UserThoughtsViewController: UIViewController {
     
     var timer = Timer()
     
-    var randomNumbers : [Int] = [Int.random(in: 1...200),Int.random(in: 1...200),Int.random(in: 1...200),Int.random(in: 1...200),Int.random(in: 1...200),Int.random(in: 1...200),Int.random(in: 1...200),Int.random(in: 1...200),Int.random(in: 1...200),Int.random(in: 1...200)]
+    var start : [Int] = []
     
     var numThoughts = 0
-    var numEssential = 0
-    var numNotEssential = 0
+    var numEssential = essentialCount
+    var numNotEssential = notEssentialCount
     
     var arr: [Thought] = [];
     
@@ -36,12 +36,12 @@ class UserThoughtsViewController: UIViewController {
     
         var collision : UICollisionBehavior!
         var animator : UIDynamicAnimator!
-         var gravity: UIGravityBehavior!
+        var gravity: UIGravityBehavior!
         var motionManager = CMMotionManager()
     
         override func viewDidLoad() {
             super.viewDidLoad()
-
+         start = [0, 22, 34, 43, 57, 70, 90, 104, 125, 142]
             editButton.setTitleColor(darkGrey, for: .normal)
             deleteButton.setTitleColor(darkGrey, for: .normal)
                   thoughtView.textColor = lightGrey
@@ -73,6 +73,7 @@ class UserThoughtsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         arr = DatabaseHelper.istance.getAllThoughts()
+
         
         for i in 0..<arr.count{
             
@@ -88,39 +89,40 @@ class UserThoughtsViewController: UIViewController {
                 button.tag = i;
                 button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
                 
-                SubView.frame = CGRect(x: 222, y: 40, width: 120, height: 120)
+                SubView.frame = CGRect(x: 222, y: 60, width: 120, height: 120)
                       DispatchQueue.main.async {
                           self.collision.addItem(SubView)
                           self.gravity.addItem(SubView)
                       }
                   Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
-                             if(self.randomNumbers[self.numThoughts] == 162){
-                                            self.randomNumbers[self.numThoughts] = 1
+                             if(self.start[self.numThoughts] >= 162){
+                                            self.start[self.numThoughts] = 1
                                         }
-                      self.changeImg(button: button, n: self.randomNumbers[self.numThoughts], state: "essential")
-                             self.randomNumbers[self.numThoughts] += 1
+                      self.changeImg(button: button, n: self.start[self.numThoughts], state: "essential")
+//                            print(self.randomNumbers[self.numThoughts])
+                             self.start[self.numThoughts] += 1
 
                          }
             }else{
                 numNotEssential += 1
                 numThoughts += 1
-                
+               
                 button.frame = CGRect(x: -15, y: -15, width: 120, height: 120)
                 button.tag = i;
                 button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
                 
-                SubView.frame = CGRect(x: 222, y: 40, width: 90, height: 90)
+                SubView.frame = CGRect(x: 222, y: 60, width: 90, height: 90)
                       DispatchQueue.main.async {
                           self.collision.addItem(SubView)
                           self.gravity.addItem(SubView)
                       }
                 
                 Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
-                                          if(self.randomNumbers[self.numThoughts] == 253){
-                                                         self.randomNumbers[self.numThoughts] = 1
+                                          if(self.start[self.numThoughts] >= 253){
+                                                         self.start[self.numThoughts] = 1
                                                      }
-                                   self.changeImg(button: button, n: self.randomNumbers[self.numThoughts], state: "not-essential")
-                                          self.randomNumbers[self.numThoughts] += 1
+                                   self.changeImg(button: button, n: self.start[self.numThoughts], state: "not-essential")
+                                          self.start[self.numThoughts] += 1
 
                                       }
             }
@@ -150,6 +152,9 @@ class UserThoughtsViewController: UIViewController {
 
         
     func displayTree() {
+        
+        print(numEssential)
+                       print(numNotEssential)
         
         if (numEssential > numNotEssential) {
             treeImage.image = UIImage(named: "plant3")

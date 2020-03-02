@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6B653E1E240D0FBE002578E1 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B653E1D240D0FBD002578E1 /* DatabaseHelper.swift */; };
+		6B653E21240D6450002578E1 /* NewYorkMedium-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6B653E20240D6450002578E1 /* NewYorkMedium-Regular.otf */; };
 		DD64247B2406B1A400A07D1C /* UserThoughtsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD64247A2406B1A400A07D1C /* UserThoughtsViewController.swift */; };
 		DD77D5F9240AC701000BA7B8 /* EvaluationThoughtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD77D5F8240AC701000BA7B8 /* EvaluationThoughtViewController.swift */; };
 		DD77D5FB240ACA51000BA7B8 /* WellDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD77D5FA240ACA51000BA7B8 /* WellDoneViewController.swift */; };
@@ -28,11 +29,11 @@
 		DDDA47D82409BFB3005950CF /* AddThoughtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA47D72409BFB3005950CF /* AddThoughtViewController.swift */; };
 		DDDA47E3240A974C005950CF /* Thought+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA47E1240A974C005950CF /* Thought+CoreDataClass.swift */; };
 		DDDA47E8240A99CD005950CF /* Thought+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA47E7240A99CD005950CF /* Thought+CoreDataProperties.swift */; };
-		DDF8CAA2240D60C80088B394 /* NewYorkMedium-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = DDF8CAA1240D60C80088B394 /* NewYorkMedium-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6B653E1D240D0FBD002578E1 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
+		6B653E20240D6450002578E1 /* NewYorkMedium-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkMedium-Regular.otf"; sourceTree = "<group>"; };
 		DD64247A2406B1A400A07D1C /* UserThoughtsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserThoughtsViewController.swift; sourceTree = "<group>"; };
 		DD77D5F8240AC701000BA7B8 /* EvaluationThoughtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationThoughtViewController.swift; sourceTree = "<group>"; };
 		DD77D5FA240ACA51000BA7B8 /* WellDoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellDoneViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +56,6 @@
 		DDDA47D72409BFB3005950CF /* AddThoughtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddThoughtViewController.swift; sourceTree = "<group>"; };
 		DDDA47E1240A974C005950CF /* Thought+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Thought+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DDDA47E7240A99CD005950CF /* Thought+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Thought+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		DDF8CAA1240D60C80088B394 /* NewYorkMedium-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NewYorkMedium-Regular.otf"; path = "../../../../Downloads/NewYorkMedium-Regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +91,7 @@
 			children = (
 				DDC2F09923FAEA9000BD4C45 /* AppDelegate.swift */,
 				DDC2F09B23FAEA9000BD4C45 /* SceneDelegate.swift */,
-				DDF8CAA1240D60C80088B394 /* NewYorkMedium-Regular.otf */,
+				6B653E20240D6450002578E1 /* NewYorkMedium-Regular.otf */,
 				DDC2F09F23FAEA9000BD4C45 /* Main.storyboard */,
 				DDC2F0A523FAEA9200BD4C45 /* Assets.xcassets */,
 				DDDA47E0240A9705005950CF /* View Controllers */,
@@ -197,7 +197,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDF8CAA2240D60C80088B394 /* NewYorkMedium-Regular.otf in Resources */,
+				6B653E21240D6450002578E1 /* NewYorkMedium-Regular.otf in Resources */,
 				DDC2F0B123FAEAED00BD4C45 /* .gitignore in Resources */,
 				DDC2F0A923FAEA9200BD4C45 /* LaunchScreen.storyboard in Resources */,
 				DDC2F0A623FAEA9200BD4C45 /* Assets.xcassets in Resources */,
