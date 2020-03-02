@@ -16,11 +16,12 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     var counter: Int = 0
-    let startPositions = [[0, 0, 0], [57, 73, 98], [13, 69, 82], [31, 0, 0]]
-    let lengths = [[0, 0, 0], [9, 14, 13], [13, 8, 28], [17]]
+//    let startPositions = [[0, 0, 0], [57, 73, 98], [13, 69, 82], [31, 0, 0]]
+//    let lengths = [[0, 0, 0], [9, 14, 13], [13, 8, 28], [17]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .light
         let gestureRec = UITapGestureRecognizer(target: self, action:  #selector (self.someAction (_:)))
         initialView.addGestureRecognizer(gestureRec)
         let attributedString = NSMutableAttributedString(string: userTextView.text)
@@ -39,19 +40,19 @@ class WelcomeViewController: UIViewController {
         showMessages()
     }
     
-    func attributedString(from string: String, semiboldRange: NSRange?) -> NSAttributedString {
-        let attrs = [
-            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18)
-        ]
-        let semiboldAttribute = [
-            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18, weight: .semibold)
-        ]
-        let attrStr = NSMutableAttributedString(string: string, attributes: attrs)
-        if let range = semiboldRange {
-            attrStr.setAttributes(semiboldAttribute, range: range)
-        }
-        return attrStr
-    }
+//    func attributedString(from string: String, semiboldRange: NSRange?) -> NSAttributedString {
+//        let attrs = [
+//            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18)
+//        ]
+//        let semiboldAttribute = [
+//            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18, weight: .semibold)
+//        ]
+//        let attrStr = NSMutableAttributedString(string: string, attributes: attrs)
+//        if let range = semiboldRange {
+//            attrStr.setAttributes(semiboldAttribute, range: range)
+//        }
+//        return attrStr
+//    }
 
     
     @objc func someAction(_ sender:UITapGestureRecognizer) {
