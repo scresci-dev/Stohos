@@ -242,7 +242,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done"/>
                                 <connections>
-                                    <action selector="donePressed:" destination="Dpr-gq-uDj" eventType="touchUpInside" id="itY-7e-Pu6"/>
                                     <segue destination="H0d-PG-Xds" kind="show" identifier="Evaluate Next" id="AX1-50-xku"/>
                                 </connections>
                             </button>
@@ -466,8 +465,8 @@
         <image name="not-essential" width="1689" height="1522"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="R3T-Od-V7C"/>
-        <segue reference="1V8-iC-Nfg"/>
+        <segue reference="AX1-50-xku"/>
+        <segue reference="LW6-wO-WU4"/>
         <segue reference="7AL-Qv-aAv"/>
     </inferredMetricsTieBreakers>
 </document>
