@@ -185,7 +185,7 @@ class UserThoughtsViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "Edit Thought") {
-            (segue.destination as! EditThoughtViewController).editedUserThought = currentThought
+            (segue.destination as! EditThoughtViewController).editedUserThought = thoughtView.text
         }
 //        if (segue.identifier == "Add Thought") {
 //            (segue.destination as! AddThoughtViewController).

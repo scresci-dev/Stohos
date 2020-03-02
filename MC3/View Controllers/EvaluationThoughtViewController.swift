@@ -13,6 +13,8 @@ import CoreData
 class EvaluationThoughtViewController: UIViewController {
     
     var finalThought: String!
+    var isUpdate: String!
+    var oldText: String!
     
     @IBOutlet weak var thoughtText: UITextView!
     @IBOutlet weak var thoughtView: UIImageView!
@@ -28,13 +30,22 @@ class EvaluationThoughtViewController: UIViewController {
     
     @IBAction func essButton(_ sender: Any) {
         //change the image view to essential and delay 2 sec to see it
+        if(isUpdate == "no"){
         DatabaseHelper.istance.saveThoughtCoredata(text: finalThought, evaluation: "essential")
+        }else{
+            DatabaseHelper.istance.updateThoughts(oldText: oldText, newText: finalThought, newEvaluation: "essential")
+        }
+        
         performSegue(withIdentifier: "Main View", sender: self)
     }
     
     @IBAction func notEssButton(_ sender: Any) {
         //change the image view to not essential and delay 2 sec to see it
+        if(isUpdate == "no"){
         DatabaseHelper.istance.saveThoughtCoredata(text: finalThought, evaluation: "not-essential")
+        }else{
+            DatabaseHelper.istance.updateThoughts(oldText: oldText, newText: finalThought, newEvaluation: "not-essential")
+        }
         performSegue(withIdentifier: "Main View", sender: self)
     }
     

@@ -50,4 +50,30 @@ class DatabaseHelper{
             // Error Handling
         }
     }
+    
+    func updateThoughts(oldText: String, newText :String, newEvaluation: String){
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest:NSFetchRequest<NSFetchRequestResult> = NSFetchRequest.init(entityName: "Thought")
+        fetchRequest.predicate = NSPredicate(format: "text = %@", oldText)
+        do{
+            let test = try managedContext.fetch(fetchRequest)
+            
+            let objectUpdate = test[0] as! NSManagedObject
+            objectUpdate.setValue("text", forKey: newText)
+            objectUpdate.setValue("evaluation", forKey: newEvaluation)
+            do{
+                try managedContext.save()
+            }
+            catch{
+                print(error)
+            }
+        }
+        catch{
+            print(error)
+        }
+        
+    }
 }
