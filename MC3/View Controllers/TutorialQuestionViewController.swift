@@ -20,7 +20,9 @@ class TutorialQuestionViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         answerText.delegate = self
-        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "greybackground.png")!)
+        nextButton.titleLabel?.font = UIFont(name: "NewYorkMedium-Regular", size: 25)
+        nextButton.setTitleColor(UIColor(red: 0.29, green: 0.29, blue: 0.29, alpha: 1), for: .normal)
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)

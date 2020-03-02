@@ -12,7 +12,7 @@ class TutorialEvaluationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "greybackground.png")!)
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
         greyThought.image = UIImage(named: "neutral")
         textAnswer.text = userAnswer
         textAnswer.textAlignment = .center
