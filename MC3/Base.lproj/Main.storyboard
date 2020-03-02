@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g6s-sF-NGW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g6s-sF-NGW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -200,9 +200,6 @@
                     <connections>
                         <outlet property="Barriera" destination="ApE-7n-3hQ" id="eme-LO-sYA"/>
                         <outlet property="BarrieraTop" destination="abK-qH-ENf" id="fqe-eL-CoY"/>
-                        <outlet property="button1" destination="B7S-kb-dhb" id="626-7A-79f"/>
-                        <outlet property="button2" destination="mMG-gY-tkA" id="OMO-ev-Oyc"/>
-                        <outlet property="button3" destination="mDs-ji-BXy" id="gCB-wb-Vn7"/>
                         <outlet property="deleteButton" destination="pDE-oF-0J8" id="nBG-bc-YMQ"/>
                         <outlet property="editButton" destination="NeT-jP-QX0" id="Ffs-vN-ouj"/>
                         <outlet property="thoughtView" destination="r76-aG-CIf" id="LCs-Ka-G79"/>
