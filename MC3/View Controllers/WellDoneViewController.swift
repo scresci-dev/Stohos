@@ -17,7 +17,7 @@ class WellDoneViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "greybackground.png")!)
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
         wellDoneText.textColor = lightGrey
         wellDoneText.font = UIFont(name: "NewYorkMedium-Regular", size: 18)
         wellDoneLabel.textColor = darkGrey
