@@ -31,7 +31,7 @@ class WellDoneViewController: UIViewController {
     }
     
     @objc func someAction(_ sender:UITapGestureRecognizer) {
-        UserDefaults.standard.bool(forKey: "LaunchedBefore") = true
+//        UserDefaults.standard.bool(forKey: "LaunchedBefore") = true
         performSegue(withIdentifier: "Main View", sender: self)
     }
     

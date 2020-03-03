@@ -29,7 +29,7 @@ class TutorialEvaluationViewController: UIViewController {
         view.endEditing(true)
         essentialCount += 1
         DatabaseHelper.istance.saveThoughtCoredata(text: userAnswer, evaluation: "essential")
-        greyThought.image = UIImage(named: "essential")
+        greyThought.image = UIImage(named: "Rosa1")
         nextMove()
     }
 
@@ -37,7 +37,7 @@ class TutorialEvaluationViewController: UIViewController {
         view.endEditing(true)
         notEssentialCount += 1
         DatabaseHelper.istance.saveThoughtCoredata(text: userAnswer, evaluation: "not-essential")
-        greyThought.image = UIImage(named: "not-essential")
+        greyThought.image = UIImage(named: "Verde1")
         nextMove()
     }
 
@@ -45,13 +45,15 @@ class TutorialEvaluationViewController: UIViewController {
     func nextMove() {
         count += 1
         if (count <= 2) {
-            DispatchQueue.main.asyncAfter(deadline:.now() + 2.0, execute: {
+//            DispatchQueue.main.asyncAfter(deadline:.now() + 2.0, execute: {
                self.performSegue(withIdentifier: "Next Question",sender: self)
-            })}
+//            })
+            
+        }
         else if (count > 2) {
-            DispatchQueue.main.asyncAfter(deadline:.now() + 2.0, execute: {
+//            DispatchQueue.main.asyncAfter(deadline:.now() + 2.0, execute: {
                self.performSegue(withIdentifier: "Tutorial Well Done",sender: self)
-            })
+//            })
         }
     }
 }

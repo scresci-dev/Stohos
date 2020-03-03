@@ -81,7 +81,7 @@ class UserThoughtsViewController: UIViewController {
           let button = UIButton()
     
           SubView.addSubview(button)
-    
+
             if(arr[i].evaluation == "essential"){
                 numThoughts += 1
                 button.frame = CGRect(x: -15, y: -15, width: 150, height: 150)
@@ -145,7 +145,7 @@ class UserThoughtsViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if !UserDefaults.standard.bool(forKey: "LaunchedBefore") {
-            performSegue(withIdentifier: "Tutorial", sender: self)
+//            performSegue(withIdentifier: "Tutorial", sender: self)
         }
     }
     
