@@ -76,4 +76,27 @@ class DatabaseHelper{
         }
         
     }
+    
+    func deleteThoughts(textThought: String){
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest:NSFetchRequest<NSFetchRequestResult> = NSFetchRequest.init(entityName: "Thought")
+        fetchRequest.predicate = NSPredicate(format: "text = %@", textThought)
+        do{
+            let test = try managedContext.fetch(fetchRequest)
+            
+            let objectDelete = test[0] as! NSManagedObject
+            
+                managedContext.delete(objectDelete)
+
+        }
+        catch{
+            print(error)
+        }
+        
+        }
+    
 }

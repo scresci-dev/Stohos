@@ -21,8 +21,6 @@ class UserThoughtsViewController: UIViewController {
     var start : [Int] = []
     
     var numThoughts = 0
-    var numEssential = essentialCount
-    var numNotEssential = notEssentialCount
     
     var arr: [Thought] = [];
     
@@ -68,15 +66,14 @@ class UserThoughtsViewController: UIViewController {
      
      @objc func changeImg(button: UIButton, n: Int, state: String){
          if(state == "essential"){
-            button.setImage(UIImage(named: "pink\(n)"), for: .normal)
+            button.setImage(UIImage(named: "Rosa\(n)"), for: .normal)
          } else{
-             button.setImage(UIImage(named: "blue\(n)"), for: .normal)
+             button.setImage(UIImage(named: "Verde\(n)"), for: .normal)
          }
         }
     
     override func viewWillAppear(_ animated: Bool) {
         arr = DatabaseHelper.istance.getAllThoughts()
-
         
         for i in 0..<arr.count{
             
@@ -86,7 +83,6 @@ class UserThoughtsViewController: UIViewController {
           SubView.addSubview(button)
     
             if(arr[i].evaluation == "essential"){
-                numEssential += 1
                 numThoughts += 1
                 button.frame = CGRect(x: -15, y: -15, width: 150, height: 150)
                 button.tag = i;
@@ -98,16 +94,14 @@ class UserThoughtsViewController: UIViewController {
                           self.gravity.addItem(SubView)
                       }
                   Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
-                             if(self.start[self.numThoughts] >= 162){
+                             if(self.start[self.numThoughts] >= 211){
                                             self.start[self.numThoughts] = 1
                                         }
                       self.changeImg(button: button, n: self.start[self.numThoughts], state: "essential")
-//                            print(self.randomNumbers[self.numThoughts])
                              self.start[self.numThoughts] += 1
 
                          }
             }else{
-                numNotEssential += 1
                 numThoughts += 1
                
                 button.frame = CGRect(x: -15, y: -15, width: 120, height: 120)
@@ -121,11 +115,11 @@ class UserThoughtsViewController: UIViewController {
                       }
                 
                 Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
-                                          if(self.start[self.numThoughts] >= 253){
-                                                         self.start[self.numThoughts] = 1
-                                                     }
-                                   self.changeImg(button: button, n: self.start[self.numThoughts], state: "not-essential")
-                                          self.start[self.numThoughts] += 1
+                   if(self.start[self.numThoughts] >= 211){
+                          self.start[self.numThoughts] = 1
+                                     }
+                   self.changeImg(button: button, n: self.start[self.numThoughts], state: "not-essential")
+                          self.start[self.numThoughts] += 1
 
                                       }
             }
@@ -159,18 +153,18 @@ class UserThoughtsViewController: UIViewController {
         
     func displayTree() {
         
-        print(numEssential)
-                       print(numNotEssential)
-        
-        if (numEssential > numNotEssential) {
-            plantButton.setImage(UIImage(named: "plant3"), for: .normal)
-        }
-        else if (numEssential < numNotEssential) {
-           plantButton.setImage(UIImage(named: "plant1"), for: .normal)
-        }
-        else {
-            plantButton.setImage(UIImage(named: "plant2"), for: .normal)
-        }
+//        print(numEssential)
+//                       print(numNotEssential)
+//
+//        if (numEssential > numNotEssential) {
+//            plantButton.setImage(UIImage(named: "plant3"), for: .normal)
+//        }
+//        else if (numEssential < numNotEssential) {
+//           plantButton.setImage(UIImage(named: "plant1"), for: .normal)
+//        }
+//        else {
+//            plantButton.setImage(UIImage(named: "plant2"), for: .normal)
+//        }
     }
     
     @IBAction func plantIsPressed(_ sender: Any) {
@@ -182,21 +176,26 @@ class UserThoughtsViewController: UIViewController {
         thoughtView.textColor = lightGrey
         let generator = UIImpactFeedbackGenerator(style: .medium)
         generator.impactOccurred()
-        if numNotEssential > numEssential {
-            thoughtView.text = "Try to let go of some of your non-essential thoughts and collect more essential ones"
-        }
-        else if numNotEssential < numEssential {
-            thoughtView.text = "Well done! You have freed yourself from most of your non-essential thoughts."
-        }
-        else {
-            thoughtView.text = "You are doing great! Keep decluttering your mind to stay productive, motivated and focused"
-        }
+//        if numNotEssential > numEssential {
+//            thoughtView.text = "Try to let go of some of your non-essential thoughts and collect more essential ones"
+//        }
+//        else if numNotEssential < numEssential {
+//            thoughtView.text = "Well done! You have freed yourself from most of your non-essential thoughts."
+//        }
+//        else {
+//            thoughtView.text = "You are doing great! Keep decluttering your mind to stay productive, motivated and focused"
+//        }
     }
     
     
     @IBAction func editButton(_ sender: Any) {
         performSegue(withIdentifier: "Edit Thought", sender: self)
     }
+    @IBAction func deleteButton(_ sender: UIButton) {
+        DatabaseHelper.istance.deleteThoughts(textThought: thoughtView.text)
+        numThoughts -= 1
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "Edit Thought") {

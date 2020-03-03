@@ -14,7 +14,6 @@ class TutorialEvaluationViewController: UIViewController {
         super.viewDidLoad()
         overrideUserInterfaceStyle = .light
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
-        greyThought.image = UIImage(named: "neutral")
         textAnswer.text = userAnswer
         textAnswer.textAlignment = .center
         textAnswer.textColor = lightGrey

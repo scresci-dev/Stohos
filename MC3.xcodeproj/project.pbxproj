@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6B653E1E240D0FBE002578E1 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B653E1D240D0FBD002578E1 /* DatabaseHelper.swift */; };
 		6B653E21240D6450002578E1 /* NewYorkMedium-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6B653E20240D6450002578E1 /* NewYorkMedium-Regular.otf */; };
+		6B653E23240EBB71002578E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B653E22240EBB71002578E1 /* Assets.xcassets */; };
 		DD64247B2406B1A400A07D1C /* UserThoughtsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD64247A2406B1A400A07D1C /* UserThoughtsViewController.swift */; };
 		DD6DA0B8240E6EB000556DCF /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6DA0B7240E6EB000556DCF /* HelpViewController.swift */; };
 		DD77D5F9240AC701000BA7B8 /* EvaluationThoughtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD77D5F8240AC701000BA7B8 /* EvaluationThoughtViewController.swift */; };
@@ -22,7 +23,6 @@
 		DDC2F09E23FAEA9000BD4C45 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC2F09D23FAEA9000BD4C45 /* WelcomeViewController.swift */; };
 		DDC2F0A123FAEA9000BD4C45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDC2F09F23FAEA9000BD4C45 /* Main.storyboard */; };
 		DDC2F0A423FAEA9000BD4C45 /* MC3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDC2F0A223FAEA9000BD4C45 /* MC3.xcdatamodeld */; };
-		DDC2F0A623FAEA9200BD4C45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDC2F0A523FAEA9200BD4C45 /* Assets.xcassets */; };
 		DDC2F0A923FAEA9200BD4C45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDC2F0A723FAEA9200BD4C45 /* LaunchScreen.storyboard */; };
 		DDC2F0B123FAEAED00BD4C45 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DDC2F0B023FAEAED00BD4C45 /* .gitignore */; };
 		DDDA47D42407FE25005950CF /* UserThoughtsDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA47D32407FE25005950CF /* UserThoughtsDatabase.swift */; };
@@ -35,6 +35,7 @@
 /* Begin PBXFileReference section */
 		6B653E1D240D0FBD002578E1 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 		6B653E20240D6450002578E1 /* NewYorkMedium-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkMedium-Regular.otf"; sourceTree = "<group>"; };
+		6B653E22240EBB71002578E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD64247A2406B1A400A07D1C /* UserThoughtsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserThoughtsViewController.swift; sourceTree = "<group>"; };
 		DD6DA0B7240E6EB000556DCF /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		DD77D5F8240AC701000BA7B8 /* EvaluationThoughtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationThoughtViewController.swift; sourceTree = "<group>"; };
@@ -49,7 +50,6 @@
 		DDC2F09D23FAEA9000BD4C45 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		DDC2F0A023FAEA9000BD4C45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDC2F0A323FAEA9000BD4C45 /* MC3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MC3.xcdatamodel; sourceTree = "<group>"; };
-		DDC2F0A523FAEA9200BD4C45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDC2F0A823FAEA9200BD4C45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDC2F0AA23FAEA9200BD4C45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDC2F0B023FAEAED00BD4C45 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -96,7 +96,6 @@
 				DDC2F09B23FAEA9000BD4C45 /* SceneDelegate.swift */,
 				6B653E20240D6450002578E1 /* NewYorkMedium-Regular.otf */,
 				DDC2F09F23FAEA9000BD4C45 /* Main.storyboard */,
-				DDC2F0A523FAEA9200BD4C45 /* Assets.xcassets */,
 				DDDA47E0240A9705005950CF /* View Controllers */,
 				DDDA47DF240A96E2005950CF /* Data */,
 				DDDA47DE240A96AE005950CF /* Database */,
@@ -104,6 +103,7 @@
 				DDC2F0AA23FAEA9200BD4C45 /* Info.plist */,
 				DDC2F0A223FAEA9000BD4C45 /* MC3.xcdatamodeld */,
 				6B653E1D240D0FBD002578E1 /* DatabaseHelper.swift */,
+				6B653E22240EBB71002578E1 /* Assets.xcassets */,
 			);
 			path = MC3;
 			sourceTree = "<group>";
@@ -203,8 +203,8 @@
 				6B653E21240D6450002578E1 /* NewYorkMedium-Regular.otf in Resources */,
 				DDC2F0B123FAEAED00BD4C45 /* .gitignore in Resources */,
 				DDC2F0A923FAEA9200BD4C45 /* LaunchScreen.storyboard in Resources */,
-				DDC2F0A623FAEA9200BD4C45 /* Assets.xcassets in Resources */,
 				DDC2F0A123FAEA9000BD4C45 /* Main.storyboard in Resources */,
+				6B653E23240EBB71002578E1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
