@@ -12,9 +12,9 @@ import CoreData
 
 class EvaluationThoughtViewController: UIViewController {
     
-    var finalThought: String!
-    var isUpdate: String!
-    var oldText: String!
+    var finalThought = String()
+    var isUpdate = String()
+    var oldText = String()
     
     @IBOutlet weak var thoughtText: UITextView!
     @IBOutlet weak var thoughtView: UIImageView!
@@ -26,6 +26,7 @@ class EvaluationThoughtViewController: UIViewController {
         super.viewDidLoad()
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "greybackground.png")!)
         thoughtText.text = finalThought
+        print(isUpdate)
     }
     
     @IBAction func essButton(_ sender: Any) {
@@ -33,6 +34,8 @@ class EvaluationThoughtViewController: UIViewController {
         if(isUpdate == "no"){
         DatabaseHelper.istance.saveThoughtCoredata(text: finalThought, evaluation: "essential")
         }else{
+            print(finalThought)
+            print("old: \(oldText)")
             DatabaseHelper.istance.updateThoughts(oldText: oldText, newText: finalThought, newEvaluation: "essential")
         }
         

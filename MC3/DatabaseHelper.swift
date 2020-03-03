@@ -62,8 +62,8 @@ class DatabaseHelper{
             let test = try managedContext.fetch(fetchRequest)
             
             let objectUpdate = test[0] as! NSManagedObject
-            objectUpdate.setValue("text", forKey: newText)
-            objectUpdate.setValue("evaluation", forKey: newEvaluation)
+            objectUpdate.setValue(newText, forKey: "text")
+            objectUpdate.setValue(newEvaluation, forKey: "evaluation")
             do{
                 try managedContext.save()
             }
