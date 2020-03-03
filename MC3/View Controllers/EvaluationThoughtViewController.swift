@@ -24,6 +24,7 @@ class EvaluationThoughtViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .light
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "greybackground.png")!)
         thoughtText.text = finalThought
         print(isUpdate)

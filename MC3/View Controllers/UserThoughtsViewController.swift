@@ -12,7 +12,6 @@ import CoreData
 import CoreMotion
 
 class UserThoughtsViewController: UIViewController {
-    
 
     var currentThought: String = " "
     var newThought: String = " "
@@ -30,9 +29,11 @@ class UserThoughtsViewController: UIViewController {
     @IBOutlet weak var thoughtView: UITextView!
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var editButton: UIButton!
-    @IBOutlet weak var treeImage: UIImageView!
     @IBOutlet weak var Barriera: UIImageView!
     @IBOutlet weak var BarrieraTop: UIImageView!
+    @IBOutlet weak var plantButton: UIButton!
+    @IBOutlet weak var questionmarkButton: UIButton!
+    
     
         var collision : UICollisionBehavior!
         var animator : UIDynamicAnimator!
@@ -41,12 +42,17 @@ class UserThoughtsViewController: UIViewController {
     
         override func viewDidLoad() {
             super.viewDidLoad()
-         start = [0, 22, 34, 43, 57, 70, 90, 104, 125, 142]
-            editButton.setTitleColor(darkGrey, for: .normal)
-            deleteButton.setTitleColor(darkGrey, for: .normal)
-                  thoughtView.textColor = lightGrey
-                  allAnswer.append(currentThought)
-                  displayTree()
+            overrideUserInterfaceStyle = .light
+            start = [0, 22, 34, 43, 57, 70, 90, 104, 125, 142]
+            editButton.titleLabel?.font = UIFont(name: "NewYorkMedium-Regular", size: 18)
+            editButton.setTitleColor(buttonColor, for: .normal)
+            deleteButton.titleLabel?.font = UIFont(name: "NewYorkMedium-Regular", size: 20)
+            deleteButton.setTitleColor(buttonColor, for: .normal)
+            thoughtView.textColor = lightGrey
+            allAnswer.append(currentThought)
+            questionmarkButton.setImage(UIImage(named: "questionmark"), for: .normal)
+            displayTree()
+            
             // Do any additional setup after loading the view.
             animator = UIDynamicAnimator(referenceView: view)
             gravity = UIGravityBehavior(items: [])
@@ -126,7 +132,10 @@ class UserThoughtsViewController: UIViewController {
 
                                       }
             }
-                  
+            if (numThoughts == 0) {
+                deleteButton.isEnabled = false
+                deleteButton.isHidden = true
+            }
                   view.addSubview(SubView)
         }
         
@@ -157,38 +166,43 @@ class UserThoughtsViewController: UIViewController {
                        print(numNotEssential)
         
         if (numEssential > numNotEssential) {
-            treeImage.image = UIImage(named: "plant3")
+            plantButton.setImage(UIImage(named: "plant3"), for: .normal)
         }
         else if (numEssential < numNotEssential) {
-            treeImage.image = UIImage(named: "plant1")
+           plantButton.setImage(UIImage(named: "plant1"), for: .normal)
         }
         else {
-            treeImage.image = UIImage(named: "plant2")
+            plantButton.setImage(UIImage(named: "plant2"), for: .normal)
         }
     }
+    
+    @IBAction func plantIsPressed(_ sender: Any) {
+        deleteButton.isHidden = true
+        deleteButton.isEnabled = false
+        thoughtView.font = UIFont(name: "NewYorkMedium-Regular", size: 16)
+        thoughtView.textAlignment = .center
+        thoughtView.textColor = lightGrey
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+        if numNotEssential > numEssential {
+            thoughtView.text = "Try to let go of some of your non-essential thoughts and collect more essential ones"
+        }
+        else if numNotEssential < numEssential {
+            thoughtView.text = "Well done! You have freed yourself from most of your non-essential thoughts."
+        }
+        else {
+            thoughtView.text = "You are doing great! Keep decluttering your mind to stay productive, motivated and focused"
+        }
+    }
+    
     
     @IBAction func editButton(_ sender: Any) {
         performSegue(withIdentifier: "Edit Thought", sender: self)
     }
     
-//    @IBAction func deleteAction(_ sender: Any) {
-//        if (button1.isTouchInside == true) {
-//            button1.isHidden = true
-//        }
-//        else if (button2.isTouchInside == true) {
-//            button2.isHidden = true
-//        }
-//        else if (button3.isTouchInside == true) {
-//            button3.isHidden = true
-//        }
-//    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "Edit Thought") {
             (segue.destination as! EditThoughtViewController).editedUserThought = thoughtView.text
         }
-//        if (segue.identifier == "Add Thought") {
-//            (segue.destination as! AddThoughtViewController).
-//        }
     }
 }
