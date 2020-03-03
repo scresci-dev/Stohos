@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g6s-sF-NGW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g6s-sF-NGW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +10,7 @@
         <!--Navigation Controller-->
         <scene sceneID="d01-EX-30P">
             <objects>
-                <navigationController id="g6s-sF-NGW" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="g6s-sF-NGW" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9sb-PE-zUz">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -124,7 +124,7 @@
         <!--User Thoughts View Controller-->
         <scene sceneID="5pG-4D-das">
             <objects>
-                <viewController storyboardIdentifier="Main" useStoryboardIdentifierAsRestorationIdentifier="YES" id="N1m-Em-c1a" customClass="UserThoughtsViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="N1m-Em-c1a" customClass="UserThoughtsViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FX1-nz-ET1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -180,13 +180,6 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeU-NX-L1U">
-                                <rect key="frame" x="291" y="681" width="63" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="d3U-u7-sOR" kind="presentation" id="ihi-qn-6bp"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="a6h-nS-OeH"/>
@@ -198,7 +191,6 @@
                         <outlet property="deleteButton" destination="pDE-oF-0J8" id="nBG-bc-YMQ"/>
                         <outlet property="editButton" destination="NeT-jP-QX0" id="Ffs-vN-ouj"/>
                         <outlet property="plantButton" destination="ata-aJ-TPD" id="5q7-KI-Zcr"/>
-                        <outlet property="questionmarkButton" destination="qeU-NX-L1U" id="5UJ-Yp-Ypj"/>
                         <outlet property="thoughtView" destination="r76-aG-CIf" id="LCs-Ka-G79"/>
                         <segue destination="HVM-I5-GwL" kind="show" identifier="Edit Thought" id="MGA-JQ-vFt"/>
                     </connections>
@@ -212,7 +204,7 @@
             <objects>
                 <viewController id="d3U-u7-sOR" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B71-Ev-z4h">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B29-TJ-6q9">
@@ -310,6 +302,13 @@
                                 <rect key="frame" x="87" y="138" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVm-hD-wbX">
+                                <rect key="frame" x="334" y="20" width="60" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="RMZ-fe-wc2" kind="presentation" id="QTg-lt-VoM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xxO-Pa-ub8"/>
@@ -318,6 +317,7 @@
                     <connections>
                         <outlet property="ebutton" destination="MqY-a0-aRS" id="ctg-5y-qYK"/>
                         <outlet property="nebutton" destination="vx8-mw-pcV" id="9U3-0l-a9y"/>
+                        <outlet property="questionmarkButton" destination="qVm-hD-wbX" id="Z2w-sQ-0xF"/>
                         <outlet property="thoughtText" destination="lY6-bl-SuX" id="ifU-ks-E6i"/>
                         <outlet property="thoughtView" destination="VUN-0g-HNL" id="7t1-zj-XUg"/>
                         <segue destination="N1m-Em-c1a" kind="show" identifier="Main View" id="LW6-wO-WU4"/>
@@ -325,7 +325,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="St6-Ov-q89" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7654" y="31"/>
+            <point key="canvasLocation" x="7653.6231884057979" y="30.803571428571427"/>
         </scene>
         <!--Edit Thought View Controller-->
         <scene sceneID="QJy-h5-jo7">
@@ -471,6 +471,43 @@
                 <tapGestureRecognizer id="qgh-ZW-QwB"/>
             </objects>
             <point key="canvasLocation" x="4018.8405797101454" y="30.803571428571427"/>
+        </scene>
+        <!--Help View Controller-->
+        <scene sceneID="cAx-yp-HrK">
+            <objects>
+                <viewController modalTransitionStyle="flipHorizontal" id="RMZ-fe-wc2" customClass="HelpViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nbc-zs-BiD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="r6c-X7-3m6">
+                                <rect key="frame" x="87" y="182" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cKK-ss-fX5">
+                                <rect key="frame" x="96" y="414" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="vKo-Or-2H0"/>
+                    </view>
+                    <connections>
+                        <outlet property="essentialView" destination="r6c-X7-3m6" id="gms-1y-o24"/>
+                        <outlet property="notEssentialView" destination="cKK-ss-fX5" id="ro0-tI-M9l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R3i-UD-Pqr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8709" y="31"/>
         </scene>
     </scenes>
     <resources>
