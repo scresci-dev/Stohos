@@ -521,6 +521,7 @@
         <image name="addThoughtButton" width="102" height="177.33332824707031"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="7Vc-nS-284"/>
         <segue reference="AX1-50-xku"/>
         <segue reference="LW6-wO-WU4"/>
         <segue reference="7AL-Qv-aAv"/>

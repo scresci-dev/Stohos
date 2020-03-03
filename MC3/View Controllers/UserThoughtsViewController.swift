@@ -142,6 +142,13 @@ class UserThoughtsViewController: UIViewController {
 
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if !UserDefaults.standard.bool(forKey: "LaunchedBefore") {
+            performSegue(withIdentifier: "Tutorial", sender: self)
+        }
+    }
+    
     @objc func buttonClicked(_ sender: UIButton){
         thoughtView.text = arr[sender.tag].text
         deleteButton.isEnabled = true
