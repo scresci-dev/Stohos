@@ -12,6 +12,7 @@ class TutorialEvaluationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .light
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
         greyThought.image = UIImage(named: "neutral")
         textAnswer.text = userAnswer
