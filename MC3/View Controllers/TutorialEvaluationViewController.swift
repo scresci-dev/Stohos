@@ -45,15 +45,15 @@ class TutorialEvaluationViewController: UIViewController {
     func nextMove() {
         count += 1
         if (count <= 2) {
-//            DispatchQueue.main.asyncAfter(deadline:.now() + 2.0, execute: {
+            DispatchQueue.main.asyncAfter(deadline:.now() + 1.0, execute: {
                self.performSegue(withIdentifier: "Next Question",sender: self)
-//            })
+            })
             
         }
         else if (count > 2) {
-//            DispatchQueue.main.asyncAfter(deadline:.now() + 2.0, execute: {
+            DispatchQueue.main.asyncAfter(deadline:.now() + 1.0, execute: {
                self.performSegue(withIdentifier: "Tutorial Well Done",sender: self)
-//            })
+            })
         }
     }
 }

@@ -27,6 +27,7 @@ class EvaluationThoughtViewController: UIViewController {
         overrideUserInterfaceStyle = .light
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "greybackground.png")!)
         questionmarkButton.setImage(UIImage(named: "questionmark"), for: .normal)
+        thoughtView.image = UIImage(named: "Spento1")
         thoughtText.text = finalThought
         print(isUpdate)
     }
@@ -40,7 +41,7 @@ class EvaluationThoughtViewController: UIViewController {
             print("old: \(oldText)")
             DatabaseHelper.istance.updateThoughts(oldText: oldText, newText: finalThought, newEvaluation: "essential")
         }
-        
+        thoughtView.image = UIImage(named: "Rosa1")
         performSegue(withIdentifier: "Main View", sender: self)
     }
     
@@ -51,6 +52,7 @@ class EvaluationThoughtViewController: UIViewController {
         }else{
             DatabaseHelper.istance.updateThoughts(oldText: oldText, newText: finalThought, newEvaluation: "not-essential")
         }
+        thoughtView.image = UIImage(named: "Verde1")
         performSegue(withIdentifier: "Main View", sender: self)
     }
     
