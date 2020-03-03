@@ -20,12 +20,13 @@ class EvaluationThoughtViewController: UIViewController {
     @IBOutlet weak var thoughtView: UIImageView!
     @IBOutlet weak var ebutton: UIButton!
     @IBOutlet weak var nebutton: UIButton!
-    
+    @IBOutlet weak var questionmarkButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         overrideUserInterfaceStyle = .light
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "greybackground.png")!)
+        questionmarkButton.setImage(UIImage(named: "questionmark"), for: .normal)
         thoughtText.text = finalThought
         print(isUpdate)
     }

@@ -32,8 +32,6 @@ class UserThoughtsViewController: UIViewController {
     @IBOutlet weak var Barriera: UIImageView!
     @IBOutlet weak var BarrieraTop: UIImageView!
     @IBOutlet weak var plantButton: UIButton!
-    @IBOutlet weak var questionmarkButton: UIButton!
-    
     
         var collision : UICollisionBehavior!
         var animator : UIDynamicAnimator!
@@ -50,7 +48,6 @@ class UserThoughtsViewController: UIViewController {
             deleteButton.setTitleColor(buttonColor, for: .normal)
             thoughtView.textColor = lightGrey
             allAnswer.append(currentThought)
-            questionmarkButton.setImage(UIImage(named: "questionmark"), for: .normal)
             displayTree()
             
             // Do any additional setup after loading the view.
