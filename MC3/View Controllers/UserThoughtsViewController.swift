@@ -132,10 +132,7 @@ class UserThoughtsViewController: UIViewController {
 
                                       }
             }
-            if (numThoughts == 0) {
-                deleteButton.isEnabled = false
-                deleteButton.isHidden = true
-            }
+        
                   view.addSubview(SubView)
         }
         
@@ -156,7 +153,10 @@ class UserThoughtsViewController: UIViewController {
     
     @objc func buttonClicked(_ sender: UIButton){
         thoughtView.text = arr[sender.tag].text
-
+        deleteButton.isEnabled = true
+        deleteButton.isHidden = false
+        editButton.isEnabled = true
+        editButton.isHidden = false
     }
 
         
@@ -179,6 +179,7 @@ class UserThoughtsViewController: UIViewController {
     @IBAction func plantIsPressed(_ sender: Any) {
         deleteButton.isHidden = true
         deleteButton.isEnabled = false
+        
         thoughtView.font = UIFont(name: "NewYorkMedium-Regular", size: 16)
         thoughtView.textAlignment = .center
         thoughtView.textColor = lightGrey
