@@ -11,7 +11,7 @@ import UIKit
 
 class EditThoughtViewController: UIViewController {
     
-    var editedUserThought: String!
+    var editedUserThought = String()
     
     @IBOutlet weak var editField: UITextView!
     
