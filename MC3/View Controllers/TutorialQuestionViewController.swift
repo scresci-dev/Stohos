@@ -11,6 +11,8 @@ import UIKit
 
 class TutorialQuestionViewController: UIViewController, UITextViewDelegate {
     
+    let placeholder = "Placeholder"
+        
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerText: UITextView!
     @IBOutlet weak var progressView: UIImageView!
@@ -19,6 +21,9 @@ class TutorialQuestionViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        answerText.delegate = self
+        answerText.text = placeholder
+        answerText.textColor = UIColor.lightGray
         overrideUserInterfaceStyle = .light
         answerText.delegate = self
         nextButton.titleLabel?.font = UIFont(name: "NewYorkMedium-Regular", size: 25)
