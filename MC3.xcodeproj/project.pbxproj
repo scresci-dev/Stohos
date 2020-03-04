@@ -11,6 +11,7 @@
 		6B653E21240D6450002578E1 /* NewYorkMedium-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6B653E20240D6450002578E1 /* NewYorkMedium-Regular.otf */; };
 		6B653E23240EBB71002578E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B653E22240EBB71002578E1 /* Assets.xcassets */; };
 		DD01A8BB240F49100032AD88 /* HelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD01A8BA240F49100032AD88 /* HelperViewController.swift */; };
+		DD45F9292410047D00AA9521 /* PlantMessageDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD45F9282410047D00AA9521 /* PlantMessageDatabase.swift */; };
 		DD64247B2406B1A400A07D1C /* UserThoughtsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD64247A2406B1A400A07D1C /* UserThoughtsViewController.swift */; };
 		DD77D5F9240AC701000BA7B8 /* EvaluationThoughtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD77D5F8240AC701000BA7B8 /* EvaluationThoughtViewController.swift */; };
 		DD77D5FB240ACA51000BA7B8 /* PerfectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD77D5FA240ACA51000BA7B8 /* PerfectViewController.swift */; };
@@ -36,6 +37,7 @@
 		6B653E20240D6450002578E1 /* NewYorkMedium-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkMedium-Regular.otf"; sourceTree = "<group>"; };
 		6B653E22240EBB71002578E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD01A8BA240F49100032AD88 /* HelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperViewController.swift; sourceTree = "<group>"; };
+		DD45F9282410047D00AA9521 /* PlantMessageDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantMessageDatabase.swift; sourceTree = "<group>"; };
 		DD64247A2406B1A400A07D1C /* UserThoughtsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserThoughtsViewController.swift; sourceTree = "<group>"; };
 		DD77D5F8240AC701000BA7B8 /* EvaluationThoughtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationThoughtViewController.swift; sourceTree = "<group>"; };
 		DD77D5FA240ACA51000BA7B8 /* PerfectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfectViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			children = (
 				DD84143E23FFD8F400478319 /* MessagesDatabase.swift */,
 				DD84143623FD58F100478319 /* QuestionsDatabase.swift */,
+				DD45F9282410047D00AA9521 /* PlantMessageDatabase.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			files = (
 				DD77D5FB240ACA51000BA7B8 /* PerfectViewController.swift in Sources */,
 				DD64247B2406B1A400A07D1C /* UserThoughtsViewController.swift in Sources */,
+				DD45F9292410047D00AA9521 /* PlantMessageDatabase.swift in Sources */,
 				DDC2F09E23FAEA9000BD4C45 /* WelcomeViewController.swift in Sources */,
 				DDC2F09A23FAEA9000BD4C45 /* AppDelegate.swift in Sources */,
 				DD84143723FD58F100478319 /* QuestionsDatabase.swift in Sources */,
