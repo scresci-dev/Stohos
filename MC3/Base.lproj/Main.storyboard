@@ -336,7 +336,6 @@
                         <outlet property="nextButton" destination="Ym8-I1-MrI" id="OSU-op-GaH"/>
                         <outlet property="questionmarkButton" destination="qVm-hD-wbX" id="Z2w-sQ-0xF"/>
                         <outlet property="thoughtText" destination="lY6-bl-SuX" id="ifU-ks-E6i"/>
-                        <outlet property="thoughtView" destination="VUN-0g-HNL" id="7t1-zj-XUg"/>
                         <segue destination="N1m-Em-c1a" kind="presentation" identifier="Main View" modalPresentationStyle="fullScreen" id="LW6-wO-WU4"/>
                     </connections>
                 </viewController>

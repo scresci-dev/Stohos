@@ -22,7 +22,6 @@ class EditThoughtViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         overrideUserInterfaceStyle = .light
         editField.delegate = self
-        self.view.backgroundColor = backgroundColor
         editField.text = editedUserThought
         editField.font = UIFont(name: "NewYorkMedium-Regular", size: 18)
         

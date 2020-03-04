@@ -20,7 +20,6 @@ class TutorialQuestionViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         answerText.delegate = self
-        self.view.backgroundColor = backgroundColor
         editAnswerText()
         editButton()
         displayView()
