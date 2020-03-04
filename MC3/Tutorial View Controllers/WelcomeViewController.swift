@@ -27,33 +27,19 @@ class WelcomeViewController: UIViewController {
         initialView.addGestureRecognizer(gestureRec)
         let attributedString = NSMutableAttributedString(string: userTextView.text)
         attributedString.addAttribute(NSAttributedString.Key.kern, value: CGFloat(0.6), range: NSRange(location: 0, length: attributedString.length))
-            userTextView.attributedText = attributedString
-            let style = NSMutableParagraphStyle()
-            style.lineSpacing = 24
-            let attributes = [NSAttributedString.Key.paragraphStyle: style]
-            userTextView.attributedText = NSAttributedString(string: userTextView.text, attributes: attributes)
-            self.view.addSubview(userTextView)
-            userTextView.allowsEditingTextAttributes = true
-            userTextView.frame = CGRect(x: 70.0, y: 400.0, width: 280.0, height: 150.0)
-            userTextView.textAlignment = NSTextAlignment.center
-            userTextView.textColor = lightGrey
-            userTextView.font = UIFont(name: "NewYorkMedium-Regular", size: CGFloat(messageArray[counter].sizeFont))
+        userTextView.attributedText = attributedString
+        let style = NSMutableParagraphStyle()
+        style.lineSpacing = 24
+        let attributes = [NSAttributedString.Key.paragraphStyle: style]
+        userTextView.attributedText = NSAttributedString(string: userTextView.text, attributes: attributes)
+        self.view.addSubview(userTextView)
+        userTextView.allowsEditingTextAttributes = true
+        userTextView.frame = CGRect(x: 70.0, y: 400.0, width: 280.0, height: 150.0)
+        userTextView.textAlignment = NSTextAlignment.center
+        userTextView.textColor = lightGrey
+        userTextView.font = UIFont(name: "NewYorkMedium-Regular", size: CGFloat(messageArray[counter].sizeFont))
         showMessages()
     }
-    
-//    func attributedString(from string: String, semiboldRange: NSRange?) -> NSAttributedString {
-//        let attrs = [
-//            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18)
-//        ]
-//        let semiboldAttribute = [
-//            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18, weight: .semibold)
-//        ]
-//        let attrStr = NSMutableAttributedString(string: string, attributes: attrs)
-//        if let range = semiboldRange {
-//            attrStr.setAttributes(semiboldAttribute, range: range)
-//        }
-//        return attrStr
-//    }
 
     
     @objc func someAction(_ sender:UITapGestureRecognizer) {

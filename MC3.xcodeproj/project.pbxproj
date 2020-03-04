@@ -10,6 +10,7 @@
 		6B653E1E240D0FBE002578E1 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B653E1D240D0FBD002578E1 /* DatabaseHelper.swift */; };
 		6B653E21240D6450002578E1 /* NewYorkMedium-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6B653E20240D6450002578E1 /* NewYorkMedium-Regular.otf */; };
 		6B653E23240EBB71002578E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B653E22240EBB71002578E1 /* Assets.xcassets */; };
+		DD01A8BB240F49100032AD88 /* HelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD01A8BA240F49100032AD88 /* HelperViewController.swift */; };
 		DD64247B2406B1A400A07D1C /* UserThoughtsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD64247A2406B1A400A07D1C /* UserThoughtsViewController.swift */; };
 		DD6DA0B8240E6EB000556DCF /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6DA0B7240E6EB000556DCF /* HelpViewController.swift */; };
 		DD77D5F9240AC701000BA7B8 /* EvaluationThoughtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD77D5F8240AC701000BA7B8 /* EvaluationThoughtViewController.swift */; };
@@ -25,7 +26,6 @@
 		DDC2F0A423FAEA9000BD4C45 /* MC3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DDC2F0A223FAEA9000BD4C45 /* MC3.xcdatamodeld */; };
 		DDC2F0A923FAEA9200BD4C45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDC2F0A723FAEA9200BD4C45 /* LaunchScreen.storyboard */; };
 		DDC2F0B123FAEAED00BD4C45 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DDC2F0B023FAEAED00BD4C45 /* .gitignore */; };
-		DDDA47D42407FE25005950CF /* UserThoughtsDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA47D32407FE25005950CF /* UserThoughtsDatabase.swift */; };
 		DDDA47D624082E3A005950CF /* EditThoughtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA47D524082E3A005950CF /* EditThoughtViewController.swift */; };
 		DDDA47D82409BFB3005950CF /* AddThoughtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA47D72409BFB3005950CF /* AddThoughtViewController.swift */; };
 		DDDA47E3240A974C005950CF /* Thought+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA47E1240A974C005950CF /* Thought+CoreDataClass.swift */; };
@@ -36,6 +36,7 @@
 		6B653E1D240D0FBD002578E1 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 		6B653E20240D6450002578E1 /* NewYorkMedium-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkMedium-Regular.otf"; sourceTree = "<group>"; };
 		6B653E22240EBB71002578E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DD01A8BA240F49100032AD88 /* HelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperViewController.swift; sourceTree = "<group>"; };
 		DD64247A2406B1A400A07D1C /* UserThoughtsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserThoughtsViewController.swift; sourceTree = "<group>"; };
 		DD6DA0B7240E6EB000556DCF /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		DD77D5F8240AC701000BA7B8 /* EvaluationThoughtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationThoughtViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +54,6 @@
 		DDC2F0A823FAEA9200BD4C45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDC2F0AA23FAEA9200BD4C45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DDC2F0B023FAEAED00BD4C45 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		DDDA47D32407FE25005950CF /* UserThoughtsDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserThoughtsDatabase.swift; sourceTree = "<group>"; };
 		DDDA47D524082E3A005950CF /* EditThoughtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditThoughtViewController.swift; sourceTree = "<group>"; };
 		DDDA47D72409BFB3005950CF /* AddThoughtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddThoughtViewController.swift; sourceTree = "<group>"; };
 		DDDA47E1240A974C005950CF /* Thought+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Thought+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -71,6 +71,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD01A8BC240F495A0032AD88 /* Tutorial View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DDC2F09D23FAEA9000BD4C45 /* WelcomeViewController.swift */,
+				DD84143A23FD77FF00478319 /* TutorialQuestionViewController.swift */,
+				DD84143C23FED79E00478319 /* TutorialEvaluationViewController.swift */,
+				DD77D5FA240ACA51000BA7B8 /* WellDoneViewController.swift */,
+			);
+			path = "Tutorial View Controllers";
+			sourceTree = "<group>";
+		};
 		DDC2F08D23FAEA9000BD4C45 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +107,7 @@
 				DDC2F09B23FAEA9000BD4C45 /* SceneDelegate.swift */,
 				6B653E20240D6450002578E1 /* NewYorkMedium-Regular.otf */,
 				DDC2F09F23FAEA9000BD4C45 /* Main.storyboard */,
+				DD01A8BC240F495A0032AD88 /* Tutorial View Controllers */,
 				DDDA47E0240A9705005950CF /* View Controllers */,
 				DDDA47DF240A96E2005950CF /* Data */,
 				DDDA47DE240A96AE005950CF /* Database */,
@@ -111,7 +123,6 @@
 		DDDA47DE240A96AE005950CF /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				DDDA47D32407FE25005950CF /* UserThoughtsDatabase.swift */,
 				DD84143E23FFD8F400478319 /* MessagesDatabase.swift */,
 				DD84143623FD58F100478319 /* QuestionsDatabase.swift */,
 			);
@@ -130,14 +141,11 @@
 		DDDA47E0240A9705005950CF /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DDC2F09D23FAEA9000BD4C45 /* WelcomeViewController.swift */,
-				DD84143A23FD77FF00478319 /* TutorialQuestionViewController.swift */,
-				DD84143C23FED79E00478319 /* TutorialEvaluationViewController.swift */,
-				DD77D5FA240ACA51000BA7B8 /* WellDoneViewController.swift */,
 				DD64247A2406B1A400A07D1C /* UserThoughtsViewController.swift */,
 				DDDA47D72409BFB3005950CF /* AddThoughtViewController.swift */,
 				DDDA47D524082E3A005950CF /* EditThoughtViewController.swift */,
 				DD77D5F8240AC701000BA7B8 /* EvaluationThoughtViewController.swift */,
+				DD01A8BA240F49100032AD88 /* HelperViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -227,7 +235,7 @@
 				DD84143F23FFD8F400478319 /* MessagesDatabase.swift in Sources */,
 				DD77D5F9240AC701000BA7B8 /* EvaluationThoughtViewController.swift in Sources */,
 				DDC2F0A423FAEA9000BD4C45 /* MC3.xcdatamodeld in Sources */,
-				DDDA47D42407FE25005950CF /* UserThoughtsDatabase.swift in Sources */,
+				DD01A8BB240F49100032AD88 /* HelperViewController.swift in Sources */,
 				DD6DA0B8240E6EB000556DCF /* HelpViewController.swift in Sources */,
 				DDDA47D82409BFB3005950CF /* AddThoughtViewController.swift in Sources */,
 				DDDA47E3240A974C005950CF /* Thought+CoreDataClass.swift in Sources */,

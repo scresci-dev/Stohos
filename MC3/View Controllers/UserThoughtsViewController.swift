@@ -45,8 +45,6 @@ class UserThoughtsViewController: UIViewController {
             deleteButton.titleLabel?.font = UIFont(name: "NewYorkMedium-Regular", size: 20)
             deleteButton.setTitleColor(buttonColor, for: .normal)
             thoughtView.textColor = lightGrey
-            allAnswer.append(currentThought)
-            displayTree()
             
             // Do any additional setup after loading the view.
             animator = UIDynamicAnimator(referenceView: view)
@@ -58,7 +56,7 @@ class UserThoughtsViewController: UIViewController {
             self.collision.addBoundary(withIdentifier: "Barrier1" as NSCopying, for: UIBezierPath(rect: Barriera.frame))
             self.collision.addBoundary(withIdentifier: "Barrier2" as NSCopying, for: UIBezierPath(rect: BarrieraTop.frame))
             self.animator.addBehavior(self.collision)
-//            DoppiaPalla.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(TextAppear)))
+//          DoppiaPalla.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(TextAppear)))
             
 
         }
@@ -157,22 +155,6 @@ class UserThoughtsViewController: UIViewController {
         editButton.isHidden = false
     }
 
-        
-    func displayTree() {
-        
-//        print(numEssential)
-//                       print(numNotEssential)
-//
-//        if (numEssential > numNotEssential) {
-//            plantButton.setImage(UIImage(named: "plant3"), for: .normal)
-//        }
-//        else if (numEssential < numNotEssential) {
-//           plantButton.setImage(UIImage(named: "plant1"), for: .normal)
-//        }
-//        else {
-//            plantButton.setImage(UIImage(named: "plant2"), for: .normal)
-//        }
-    }
     
     @IBAction func plantIsPressed(_ sender: Any) {
         deleteButton.isHidden = true
@@ -183,15 +165,6 @@ class UserThoughtsViewController: UIViewController {
         thoughtView.textColor = lightGrey
         let generator = UIImpactFeedbackGenerator(style: .medium)
         generator.impactOccurred()
-//        if numNotEssential > numEssential {
-//            thoughtView.text = "Try to let go of some of your non-essential thoughts and collect more essential ones"
-//        }
-//        else if numNotEssential < numEssential {
-//            thoughtView.text = "Well done! You have freed yourself from most of your non-essential thoughts."
-//        }
-//        else {
-//            thoughtView.text = "You are doing great! Keep decluttering your mind to stay productive, motivated and focused"
-//        }
     }
     
     
