@@ -39,7 +39,8 @@ class TutorialEvaluationViewController: UIViewController {
         essentialButton.setImage(UIImage(named: "Essential Reflect"), for: .normal)
         notEssentialButton.setImage(UIImage(named: "NonEssential Reflect"), for: .normal)
 
-        timerEssentialSpento()
+        timerEssential()
+        timerNotEssential()
         
         
         

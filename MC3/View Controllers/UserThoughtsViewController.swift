@@ -173,7 +173,7 @@ class UserThoughtsViewController: UIViewController {
         plantLabel.textAlignment = .center
         plantLabel.font = UIFont(name: "NewYorkMedium-Regular", size: 16)
         plantLabel.textColor = lightGrey
-        if (plantCounter < 10) {
+        if (plantCounter < 9) {
             plantLabel.text = plantArray[plantCounter].text
             plantCounter += 1
         } else {
@@ -204,7 +204,6 @@ class UserThoughtsViewController: UIViewController {
         DatabaseHelper.istance.deleteThoughts(textThought: thoughtView.text)
         let generator = UIImpactFeedbackGenerator(style: .heavy)
         generator.impactOccurred()
-        performSegue(withIdentifier: "Last View", sender: self)
         numThoughts -= 1
         deleteButton.isHidden = true
         deleteButton.isEnabled = false
