@@ -11,14 +11,12 @@ import UIKit
 
 class PerfectViewController: UIViewController {
     
-    @IBOutlet var perfectView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         overrideUserInterfaceStyle = .light
         let gestureRec = UITapGestureRecognizer(target: self, action:  #selector (self.someAction (_:)))
-        
-        perfectView.addGestureRecognizer(gestureRec)
+        view.addGestureRecognizer(gestureRec)
     }
     
     @objc func someAction(_ sender:UITapGestureRecognizer) {

@@ -49,6 +49,8 @@ class TutorialEvaluationViewController: UIViewController {
         var j = 0
         timerEss.invalidate()
         timerSpNot.invalidate()
+        timerNot.invalidate()
+        timerSpEss.invalidate()
         timerNotEssential()
         timerSpEss = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
            if(j >= 210){
@@ -60,8 +62,10 @@ class TutorialEvaluationViewController: UIViewController {
     }
     func timerNotEssentialSpento(){
         var j = 0
-          timerNot.invalidate()
-          timerSpEss.invalidate()
+        timerNot.invalidate()
+        timerSpEss.invalidate()
+        timerEss.invalidate()
+        timerSpNot.invalidate()
         timerEssential()
         timerSpNot =  Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
              if(j >= 210){
