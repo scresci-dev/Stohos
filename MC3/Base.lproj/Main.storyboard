@@ -181,7 +181,7 @@
                                     <segue destination="oNM-xE-TX3" kind="presentation" identifier="WarningVC" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="FBX-rN-KIs"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQq-wR-MRm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQq-wR-MRm">
                                 <rect key="frame" x="43" y="649" width="328" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText"/>
@@ -278,16 +278,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Reflect" translatesAutoresizingMaskIntoConstraints="NO" id="VUN-0g-HNL">
-                                <rect key="frame" x="53" y="132" width="308" height="143"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="138" id="6zD-s9-NEe"/>
-                                    <constraint firstAttribute="width" constant="240" id="9KI-gk-UBr"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="187" id="cUM-Xl-lqG"/>
-                                    <constraint firstAttribute="height" constant="187" id="mKt-Cw-mzo"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="187" id="vxp-It-kKi"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqY-a0-aRS">
                                 <rect key="frame" x="53" y="327" width="150" height="138"/>
                                 <constraints>
@@ -323,6 +313,16 @@
                                     <action selector="notEssButton:" destination="H0d-PG-Xds" eventType="touchUpInside" id="blB-qQ-jaq"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Reflect" translatesAutoresizingMaskIntoConstraints="NO" id="VUN-0g-HNL">
+                                <rect key="frame" x="54" y="123" width="340" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="138" id="6zD-s9-NEe"/>
+                                    <constraint firstAttribute="width" constant="240" id="9KI-gk-UBr"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="187" id="cUM-Xl-lqG"/>
+                                    <constraint firstAttribute="height" constant="187" id="mKt-Cw-mzo"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="187" id="vxp-It-kKi"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -541,8 +541,8 @@
         <image name="questionmark" width="42" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ejv-vo-jwM"/>
-        <segue reference="EEt-KG-hBY"/>
+        <segue reference="2Y7-pF-SYi"/>
+        <segue reference="LW6-wO-WU4"/>
         <segue reference="7AL-Qv-aAv"/>
     </inferredMetricsTieBreakers>
 </document>

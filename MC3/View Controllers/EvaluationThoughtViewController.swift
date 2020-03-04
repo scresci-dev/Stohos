@@ -37,6 +37,8 @@ class EvaluationThoughtViewController: UIViewController {
     
     @IBAction func essButton(_ sender: Any) {
         //change the image view to essential and delay 2 sec to see it
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+               generator.impactOccurred()
         if(isUpdate == "no"){
         DatabaseHelper.istance.saveThoughtCoredata(text: finalThought, evaluation: "essential")
         }else{
@@ -49,6 +51,8 @@ class EvaluationThoughtViewController: UIViewController {
     
     @IBAction func notEssButton(_ sender: Any) {
         //change the image view to not essential and delay 2 sec to see it
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+               generator.impactOccurred()
         if(isUpdate == "no"){
         DatabaseHelper.istance.saveThoughtCoredata(text: finalThought, evaluation: "not-essential")
         }else{

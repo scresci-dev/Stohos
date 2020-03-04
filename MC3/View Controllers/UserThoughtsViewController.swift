@@ -157,6 +157,8 @@ class UserThoughtsViewController: UIViewController {
     }
     
     @objc func buttonClicked(_ sender: UIButton){
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
         thoughtView.text = arr[sender.tag].text
         deleteButton.isEnabled = true
         deleteButton.isHidden = false
@@ -179,7 +181,7 @@ class UserThoughtsViewController: UIViewController {
         } else {
             plantCounter = 0
         }
-        let generator = UIImpactFeedbackGenerator(style: .medium)
+        let generator = UIImpactFeedbackGenerator(style: .light)
         generator.impactOccurred()
     }
     
@@ -189,6 +191,8 @@ class UserThoughtsViewController: UIViewController {
             performSegue(withIdentifier: "Edit Thought", sender: self)
         }
         else {
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.warning)
             performSegue(withIdentifier: "WarningVC", sender: self)
         }
 
@@ -200,6 +204,9 @@ class UserThoughtsViewController: UIViewController {
     }
     @IBAction func deleteButton(_ sender: UIButton) {
         DatabaseHelper.istance.deleteThoughts(textThought: thoughtView.text)
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
+        performSegue(withIdentifier: "Last View", sender: self)
         numThoughts -= 1
         deleteButton.isHidden = true
         deleteButton.isEnabled = false

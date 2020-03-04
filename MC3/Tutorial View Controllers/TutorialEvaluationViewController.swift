@@ -94,6 +94,8 @@ class TutorialEvaluationViewController: UIViewController {
     }
 
     @IBAction func essentialButton(_ sender: Any) {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+               generator.impactOccurred()
         view.endEditing(true)
         evaluation = "essential"
         timerEssentialSpento()
@@ -102,6 +104,8 @@ class TutorialEvaluationViewController: UIViewController {
     }
 
     @IBAction func notEssentialButton(_ sender: Any) {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+               generator.impactOccurred()
         view.endEditing(true)
         evaluation = "not-essential"
         timerNotEssentialSpento()
