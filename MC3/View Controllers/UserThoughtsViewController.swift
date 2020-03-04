@@ -129,8 +129,6 @@ class UserThoughtsViewController: UIViewController {
                                       }
             }
             
-
-        
                   view.addSubview(SubView)
         }
         
