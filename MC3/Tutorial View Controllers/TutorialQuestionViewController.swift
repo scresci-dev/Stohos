@@ -19,18 +19,15 @@ class TutorialQuestionViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        answerText.text = "Write here..."
-        answerText.textColor = UIColor.lightGray
-        overrideUserInterfaceStyle = .light
        
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         editAnswerText()
         editButton()
         displayView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        answerText.becomeFirstResponder()
     }
     
    func textViewDidBeginEditing(_ textView: UITextView) {
@@ -41,40 +38,9 @@ class TutorialQuestionViewController: UIViewController, UITextViewDelegate {
    }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText newText: String) -> Bool {
-        let currentText:String = textView.text
-        let updatedText = (currentText as NSString).replacingCharacters(in: range, with: newText)
-        if updatedText.isEmpty {
-
-            textView.text = "Write here..."
-            textView.textColor = UIColor.lightGray
-
-            textView.selectedTextRange = textView.textRange(from: textView.beginningOfDocument, to: textView.beginningOfDocument)
-        }
-        else if textView.textColor == UIColor.lightGray && !newText.isEmpty {
-            textView.textColor = UIColor.black
-            textView.text = newText
-        }
         return answerText.text.count + (newText.count - range.length) <= 250
     }
     
-    @objc func keyboardWillShow(notification: NSNotification) {
-           if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-               if self.view.frame.origin.y == 0 {
-                   self.view.frame.origin.y -= keyboardSize.height
-               }
-           }
-       }
-       
-       @objc func keyboardWillHide(notification: NSNotification) {
-           if self.view.frame.origin.y != 0 {
-               self.view.frame.origin.y = 0
-           }
-       }
-       
-       @objc func dismissKeyboard() {
-           view.endEditing(true)
-       }
-
     @IBAction func buttonPressed(_ sender: Any) {
         view.endEditing(true)
         exitTutorial()
@@ -87,7 +53,7 @@ class TutorialQuestionViewController: UIViewController, UITextViewDelegate {
     
     func editAnswerText() {
         //answerText.layer.borderWidth = 1.0
-        answerText.textAlignment = .center
+        answerText.textAlignment = .left
         answerText.textColor = lightGrey
         answerText.font = UIFont(name: "NewYorkMedium-Regular", size: 18)
         let style = NSMutableParagraphStyle()

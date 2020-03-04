@@ -46,7 +46,9 @@ class UserThoughtsViewController: UIViewController {
             editButton.setTitleColor(buttonColor, for: .normal)
             deleteButton.titleLabel?.font = UIFont(name: "NewYorkMedium-Regular", size: 20)
             deleteButton.setTitleColor(buttonColor, for: .normal)
-            thoughtView.textColor = lightGrey
+            thoughtView.font = UIFont(name: "NewYorkMedium-Regular", size: 18)
+             thoughtView.textAlignment = .center
+             thoughtView.textColor = lightGrey
             
             // Do any additional setup after loading the view.
             animator = UIDynamicAnimator(referenceView: view)
@@ -125,6 +127,8 @@ class UserThoughtsViewController: UIViewController {
 
                                       }
             }
+            
+
         
                   view.addSubview(SubView)
         }
@@ -163,6 +167,8 @@ class UserThoughtsViewController: UIViewController {
     @IBAction func plantIsPressed(_ sender: Any) {
         deleteButton.isHidden = true
         deleteButton.isEnabled = false
+        editButton.isEnabled = false
+        editButton.isHidden = true
         
         thoughtView.font = UIFont(name: "NewYorkMedium-Regular", size: 16)
         thoughtView.textAlignment = .center

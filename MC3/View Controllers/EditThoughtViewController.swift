@@ -23,11 +23,17 @@ class EditThoughtViewController: UIViewController {
         overrideUserInterfaceStyle = .light
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "greybackground.png")!)
         editField.text = editedUserThought
+        editField.font = UIFont(name: "NewYorkMedium-Regular", size: 18)
+        
+        editField.textAlignment = .left
+        editField.textColor = lightGrey
         doneEditButton?.titleLabel?.font = UIFont(name: "NewYorkMedium-Regular", size: 25)
         doneEditButton?.setTitleColor(buttonColor, for: .normal)
         doneEditButton?.setTitle("Done", for: .normal)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+//     let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+//        view.addGestureRecognizer(tap)
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText newText: String) -> Bool {
@@ -45,21 +51,26 @@ class EditThoughtViewController: UIViewController {
 
         
     }
-    @objc func keyboardWillShow(notification: NSNotification) {
-           if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-               if self.view.frame.origin.y == 0 {
-                   self.view.frame.origin.y -= keyboardSize.height
-               }
-           }
-       }
-       
-       @objc func keyboardWillHide(notification: NSNotification) {
-           if self.view.frame.origin.y != 0 {
-               self.view.frame.origin.y = 0
-           }
-       }
-       
-       @objc func dismissKeyboard() {
-           view.endEditing(true)
-       }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        editField.becomeFirstResponder()
+    }
+//        @objc func keyboardWillShow(notification: NSNotification) {
+//            if ((notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue) != nil {
+//               if self.view.frame.origin.y == 0 {
+//                   self.view.frame.origin.y -= 240
+//
+//               }
+//           }
+//       }
+//
+//       @objc func keyboardWillHide(notification: NSNotification) {
+//           if self.view.frame.origin.y != 0 {
+//               self.view.frame.origin.y = 0
+//           }
+//       }
+//
+//       @objc func dismissKeyboard() {
+//           view.endEditing(true)
+//       }
 }
