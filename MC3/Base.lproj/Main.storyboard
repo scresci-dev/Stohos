@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N1m-Em-c1a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N1m-Em-c1a">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -117,7 +117,7 @@
         <!--User Thoughts View Controller-->
         <scene sceneID="5pG-4D-das">
             <objects>
-                <viewController storyboardIdentifier="FirstVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="N1m-Em-c1a" customClass="UserThoughtsViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="N1m-Em-c1a" customClass="UserThoughtsViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FX1-nz-ET1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -150,7 +150,6 @@
                                 </state>
                                 <connections>
                                     <action selector="deleteButton:" destination="N1m-Em-c1a" eventType="touchUpInside" id="Kkr-JD-kQA"/>
-                                    <segue destination="v3D-KA-RmJ" kind="presentation" id="O39-NJ-idi"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plant" translatesAutoresizingMaskIntoConstraints="NO" id="VMG-p9-X5b">
@@ -195,28 +194,33 @@
                         <outlet property="thoughtView" destination="r76-aG-CIf" id="LCs-Ka-G79"/>
                         <segue destination="HVM-I5-GwL" kind="show" identifier="Edit Thought" id="MGA-JQ-vFt"/>
                         <segue destination="g6s-sF-NGW" kind="presentation" identifier="tutorial" modalPresentationStyle="fullScreen" id="gBY-1R-ibJ"/>
+                        <segue destination="v3D-KA-RmJ" kind="presentation" identifier="feedback" id="xuA-la-65d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L0I-4L-YQU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5050.7246376811599" y="30.803571428571427"/>
         </scene>
-        <!--View Controller-->
+        <!--Well Done View Controller-->
         <scene sceneID="IWK-zL-xeS">
             <objects>
-                <viewController id="v3D-KA-RmJ" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="v3D-KA-RmJ" customClass="WellDoneViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IxP-O2-gMe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WellDone" translatesAutoresizingMaskIntoConstraints="NO" id="TKz-0o-VV2">
-                                <rect key="frame" x="87" y="362" width="240" height="173"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WellDone" translatesAutoresizingMaskIntoConstraints="NO" id="TKz-0o-VV2">
+                                <rect key="frame" x="0.0" y="-86" width="414" height="1014"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="0.60402397260273977" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Hpo-Vc-2So"/>
                     </view>
+                    <connections>
+                        <segue destination="N1m-Em-c1a" kind="show" identifier="GoBack" id="EEt-KG-hBY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQ2-dw-T5F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -230,7 +234,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="InfoSection" translatesAutoresizingMaskIntoConstraints="NO" id="B29-TJ-6q9">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="CIAOGIANNA" translatesAutoresizingMaskIntoConstraints="NO" id="B29-TJ-6q9">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
                         </subviews>
@@ -433,9 +437,6 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaQ-pN-7H5">
                                 <rect key="frame" x="158" y="732" width="98" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="nextButton:" destination="NOg-Fx-v7m" eventType="touchUpInside" id="vQ1-hL-qrN"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -464,10 +465,10 @@
             </objects>
             <point key="canvasLocation" x="2962.3188405797105" y="30.803571428571427"/>
         </scene>
-        <!--Well Done View Controller-->
+        <!--Perfect View Controller-->
         <scene sceneID="ROT-sf-zKZ">
             <objects>
-                <viewController id="nrh-bp-NIk" customClass="WellDoneViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nrh-bp-NIk" customClass="PerfectViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NMi-YE-gRF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -497,7 +498,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="InfoSection" width="375" height="812"/>
+        <image name="CIAOGIANNA" width="375" height="812"/>
         <image name="Perfect" width="321" height="221"/>
         <image name="PlusButton" width="87" height="124.66666412353516"/>
         <image name="Reflect" width="321" height="86"/>
@@ -506,8 +507,8 @@
         <image name="questionmark" width="42" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ejv-vo-jwM"/>
-        <segue reference="LW6-wO-WU4"/>
+        <segue reference="2Y7-pF-SYi"/>
+        <segue reference="EEt-KG-hBY"/>
         <segue reference="7AL-Qv-aAv"/>
     </inferredMetricsTieBreakers>
 </document>
