@@ -190,6 +190,12 @@ class UserThoughtsViewController: UIViewController {
     @IBAction func deleteButton(_ sender: UIButton) {
         DatabaseHelper.istance.deleteThoughts(textThought: thoughtView.text)
         numThoughts -= 1
+        deleteButton.isHidden = true
+        deleteButton.isEnabled = false
+        editButton.isEnabled = false
+        editButton.isHidden = true
+        thoughtView.isHidden = true
+        performSegue(withIdentifier: "feedback", sender: self)
     }
     
     

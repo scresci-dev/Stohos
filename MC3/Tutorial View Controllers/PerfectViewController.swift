@@ -9,16 +9,16 @@
 import Foundation
 import UIKit
 
-class WellDoneViewController: UIViewController {
+class PerfectViewController: UIViewController {
     
-    @IBOutlet var wellDoneView: UIView!
+    @IBOutlet var perfectView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         overrideUserInterfaceStyle = .light
         let gestureRec = UITapGestureRecognizer(target: self, action:  #selector (self.someAction (_:)))
         
-        wellDoneView.addGestureRecognizer(gestureRec)
+        perfectView.addGestureRecognizer(gestureRec)
     }
     
     @objc func someAction(_ sender:UITapGestureRecognizer) {
