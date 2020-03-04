@@ -22,9 +22,7 @@ class TutorialQuestionViewController: UIViewController, UITextViewDelegate {
         answerText.text = "Write here..."
         answerText.textColor = UIColor.lightGray
         overrideUserInterfaceStyle = .light
-        answerText.delegate = self
-        nextButton.titleLabel?.font = UIFont(name: "NewYorkMedium-Regular", size: 25)
-        nextButton.setTitleColor(buttonColor, for: .normal)
+       
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -99,7 +97,8 @@ class TutorialQuestionViewController: UIViewController, UITextViewDelegate {
     }
     
     func editButton() {
-        nextButton.setTitleColor(darkGrey, for: .normal)
+       nextButton.titleLabel?.font = UIFont(name: "NewYorkMedium-Regular", size: 25)
+        nextButton.setTitleColor(buttonColor, for: .normal)
         nextButton.setTitle("Next", for: .normal)
     }
     

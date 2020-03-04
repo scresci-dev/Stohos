@@ -14,15 +14,23 @@ class EditThoughtViewController: UIViewController {
     var editedUserThought = String()
     
     @IBOutlet weak var editField: UITextView!
+    @IBOutlet weak var doneEditButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         overrideUserInterfaceStyle = .light
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "greybackground.png")!)
         editField.text = editedUserThought
+        doneEditButton.titleLabel?.font = UIFont(name: "NewYorkMedium-Regular", size: 25)
+        doneEditButton.setTitleColor(buttonColor, for: .normal)
+        doneEditButton.setTitle("Done", for: .normal)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText newText: String) -> Bool {
+           return editField.text.count + (newText.count - range.length) <= 250
+       }
     
     @IBAction func donePressed(_ sender: Any) {
         performSegue(withIdentifier: "Evaluate Again", sender: self)

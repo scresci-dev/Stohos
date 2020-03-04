@@ -26,7 +26,6 @@ class EvaluationThoughtViewController: UIViewController {
         super.viewDidLoad()
         overrideUserInterfaceStyle = .light
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "greybackground.png")!)
-        questionmarkButton.setImage(UIImage(named: "questionmark"), for: .normal)
         thoughtView.image = UIImage(named: "Spento1")
         thoughtText.text = finalThought
         print(isUpdate)

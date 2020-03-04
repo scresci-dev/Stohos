@@ -15,14 +15,13 @@ class TutorialEvaluationViewController: UIViewController {
         overrideUserInterfaceStyle = .light
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
         textAnswer.text = userAnswer
+        textAnswer.font = UIFont(name: "NewYorkMedium-Regular", size: 18)
         textAnswer.textAlignment = .center
         textAnswer.textColor = lightGrey
-        textAnswer.font = UIFont(name: "NewYorkMedium-Regular", size: 18)
         let style = NSMutableParagraphStyle()
         style.lineSpacing = 24
         let attributes = [NSAttributedString.Key.paragraphStyle: style]
         textAnswer.attributedText = NSAttributedString(string: textAnswer.text, attributes: attributes)
-        allAnswer.append(userAnswer)
     }
 
     @IBAction func essentialButton(_ sender: Any) {
