@@ -17,19 +17,21 @@ class EvaluationThoughtViewController: UIViewController {
     var oldText = String()
     
     @IBOutlet weak var thoughtText: UITextView!
-    @IBOutlet weak var thoughtView: UIImageView!
     @IBOutlet weak var ebutton: UIButton!
     @IBOutlet weak var nebutton: UIButton!
     @IBOutlet weak var questionmarkButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         overrideUserInterfaceStyle = .light
-        thoughtView.image = UIImage(named: "Spento1")
         thoughtText.text = finalThought
         thoughtText.font = UIFont(name: "NewYorkMedium-Regular", size: 18)
         thoughtText.textAlignment = .center
         thoughtText.textColor = lightGrey
+        nextButton.titleLabel?.font = UIFont(name: "NewYorkMedium-Regular", size: 25)
+        nextButton.setTitleColor(buttonColor, for: .normal)
+        nextButton.setTitle("Next", for: .normal)
         print(isUpdate)
     }
     
@@ -42,7 +44,6 @@ class EvaluationThoughtViewController: UIViewController {
             print("old: \(oldText)")
             DatabaseHelper.istance.updateThoughts(oldText: oldText, newText: finalThought, newEvaluation: "essential")
         }
-        thoughtView.image = UIImage(named: "Rosa1")
         performSegue(withIdentifier: "Main View", sender: self)
     }
     
@@ -53,7 +54,6 @@ class EvaluationThoughtViewController: UIViewController {
         }else{
             DatabaseHelper.istance.updateThoughts(oldText: oldText, newText: finalThought, newEvaluation: "not-essential")
         }
-        thoughtView.image = UIImage(named: "Verde1")
         performSegue(withIdentifier: "Main View", sender: self)
     }
     

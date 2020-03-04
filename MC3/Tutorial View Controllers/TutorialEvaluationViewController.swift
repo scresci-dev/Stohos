@@ -7,6 +7,8 @@ class TutorialEvaluationViewController: UIViewController {
     @IBOutlet weak var essentialButton: UIButton!
     @IBOutlet weak var notEssentialButton: UIButton!
     @IBOutlet weak var labelView: UIImageView!
+    @IBOutlet weak var nextButton: UIButton!
+    
     
     var userAnswer: String!
 
@@ -25,6 +27,9 @@ class TutorialEvaluationViewController: UIViewController {
         textAnswer.textColor = lightGrey
         textAnswer.text = userAnswer
         labelView.image = UIImage(named: "Reflect")
+        nextButton.titleLabel?.font = UIFont(name: "NewYorkMedium-Regular", size: 25)
+        nextButton.setTitleColor(buttonColor, for: .normal)
+        nextButton.setTitle("Next", for: .normal)
     }
 
     @IBAction func essentialButton(_ sender: Any) {
