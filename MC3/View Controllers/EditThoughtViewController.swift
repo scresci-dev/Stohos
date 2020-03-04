@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class EditThoughtViewController: UIViewController {
+class EditThoughtViewController: UIViewController, UITextViewDelegate {
     
     var editedUserThought = String()
     
@@ -21,6 +21,7 @@ class EditThoughtViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         overrideUserInterfaceStyle = .light
+        editField.delegate = self
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "greybackground.png")!)
         editField.text = editedUserThought
         editField.font = UIFont(name: "NewYorkMedium-Regular", size: 18)
@@ -30,10 +31,6 @@ class EditThoughtViewController: UIViewController {
         doneEditButton?.titleLabel?.font = UIFont(name: "NewYorkMedium-Regular", size: 25)
         doneEditButton?.setTitleColor(buttonColor, for: .normal)
         doneEditButton?.setTitle("Done", for: .normal)
-//     let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
-//        view.addGestureRecognizer(tap)
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-//        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText newText: String) -> Bool {
@@ -41,7 +38,13 @@ class EditThoughtViewController: UIViewController {
        }
     
     @IBAction func donePressed(_ sender: Any) {
-        performSegue(withIdentifier: "Evaluate Again", sender: self)
+        if editField.text.isEmpty {
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.warning)
+        }
+        else {
+            performSegue(withIdentifier: "Evaluate Again", sender: self)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

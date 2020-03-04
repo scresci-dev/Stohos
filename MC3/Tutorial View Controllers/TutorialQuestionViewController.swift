@@ -19,7 +19,7 @@ class TutorialQuestionViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        answerText.delegate = self
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
         editAnswerText()
         editButton()
@@ -48,7 +48,13 @@ class TutorialQuestionViewController: UIViewController, UITextViewDelegate {
 
     func exitTutorial() {
         counter += 1
-        performSegue(withIdentifier: "Evaluation Control", sender: self)
+        if answerText.text.isEmpty {
+            let generator = UINotificationFeedbackGenerator()
+                   generator.notificationOccurred(.warning)
+        }
+        else {
+            performSegue(withIdentifier: "Evaluation Control", sender: self)
+        }
     }
     
     func editAnswerText() {
@@ -72,7 +78,7 @@ class TutorialQuestionViewController: UIViewController, UITextViewDelegate {
         if (counter <= 2) {
             questionLabel.textColor = darkGrey
             questionLabel.font = UIFont(name: "NewYorkMedium-Regular", size: 25)
-            questionLabel.textAlignment = .center
+            questionLabel.textAlignment = .left
             let style1 = NSMutableParagraphStyle()
             style1.lineSpacing = 28
             let attributes1 = [NSAttributedString.Key.paragraphStyle: style1]
