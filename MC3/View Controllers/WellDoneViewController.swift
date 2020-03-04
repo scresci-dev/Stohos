@@ -18,6 +18,7 @@ class WellDoneViewController: UIViewController {
     }
     
     @objc func closePopUp(_ sender:UITapGestureRecognizer) {
-        dismiss(animated: true, completion: nil)
+        //dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: "GoBack", sender: self)
     }
 }
