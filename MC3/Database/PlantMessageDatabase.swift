@@ -24,3 +24,4 @@ let plantMessage9 = PlantMessage(text: "“Keep only those things that speak to 
 
 let plantArray = [plantMessage1, plantMessage2, plantMessage3, plantMessage4, plantMessage5, plantMessage6, plantMessage7, plantMessage8, plantMessage9]
 
+var plantCounter: Int = 0
