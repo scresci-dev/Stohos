@@ -31,10 +31,6 @@ class AddThoughtViewController: UIViewController {
         
     }
     
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText newText: String) -> Bool {
-           return newThought.text.count + (newText.count - range.length) <= 250
-       }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      (segue.destination as! EvaluationThoughtViewController).finalThought = newThought.text
     }

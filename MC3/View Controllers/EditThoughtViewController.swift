@@ -14,16 +14,18 @@ class EditThoughtViewController: UIViewController {
     var editedUserThought = String()
     
     @IBOutlet weak var editField: UITextView!
-    @IBOutlet weak var doneEditButton: UIButton!
+    @IBOutlet weak var doneEditButton: UIButton?
+    
+    var isUpdate = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         overrideUserInterfaceStyle = .light
         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "greybackground.png")!)
         editField.text = editedUserThought
-        doneEditButton.titleLabel?.font = UIFont(name: "NewYorkMedium-Regular", size: 25)
-        doneEditButton.setTitleColor(buttonColor, for: .normal)
-        doneEditButton.setTitle("Done", for: .normal)
+        doneEditButton?.titleLabel?.font = UIFont(name: "NewYorkMedium-Regular", size: 25)
+        doneEditButton?.setTitleColor(buttonColor, for: .normal)
+        doneEditButton?.setTitle("Done", for: .normal)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
@@ -38,15 +40,10 @@ class EditThoughtViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      (segue.destination as! EvaluationThoughtViewController).finalThought = editField.text
-        print("textField: \(editField.text)")
-        print("edit: \(editedUserThought)")
-
-        if(editField.text == editedUserThought){
-        (segue.destination as! EvaluationThoughtViewController).isUpdate = "no"
-        }else{
-            (segue.destination as! EvaluationThoughtViewController).isUpdate = "yes"
+        (segue.destination as! EvaluationThoughtViewController).isUpdate = isUpdate
             (segue.destination as! EvaluationThoughtViewController).oldText = editedUserThought
-        }
+
+        
     }
     @objc func keyboardWillShow(notification: NSNotification) {
            if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {

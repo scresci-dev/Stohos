@@ -13,14 +13,16 @@ import CoreMotion
 
 class UserThoughtsViewController: UIViewController {
 
-    var currentThought: String = " "
-    var newThought: String = " "
+    var currentThought: String = ""
+    var newThought: String = ""
     
     var timer = Timer()
     
     var start : [Int] = []
     
     var numThoughts = 0
+    
+    var isUpdate : String = ""
     
     var arr: [Thought] = [];
     
@@ -77,7 +79,9 @@ class UserThoughtsViewController: UIViewController {
             
           let SubView = UIView()
           let button = UIButton()
-    
+            let x : CGFloat = 200
+            let y : CGFloat = 50
+
           SubView.addSubview(button)
 
             if(arr[i].evaluation == "essential"){
@@ -86,17 +90,17 @@ class UserThoughtsViewController: UIViewController {
                 button.tag = i;
                 button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
                 
-                SubView.frame = CGRect(x: 222, y: 60, width: 120, height: 120)
+                SubView.frame = CGRect(x: x+CGFloat(i*10), y: y+CGFloat(i*10), width: 120, height: 120)
                       DispatchQueue.main.async {
                           self.collision.addItem(SubView)
                           self.gravity.addItem(SubView)
                       }
                   Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
-                             if(self.start[self.numThoughts] >= 211){
-                                            self.start[self.numThoughts] = 1
+                    if(self.start[button.tag] >= 211){
+                                            self.start[button.tag] = 1
                                         }
-                      self.changeImg(button: button, n: self.start[self.numThoughts], state: "essential")
-                             self.start[self.numThoughts] += 1
+                      self.changeImg(button: button, n: self.start[button.tag], state: "essential")
+                             self.start[button.tag] += 1
 
                          }
             }else{
@@ -106,18 +110,18 @@ class UserThoughtsViewController: UIViewController {
                 button.tag = i;
                 button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
                 
-                SubView.frame = CGRect(x: 222, y: 60, width: 90, height: 90)
+                SubView.frame = CGRect(x: x+CGFloat(i*10), y: y+CGFloat(i*10), width: 90, height: 90)
                       DispatchQueue.main.async {
                           self.collision.addItem(SubView)
                           self.gravity.addItem(SubView)
                       }
                 
                 Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
-                   if(self.start[self.numThoughts] >= 211){
-                          self.start[self.numThoughts] = 1
+                   if(self.start[button.tag] >= 211){
+                          self.start[button.tag] = 1
                                      }
-                   self.changeImg(button: button, n: self.start[self.numThoughts], state: "not-essential")
-                          self.start[self.numThoughts] += 1
+                   self.changeImg(button: button, n: self.start[button.tag], state: "not-essential")
+                          self.start[button.tag] += 1
 
                                       }
             }
@@ -167,8 +171,14 @@ class UserThoughtsViewController: UIViewController {
         generator.impactOccurred()
     }
     
+    @IBAction func addButton(_ sender: UIButton) {
+        isUpdate = "no"
+        performSegue(withIdentifier: "Edit Thought", sender: self)
+
+    }
     
     @IBAction func editButton(_ sender: Any) {
+        isUpdate = "yes"
         performSegue(withIdentifier: "Edit Thought", sender: self)
     }
     @IBAction func deleteButton(_ sender: UIButton) {
@@ -179,7 +189,17 @@ class UserThoughtsViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "Edit Thought") {
-            (segue.destination as! EditThoughtViewController).editedUserThought = thoughtView.text
+            if(isUpdate == "yes"){
+            (segue.destination as!
+                EditThoughtViewController).editedUserThought = thoughtView.text
+                (segue.destination as!
+                    EditThoughtViewController).isUpdate = isUpdate
+            }else{
+                (segue.destination as!
+                EditThoughtViewController).editedUserThought = ""
+                (segue.destination as!
+                EditThoughtViewController).isUpdate = isUpdate
+            }
         }
     }
 }
