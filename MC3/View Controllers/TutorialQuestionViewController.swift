@@ -10,9 +10,7 @@ import Foundation
 import UIKit
 
 class TutorialQuestionViewController: UIViewController, UITextViewDelegate {
-    
-    let placeholder = "Placeholder"
-        
+            
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var answerText: UITextView!
     @IBOutlet weak var progressView: UIImageView!
@@ -21,8 +19,7 @@ class TutorialQuestionViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        answerText.delegate = self
-        answerText.text = placeholder
+        answerText.text = "Write here..."
         answerText.textColor = UIColor.lightGray
         overrideUserInterfaceStyle = .light
         answerText.delegate = self
@@ -38,7 +35,27 @@ class TutorialQuestionViewController: UIViewController, UITextViewDelegate {
         displayView()
     }
     
+   func textViewDidBeginEditing(_ textView: UITextView) {
+       if textView.textColor == UIColor.lightGray {
+           textView.text = nil
+           textView.textColor = UIColor.black
+       }
+   }
+    
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText newText: String) -> Bool {
+        let currentText:String = textView.text
+        let updatedText = (currentText as NSString).replacingCharacters(in: range, with: newText)
+        if updatedText.isEmpty {
+
+            textView.text = "Write here..."
+            textView.textColor = UIColor.lightGray
+
+            textView.selectedTextRange = textView.textRange(from: textView.beginningOfDocument, to: textView.beginningOfDocument)
+        }
+        else if textView.textColor == UIColor.lightGray && !newText.isEmpty {
+            textView.textColor = UIColor.black
+            textView.text = newText
+        }
         return answerText.text.count + (newText.count - range.length) <= 250
     }
     

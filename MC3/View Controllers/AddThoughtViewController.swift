@@ -23,5 +23,20 @@ class AddThoughtViewController: UIViewController {
      (segue.destination as! EvaluationThoughtViewController).finalThought = newThought.text
     }
     
-    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText newText: String) -> Bool {
+        let currentText:String = textView.text
+        let updatedText = (currentText as NSString).replacingCharacters(in: range, with: newText)
+        if updatedText.isEmpty {
+
+            textView.text = "Write here..."
+            textView.textColor = UIColor.lightGray
+
+            textView.selectedTextRange = textView.textRange(from: textView.beginningOfDocument, to: textView.beginningOfDocument)
+        }
+        else if textView.textColor == UIColor.lightGray && !newText.isEmpty {
+            textView.textColor = UIColor.black
+            textView.text = newText
+        }
+        return newThought.text.count + (newText.count - range.length) <= 250
+    }
 }

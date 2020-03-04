@@ -145,7 +145,7 @@ class UserThoughtsViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if UserDefaults.standard.bool(forKey: "NotLaunchedBefore") {
-           performSegue(withIdentifier: "tutorial", sender: self)
+//           performSegue(withIdentifier: "tutorial", sender: self)
         }
     }
     
