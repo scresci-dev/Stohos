@@ -32,6 +32,7 @@ class UserThoughtsViewController: UIViewController {
     @IBOutlet weak var Barriera: UIImageView!
     @IBOutlet weak var BarrieraTop: UIImageView!
     @IBOutlet weak var plantButton: UIButton!
+    @IBOutlet weak var plantLabel: UILabel!
     
         var collision : UICollisionBehavior!
         var animator : UIDynamicAnimator!
@@ -169,17 +170,27 @@ class UserThoughtsViewController: UIViewController {
         deleteButton.isEnabled = false
         editButton.isEnabled = false
         editButton.isHidden = true
-        
-        thoughtView.font = UIFont(name: "NewYorkMedium-Regular", size: 16)
-        thoughtView.textAlignment = .center
-        thoughtView.textColor = lightGrey
+        plantLabel.textAlignment = .center
+        plantLabel.font = UIFont(name: "NewYorkMedium-Regular", size: 16)
+        plantLabel.textColor = lightGrey
+        if (plantCounter < 10) {
+            plantLabel.text = plantArray[plantCounter].text
+            plantCounter += 1
+        } else {
+            plantCounter = 0
+        }
         let generator = UIImpactFeedbackGenerator(style: .medium)
         generator.impactOccurred()
     }
     
     @IBAction func addButton(_ sender: UIButton) {
+        if numThoughts <= 10 {
         isUpdate = "no"
-        performSegue(withIdentifier: "Edit Thought", sender: self)
+            performSegue(withIdentifier: "Edit Thought", sender: self)
+        }
+        else {
+            performSegue(withIdentifier: "WarningVC", sender: self)
+        }
 
     }
     
