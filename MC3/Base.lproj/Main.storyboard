@@ -68,10 +68,10 @@
             <objects>
                 <viewController storyboardIdentifier="TutorialQuestionViewControllerID" id="oXI-zw-iXa" customClass="TutorialQuestionViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oRJ-xg-ct5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxM-Ze-AOW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxM-Ze-AOW">
                                 <rect key="frame" x="48" y="144" width="318" height="88"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
@@ -90,7 +90,7 @@
                                     <action selector="buttonPressed:" destination="oXI-zw-iXa" eventType="touchUpInside" id="qSU-gb-Kqz"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="interactive" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bei-MG-ugW">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="bei-MG-ugW">
                                 <rect key="frame" x="54" y="260" width="307" height="218"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -268,13 +268,6 @@
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="187" id="vxp-It-kKi"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVm-hD-wbX">
-                                <rect key="frame" x="334" y="20" width="60" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="RMZ-fe-wc2" kind="presentation" id="QTg-lt-VoM"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqY-a0-aRS">
                                 <rect key="frame" x="50" y="636" width="147" height="138"/>
                                 <constraints>
@@ -286,6 +279,13 @@
                                 <state key="normal" image="Rosa1"/>
                                 <connections>
                                     <action selector="essButton:" destination="H0d-PG-Xds" eventType="touchUpInside" id="LQm-GS-e0v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVm-hD-wbX">
+                                <rect key="frame" x="334" y="44" width="60" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="RMZ-fe-wc2" kind="presentation" id="QTg-lt-VoM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -365,55 +365,57 @@
             <objects>
                 <viewController id="NOg-Fx-v7m" customClass="TutorialEvaluationViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5NL-XW-OEX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpj-Zy-BQZ">
-                                <rect key="frame" x="87" y="344" width="240" height="128"/>
+                                <rect key="frame" x="54" y="474" width="307" height="218"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgf-Oz-Zkq">
-                                <rect key="frame" x="50" y="636" width="140" height="138"/>
-                                <state key="normal" image="Rosa1"/>
+                                <rect key="frame" x="54" y="282" width="150" height="138"/>
                                 <connections>
                                     <action selector="essentialButton:" destination="NOg-Fx-v7m" eventType="touchUpInside" id="H3F-YN-Hds"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Spento1" translatesAutoresizingMaskIntoConstraints="NO" id="BeZ-qB-M1d">
-                                <rect key="frame" x="87" y="88" width="240" height="187"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4j-4h-jFK">
-                                <rect key="frame" x="217" y="636" width="147" height="138"/>
+                                <rect key="frame" x="214" y="282" width="147" height="138"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="138" id="W1f-7l-dwV"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="147" id="dic-rw-HJN"/>
                                     <constraint firstAttribute="width" constant="147" id="h29-jh-at0"/>
                                 </constraints>
-                                <state key="normal" image="Verde1"/>
                                 <connections>
                                     <action selector="notEssentialButton:" destination="NOg-Fx-v7m" eventType="touchUpInside" id="Zkt-0D-16P"/>
                                 </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d29-ua-3mJ">
+                                <rect key="frame" x="54" y="121" width="307" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cfk-EN-ubv">
+                                <rect key="frame" x="334" y="20" width="60" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Q4j-4h-jFK" firstAttribute="bottom" secondItem="Xgf-Oz-Zkq" secondAttribute="bottom" id="XWC-Dy-OJS"/>
                             <constraint firstItem="Q4j-4h-jFK" firstAttribute="top" secondItem="Xgf-Oz-Zkq" secondAttribute="top" id="YpB-9H-4XW"/>
-                            <constraint firstItem="i81-MX-V85" firstAttribute="bottom" secondItem="Q4j-4h-jFK" secondAttribute="bottom" constant="88" id="nqk-OQ-yUQ"/>
-                            <constraint firstItem="i81-MX-V85" firstAttribute="trailing" secondItem="Q4j-4h-jFK" secondAttribute="trailing" constant="50" id="uHU-au-9d0"/>
-                            <constraint firstItem="Xgf-Oz-Zkq" firstAttribute="leading" secondItem="i81-MX-V85" secondAttribute="leading" constant="50" id="wAa-4d-CFG"/>
-                            <constraint firstItem="Q4j-4h-jFK" firstAttribute="leading" secondItem="Xgf-Oz-Zkq" secondAttribute="trailing" constant="27" id="wcr-bY-tRg"/>
+                            <constraint firstItem="i81-MX-V85" firstAttribute="bottom" secondItem="Q4j-4h-jFK" secondAttribute="bottom" constant="388" id="nqk-OQ-yUQ"/>
+                            <constraint firstItem="i81-MX-V85" firstAttribute="trailing" secondItem="Q4j-4h-jFK" secondAttribute="trailing" constant="53" id="uHU-au-9d0"/>
+                            <constraint firstItem="Xgf-Oz-Zkq" firstAttribute="leading" secondItem="i81-MX-V85" secondAttribute="leading" constant="54" id="wAa-4d-CFG"/>
+                            <constraint firstItem="Q4j-4h-jFK" firstAttribute="leading" secondItem="Xgf-Oz-Zkq" secondAttribute="trailing" constant="10" id="wcr-bY-tRg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="i81-MX-V85"/>
                     </view>
                     <navigationItem key="navigationItem" id="CVT-vc-3sY"/>
                     <connections>
                         <outlet property="essentialButton" destination="Xgf-Oz-Zkq" id="pgM-u4-wTg"/>
-                        <outlet property="greyThought" destination="BeZ-qB-M1d" id="bdF-hN-mQf"/>
+                        <outlet property="labelView" destination="d29-ua-3mJ" id="doC-Ks-2gz"/>
                         <outlet property="notEssentialButton" destination="Q4j-4h-jFK" id="pRL-St-4tI"/>
                         <outlet property="textAnswer" destination="zpj-Zy-BQZ" id="suF-Ot-zHY"/>
                         <segue destination="oXI-zw-iXa" kind="show" identifier="Next Question" id="7AL-Qv-aAv"/>
@@ -429,7 +431,7 @@
             <objects>
                 <viewController id="nrh-bp-NIk" customClass="WellDoneViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NMi-YE-gRF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0L-WV-nN6">
@@ -508,13 +510,12 @@
     </scenes>
     <resources>
         <image name="Rosa1" width="392" height="392"/>
-        <image name="Spento1" width="392" height="392"/>
         <image name="Verde1" width="392" height="392"/>
         <image name="addThoughtButton" width="102" height="177.33332824707031"/>
         <image name="plant" width="95.5" height="186"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="LW6-wO-WU4"/>
-        <segue reference="N1p-FE-cor"/>
+        <segue reference="7AL-Qv-aAv"/>
     </inferredMetricsTieBreakers>
 </document>

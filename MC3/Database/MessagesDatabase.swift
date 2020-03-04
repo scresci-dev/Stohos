@@ -17,6 +17,7 @@ struct TutorialMessage {
 let darkGrey = UIColor(red: 0.43, green: 0.43, blue: 0.43, alpha: 1)
 let lightGrey = UIColor(red: 0.65, green: 0.65, blue: 0.65, alpha: 1)
 let buttonColor = UIColor(red: 0.29, green: 0.29, blue: 0.29, alpha: 1)
+let backgroundColor = UIColor(red: 0.92, green: 0.92, blue: 0.92, alpha: 1)
 
 let message1 = TutorialMessage(textMessage: "Welcome to Stohos", imageName: "Welcome")
 let message2 = TutorialMessage(textMessage: "According to Minimalism as a state of mind, a thought is Essential when it brings you joy and has a vital meaning for you", imageName: "Essential Description")

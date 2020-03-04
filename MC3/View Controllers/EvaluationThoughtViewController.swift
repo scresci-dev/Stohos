@@ -25,7 +25,6 @@ class EvaluationThoughtViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         overrideUserInterfaceStyle = .light
-        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "greybackground.png")!)
         thoughtView.image = UIImage(named: "Spento1")
         thoughtText.text = finalThought
         thoughtText.font = UIFont(name: "NewYorkMedium-Regular", size: 18)

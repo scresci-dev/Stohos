@@ -18,7 +18,6 @@ class WellDoneViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         overrideUserInterfaceStyle = .light
-        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
         wellDoneText.textColor = lightGrey
         wellDoneText.font = UIFont(name: "NewYorkMedium-Regular", size: 18)
         wellDoneLabel.textColor = darkGrey

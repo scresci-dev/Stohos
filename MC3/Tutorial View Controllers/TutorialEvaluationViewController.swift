@@ -6,15 +6,13 @@ class TutorialEvaluationViewController: UIViewController {
     @IBOutlet weak var textAnswer: UITextView!
     @IBOutlet weak var essentialButton: UIButton!
     @IBOutlet weak var notEssentialButton: UIButton!
-    @IBOutlet weak var greyThought: UIImageView!
+    @IBOutlet weak var labelView: UIImageView!
     
     var userAnswer: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         overrideUserInterfaceStyle = .light
-        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
-        
         
         let style = NSMutableParagraphStyle()
         style.lineSpacing = 24
@@ -26,13 +24,13 @@ class TutorialEvaluationViewController: UIViewController {
         textAnswer.textAlignment = .center
         textAnswer.textColor = lightGrey
         textAnswer.text = userAnswer
+        labelView.image = UIImage(named: "Reflect")
     }
 
     @IBAction func essentialButton(_ sender: Any) {
         view.endEditing(true)
         essentialCount += 1
         DatabaseHelper.istance.saveThoughtCoredata(text: userAnswer, evaluation: "essential")
-        greyThought.image = UIImage(named: "Rosa1")
         nextMove()
     }
 
@@ -40,7 +38,6 @@ class TutorialEvaluationViewController: UIViewController {
         view.endEditing(true)
         notEssentialCount += 1
         DatabaseHelper.istance.saveThoughtCoredata(text: userAnswer, evaluation: "not-essential")
-        greyThought.image = UIImage(named: "Verde1")
         nextMove()
     }
 

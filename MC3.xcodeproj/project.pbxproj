@@ -12,7 +12,6 @@
 		6B653E23240EBB71002578E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B653E22240EBB71002578E1 /* Assets.xcassets */; };
 		DD01A8BB240F49100032AD88 /* HelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD01A8BA240F49100032AD88 /* HelperViewController.swift */; };
 		DD64247B2406B1A400A07D1C /* UserThoughtsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD64247A2406B1A400A07D1C /* UserThoughtsViewController.swift */; };
-		DD6DA0B8240E6EB000556DCF /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6DA0B7240E6EB000556DCF /* HelpViewController.swift */; };
 		DD77D5F9240AC701000BA7B8 /* EvaluationThoughtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD77D5F8240AC701000BA7B8 /* EvaluationThoughtViewController.swift */; };
 		DD77D5FB240ACA51000BA7B8 /* WellDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD77D5FA240ACA51000BA7B8 /* WellDoneViewController.swift */; };
 		DD84143723FD58F100478319 /* QuestionsDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD84143623FD58F100478319 /* QuestionsDatabase.swift */; };
@@ -37,7 +36,6 @@
 		6B653E22240EBB71002578E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD01A8BA240F49100032AD88 /* HelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperViewController.swift; sourceTree = "<group>"; };
 		DD64247A2406B1A400A07D1C /* UserThoughtsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserThoughtsViewController.swift; sourceTree = "<group>"; };
-		DD6DA0B7240E6EB000556DCF /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		DD77D5F8240AC701000BA7B8 /* EvaluationThoughtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluationThoughtViewController.swift; sourceTree = "<group>"; };
 		DD77D5FA240ACA51000BA7B8 /* WellDoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellDoneViewController.swift; sourceTree = "<group>"; };
 		DD84143623FD58F100478319 /* QuestionsDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsDatabase.swift; sourceTree = "<group>"; };
@@ -83,7 +81,6 @@
 		DDC2F08D23FAEA9000BD4C45 = {
 			isa = PBXGroup;
 			children = (
-				DD6DA0B7240E6EB000556DCF /* HelpViewController.swift */,
 				DDC2F0B023FAEAED00BD4C45 /* .gitignore */,
 				DDC2F09823FAEA9000BD4C45 /* MC3 */,
 				DDC2F09723FAEA9000BD4C45 /* Products */,
@@ -233,7 +230,6 @@
 				DD77D5F9240AC701000BA7B8 /* EvaluationThoughtViewController.swift in Sources */,
 				DDC2F0A423FAEA9000BD4C45 /* MC3.xcdatamodeld in Sources */,
 				DD01A8BB240F49100032AD88 /* HelperViewController.swift in Sources */,
-				DD6DA0B8240E6EB000556DCF /* HelpViewController.swift in Sources */,
 				DDDA47E3240A974C005950CF /* Thought+CoreDataClass.swift in Sources */,
 				DDDA47D624082E3A005950CF /* EditThoughtViewController.swift in Sources */,
 				6B653E1E240D0FBE002578E1 /* DatabaseHelper.swift in Sources */,
