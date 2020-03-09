@@ -89,7 +89,10 @@ class UserThoughtsViewController: UIViewController, AVAudioPlayerDelegate {
         }
     
     override func viewWillAppear(_ animated: Bool) {
+        player.setVolume(0.1, fadeDuration: 3)
+        player.setVolume(0.5, fadeDuration: 2)
         player.play()
+        player.numberOfLoops = -1
         arr = DatabaseHelper.istance.getAllThoughts()
         
         for i in 0..<arr.count{
@@ -169,7 +172,7 @@ class UserThoughtsViewController: UIViewController, AVAudioPlayerDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if !UserDefaults.standard.bool(forKey: "LaunchedBefore") {
-           performSegue(withIdentifier: "tutorial", sender: self)
+            performSegue(withIdentifier: "tutorial", sender: self)
         }
     }
     
