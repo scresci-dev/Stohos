@@ -8,8 +8,7 @@ class TutorialEvaluationViewController: UIViewController {
     @IBOutlet weak var notEssentialButton: UIButton!
     @IBOutlet weak var labelView: UIImageView!
     @IBOutlet weak var nextButton: UIButton!
-    var timerEss = Timer()
-    var timerNot = Timer()
+
     var timerSpEss = Timer()
     var timerSpNot = Timer()
     
@@ -38,21 +37,14 @@ class TutorialEvaluationViewController: UIViewController {
         nextButton.setTitle("Next", for: .normal)
         essentialButton.setImage(UIImage(named: "Essential Reflect"), for: .normal)
         notEssentialButton.setImage(UIImage(named: "NonEssential Reflect"), for: .normal)
-
-        timerEssential()
-        timerNotEssential()
-        
         
         
     }
     
     func timerEssentialSpento(){
         var j = 0
-        timerEss.invalidate()
         timerSpNot.invalidate()
-        timerNot.invalidate()
         timerSpEss.invalidate()
-        timerNotEssential()
         timerSpEss = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
            if(j >= 210){
                 j = 1
@@ -63,11 +55,8 @@ class TutorialEvaluationViewController: UIViewController {
     }
     func timerNotEssentialSpento(){
         var j = 0
-        timerNot.invalidate()
         timerSpEss.invalidate()
-        timerEss.invalidate()
         timerSpNot.invalidate()
-        timerEssential()
         timerSpNot =  Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
              if(j >= 210){
                   j = 1
@@ -76,26 +65,6 @@ class TutorialEvaluationViewController: UIViewController {
                   j += 1
                      }
           
-    }
-    func timerEssential(){
-        var j = 0
-        timerEss = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
-           if(j >= 210){
-                j = 1
-            }
-            self.essentialButton.setBackgroundImage(UIImage(named: "Spento\(j)"), for: .normal)
-                j += 1
-                   }
-    }
-    func timerNotEssential(){
-        var p = 0
-        timerNot = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
-           if(p >= 210){
-                p = 1
-            }
-            self.notEssentialButton.setBackgroundImage(UIImage(named: "Spento\(p)"), for: .normal)
-                p += 1
-                   }
     }
 
     @IBAction func essentialButton(_ sender: Any) {
