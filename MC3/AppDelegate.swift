@@ -14,51 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-//        let firstLaunch = defaults.bool(forKey: "FirstLaunch")
-//
-//        if firstLaunch  {
-//            print("Not first launch.")
-//
-//        self.window = UIWindow(frame: UIScreen.main.bounds)
-//
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//
-//        let initialViewController = storyboard.instantiateViewController(withIdentifier: "Welcome") as! UINavigationController
-//
-//        self.window?.rootViewController = initialViewController
-//        self.window?.makeKeyAndVisible()
-//
-//
-//          } else {
-//            print("First launch, setting NSUserDefault.")
-//
-//            self.window = UIWindow(frame: UIScreen.main.bounds)
-//
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//
-//            let initialViewController = storyboard.instantiateViewController(withIdentifier: "FirstVC") as UIViewController
-//
-//            self.window?.rootViewController = initialViewController
-//            self.window?.makeKeyAndVisible()
-//
-//          }
-        
-//        self.window = UIWindow(frame: UIScreen.main.bounds)
-//        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//        var initialViewController: UIViewController
-//        if !UserDefaults.standard.bool(forKey: "FirstLaunch") {
-//            initialViewController = mainStoryboard.instantiateViewController(withIdentifier: "Welcome") as! WelcomeViewController // 'LoginController' is the storyboard id of LoginViewController
-//            UserDefaults.standard.set(true, forKey: "FirstLaunch")
-//        }
-//        else {
-//            initialViewController = mainStoryboard.instantiateViewController(withIdentifier: "FirstVC") as! UserThoughtsViewController // 'MainController' is the storyboard id of MainViewController
-//              //If not logged in then show LoginViewController
-//        }
-//
-//            self.window?.rootViewController = initialViewController
-//
-//            self.window?.makeKeyAndVisible()
-
             return true
         }
     

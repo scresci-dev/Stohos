@@ -32,6 +32,10 @@ class EditThoughtViewController: UIViewController, UITextViewDelegate {
         doneEditButton?.setTitle("Done", for: .normal)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+         editField.becomeFirstResponder()
+    }
+    
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText newText: String) -> Bool {
            return editField.text.count + (newText.count - range.length) <= 250
        }
@@ -46,6 +50,10 @@ class EditThoughtViewController: UIViewController, UITextViewDelegate {
         }
     }
     
+    @IBAction func backButton(_ sender: Any) {
+         dismiss(animated: true, completion: nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      (segue.destination as! EvaluationThoughtViewController).finalThought = editField.text
         (segue.destination as! EvaluationThoughtViewController).isUpdate = isUpdate
@@ -53,26 +61,5 @@ class EditThoughtViewController: UIViewController, UITextViewDelegate {
 
         
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        editField.becomeFirstResponder()
-    }
-//        @objc func keyboardWillShow(notification: NSNotification) {
-//            if ((notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue) != nil {
-//               if self.view.frame.origin.y == 0 {
-//                   self.view.frame.origin.y -= 240
-//
-//               }
-//           }
-//       }
-//
-//       @objc func keyboardWillHide(notification: NSNotification) {
-//           if self.view.frame.origin.y != 0 {
-//               self.view.frame.origin.y = 0
-//           }
-//       }
-//
-//       @objc func dismissKeyboard() {
-//           view.endEditing(true)
-//       }
+
 }

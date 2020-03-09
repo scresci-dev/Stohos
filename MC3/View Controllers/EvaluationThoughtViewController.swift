@@ -35,6 +35,11 @@ class EvaluationThoughtViewController: UIViewController {
         print(isUpdate)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
     @IBAction func essButton(_ sender: Any) {
         //change the image view to essential and delay 2 sec to see it
         let generator = UIImpactFeedbackGenerator(style: .medium)

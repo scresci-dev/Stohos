@@ -10,7 +10,6 @@
 		6B653E1E240D0FBE002578E1 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B653E1D240D0FBD002578E1 /* DatabaseHelper.swift */; };
 		6B653E21240D6450002578E1 /* NewYorkMedium-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6B653E20240D6450002578E1 /* NewYorkMedium-Regular.otf */; };
 		6B653E23240EBB71002578E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B653E22240EBB71002578E1 /* Assets.xcassets */; };
-		DD01A8BB240F49100032AD88 /* HelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD01A8BA240F49100032AD88 /* HelperViewController.swift */; };
 		DD45F9292410047D00AA9521 /* PlantMessageDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD45F9282410047D00AA9521 /* PlantMessageDatabase.swift */; };
 		DD45F92B24100A1800AA9521 /* WarningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD45F92A24100A1800AA9521 /* WarningViewController.swift */; };
 		DD64247B2406B1A400A07D1C /* UserThoughtsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD64247A2406B1A400A07D1C /* UserThoughtsViewController.swift */; };
@@ -37,7 +36,6 @@
 		6B653E1D240D0FBD002578E1 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 		6B653E20240D6450002578E1 /* NewYorkMedium-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkMedium-Regular.otf"; sourceTree = "<group>"; };
 		6B653E22240EBB71002578E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DD01A8BA240F49100032AD88 /* HelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperViewController.swift; sourceTree = "<group>"; };
 		DD45F9282410047D00AA9521 /* PlantMessageDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantMessageDatabase.swift; sourceTree = "<group>"; };
 		DD45F92A24100A1800AA9521 /* WarningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningViewController.swift; sourceTree = "<group>"; };
 		DD64247A2406B1A400A07D1C /* UserThoughtsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserThoughtsViewController.swift; sourceTree = "<group>"; };
@@ -146,7 +144,6 @@
 				DD64247A2406B1A400A07D1C /* UserThoughtsViewController.swift */,
 				DDDA47D524082E3A005950CF /* EditThoughtViewController.swift */,
 				DD77D5F8240AC701000BA7B8 /* EvaluationThoughtViewController.swift */,
-				DD01A8BA240F49100032AD88 /* HelperViewController.swift */,
 				DD89CD63240FF68A00DEAE88 /* WellDoneViewController.swift */,
 				DD45F92A24100A1800AA9521 /* WarningViewController.swift */,
 			);
@@ -240,7 +237,6 @@
 				DD84143F23FFD8F400478319 /* MessagesDatabase.swift in Sources */,
 				DD77D5F9240AC701000BA7B8 /* EvaluationThoughtViewController.swift in Sources */,
 				DDC2F0A423FAEA9000BD4C45 /* MC3.xcdatamodeld in Sources */,
-				DD01A8BB240F49100032AD88 /* HelperViewController.swift in Sources */,
 				DD45F92B24100A1800AA9521 /* WarningViewController.swift in Sources */,
 				DDDA47E3240A974C005950CF /* Thought+CoreDataClass.swift in Sources */,
 				DDDA47D624082E3A005950CF /* EditThoughtViewController.swift in Sources */,
