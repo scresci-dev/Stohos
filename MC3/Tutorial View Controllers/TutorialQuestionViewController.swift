@@ -84,7 +84,6 @@ class TutorialQuestionViewController: UIViewController, UITextViewDelegate {
             questionLabel.attributedText = NSAttributedString(string: questionLabel.text!, attributes: attributes1)
             questionLabel.text =  questionArray[counter].question
             progressView.image = questionArray[counter].progress
-            print(counter)
             if (counter == 2) {
                nextButton.setTitle("Done", for: .normal)
             }
