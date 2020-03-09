@@ -20,6 +20,10 @@ var essentialCount: Int = 0
 var notEssentialCount: Int = 0
 var arrayCheck: [String] = []
 var allAnswer: [String] = []
+var thought1Text : String = ""
+var thought1Evaluation : String = ""
+var thought2Text : String = ""
+var thought2Evaluation : String = ""
 
 let question1 = TutorialQuestion(question: "Write down something that happened to you today", progress: UIImage(named: "image1"))
 let question2 = TutorialQuestion(question: "Write down something that worries you", progress: UIImage(named: "image2"))
