@@ -51,6 +51,9 @@ class EvaluationThoughtViewController: UIViewController {
                 j += 1
                    }
         nebutton.setBackgroundImage(UIImage(named: "Spento1"), for: .normal)
+        ebutton.setImage(UIImage(named: "Essential Reflect"), for: .normal)
+        nebutton.setImage(UIImage(named: "NonEssential"), for: .normal)
+        
     }
     func timerNotEssentialSpento(){
         var j = 1
@@ -64,6 +67,8 @@ class EvaluationThoughtViewController: UIViewController {
                   j += 1
                      }
           ebutton.setBackgroundImage(UIImage(named: "Spento1"), for: .normal)
+        nebutton.setImage(UIImage(named: "NonEssential Reflect"), for: .normal)
+        ebutton.setImage(UIImage(named: "Essential"), for: .normal)
           
     }
     

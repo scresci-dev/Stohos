@@ -68,7 +68,7 @@
             <objects>
                 <viewController storyboardIdentifier="TutorialQuestionViewControllerID" id="oXI-zw-iXa" customClass="TutorialQuestionViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oRJ-xg-ct5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GxM-Ze-AOW">
@@ -286,7 +286,7 @@
                                     <constraint firstAttribute="height" constant="149.99999999999989" id="Cl3-RM-VO9"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="147" id="FzA-Ir-HIA"/>
                                 </constraints>
-                                <state key="normal" image="Essential Reflect" backgroundImage="Spento1"/>
+                                <state key="normal" image="Essential" backgroundImage="Spento1"/>
                                 <connections>
                                     <action selector="essButton:" destination="H0d-PG-Xds" eventType="touchUpInside" id="LQm-GS-e0v"/>
                                 </connections>
@@ -313,7 +313,7 @@
                                     <constraint firstAttribute="width" constant="150" id="FAX-BW-6MU"/>
                                     <constraint firstAttribute="height" constant="149.99999999999989" id="vKo-Fu-ePE"/>
                                 </constraints>
-                                <state key="normal" image="NonEssential Reflect" backgroundImage="Spento1"/>
+                                <state key="normal" image="NonEssential" backgroundImage="Spento1"/>
                                 <connections>
                                     <action selector="notEssButton:" destination="H0d-PG-Xds" eventType="touchUpInside" id="blB-qQ-jaq"/>
                                 </connections>
@@ -395,7 +395,7 @@
             <objects>
                 <viewController id="NOg-Fx-v7m" customClass="TutorialEvaluationViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5NL-XW-OEX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpj-Zy-BQZ">
@@ -406,20 +406,20 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgf-Oz-Zkq">
-                                <rect key="frame" x="54" y="282" width="150.00000000000011" height="150.00000000000011"/>
-                                <state key="normal" image="Essential Reflect" backgroundImage="Spento1"/>
+                                <rect key="frame" x="54" y="336" width="150.00000000000011" height="150.00000000000011"/>
+                                <state key="normal" image="Essential" backgroundImage="Spento1"/>
                                 <connections>
                                     <action selector="essentialButton:" destination="NOg-Fx-v7m" eventType="touchUpInside" id="H3F-YN-Hds"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4j-4h-jFK">
-                                <rect key="frame" x="214" y="282" width="150.00000000000011" height="150.00000000000011"/>
+                                <rect key="frame" x="214" y="336" width="150.00000000000011" height="150.00000000000011"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="149.99999999999989" id="W1f-7l-dwV"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="147" id="dic-rw-HJN"/>
                                     <constraint firstAttribute="width" constant="149.99999999999989" id="h29-jh-at0"/>
                                 </constraints>
-                                <state key="normal" image="NonEssential Reflect" backgroundImage="Spento1"/>
+                                <state key="normal" image="NonEssential" backgroundImage="Spento1"/>
                                 <connections>
                                     <action selector="notEssentialButton:" destination="NOg-Fx-v7m" eventType="touchUpInside" id="Zkt-0D-16P"/>
                                 </connections>
@@ -478,7 +478,7 @@
             <objects>
                 <viewController id="nrh-bp-NIk" customClass="PerfectViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NMi-YE-gRF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Perfect" translatesAutoresizingMaskIntoConstraints="NO" id="upQ-OX-ZB8">
@@ -506,8 +506,8 @@
     </scenes>
     <resources>
         <image name="CIAOGIANNA" width="375" height="812"/>
-        <image name="Essential Reflect" width="94" height="39"/>
-        <image name="NonEssential Reflect" width="94" height="81"/>
+        <image name="Essential" width="94" height="39"/>
+        <image name="NonEssential" width="94" height="81"/>
         <image name="Perfect" width="321" height="221"/>
         <image name="Reflect" width="321" height="86"/>
         <image name="Spento1" width="392" height="392"/>
@@ -516,8 +516,8 @@
         <image name="questionmark" width="42" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ejv-vo-jwM"/>
+        <segue reference="2Y7-pF-SYi"/>
         <segue reference="LW6-wO-WU4"/>
-        <segue reference="7AL-Qv-aAv"/>
+        <segue reference="N1p-FE-cor"/>
     </inferredMetricsTieBreakers>
 </document>
