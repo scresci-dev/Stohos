@@ -15,7 +15,6 @@ class TutorialQuestionViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var answerText: UITextView!
     @IBOutlet weak var progressView: UIImageView!
     @IBOutlet weak var nextButton: UIButton!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()

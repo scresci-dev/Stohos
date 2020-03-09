@@ -95,13 +95,18 @@ class EvaluationThoughtViewController: UIViewController {
     }
     
     @IBAction func nextButtonFunc(_ sender: UIButton) {
+        if(modeSelected != ""){
             if(isUpdate == "no"){
                  DatabaseHelper.istance.saveThoughtCoredata(text: finalThought, evaluation: modeSelected)
             } else{
                 DatabaseHelper.istance.updateThoughts(oldText: oldText, newText: finalThought, newEvaluation: modeSelected)
         }
+        modeSelected = ""
         performSegue(withIdentifier: "Main View", sender: self)
-
+        } else{
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.warning)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

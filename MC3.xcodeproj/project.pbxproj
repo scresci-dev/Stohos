@@ -399,7 +399,7 @@
 		DDC2F0AE23FAEA9200BD4C45 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GXVS8CQ292;
 				INFOPLIST_FILE = MC3/Info.plist;
@@ -417,7 +417,7 @@
 		DDC2F0AF23FAEA9200BD4C45 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GXVS8CQ292;
 				INFOPLIST_FILE = MC3/Info.plist;

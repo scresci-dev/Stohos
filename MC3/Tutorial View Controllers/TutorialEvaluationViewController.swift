@@ -11,8 +11,9 @@ class TutorialEvaluationViewController: UIViewController {
 
     var timerSpEss = Timer()
     var timerSpNot = Timer()
-    
-    
+    var isPressed = false
+
+
     var userAnswer: String!
     var evaluation: String!
 
@@ -76,6 +77,7 @@ class TutorialEvaluationViewController: UIViewController {
                generator.impactOccurred()
         view.endEditing(true)
         evaluation = "essential"
+        isPressed = true
         timerEssentialSpento()
         
        // nextMove()
@@ -86,6 +88,7 @@ class TutorialEvaluationViewController: UIViewController {
                generator.impactOccurred()
         view.endEditing(true)
         evaluation = "not-essential"
+        isPressed = true
         timerNotEssentialSpento()
         
         
@@ -93,18 +96,29 @@ class TutorialEvaluationViewController: UIViewController {
     }
 
     @IBAction func nextButton(_ sender: UIButton) {
-        if(evaluation == "essential"){
-            essentialCount += 1
-            DatabaseHelper.istance.saveThoughtCoredata(text: userAnswer, evaluation: "essential")
+        if(isPressed){
+            isPressed = false
+            count += 1
+            if(count == 1){
+                thought1Text = userAnswer
+                thought1Evaluation = evaluation
+            } else if(count == 2){
+                thought2Text = userAnswer
+                thought2Evaluation = evaluation
+            } else{
+                DatabaseHelper.istance.saveThoughtCoredata(text: thought1Text, evaluation: thought1Evaluation)
+                DatabaseHelper.istance.saveThoughtCoredata(text: thought2Text, evaluation: thought2Evaluation)
+                DatabaseHelper.istance.saveThoughtCoredata(text: userAnswer, evaluation: evaluation)
+            }
+            nextMove()
         }else{
-            notEssentialCount += 1
-            DatabaseHelper.istance.saveThoughtCoredata(text: userAnswer, evaluation: "not-essential")
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.warning)
         }
-        nextMove()
     }
     
     func nextMove() {
-        count += 1
+        
         if (count <= 2) {
             DispatchQueue.main.asyncAfter(deadline:.now(), execute: {
                self.performSegue(withIdentifier: "Next Question",sender: self)
