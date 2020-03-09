@@ -34,6 +34,7 @@ class WelcomeViewController: UIViewController {
         counter += 1
         showMessages()
     }
+
     
     func showMessages() {
         if (counter > 3 ) {
