@@ -16,6 +16,11 @@ class EvaluationThoughtViewController: UIViewController {
     var isUpdate = String()
     var oldText = String()
     
+    var timerSpEss = Timer()
+    var timerSpNot = Timer()
+    
+    var modeSelected = String()
+    
     @IBOutlet weak var thoughtText: UITextView!
     @IBOutlet weak var ebutton: UIButton!
     @IBOutlet weak var nebutton: UIButton!
@@ -32,36 +37,64 @@ class EvaluationThoughtViewController: UIViewController {
         nextButton.titleLabel?.font = UIFont(name: "NewYorkMedium-Regular", size: 25)
         nextButton.setTitleColor(buttonColor, for: .normal)
         nextButton.setTitle("Next", for: .normal)
-        print(isUpdate)
     }
+    
+    func timerEssentialSpento(){
+        var j = 1
+        timerSpNot.invalidate()
+        timerSpEss.invalidate()
+        timerSpEss = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
+           if(j >= 210){
+                j = 1
+            }
+            self.ebutton.setBackgroundImage(UIImage(named: "Rosa\(j)"), for: .normal)
+                j += 1
+                   }
+        nebutton.setBackgroundImage(UIImage(named: "Spento1"), for: .normal)
+    }
+    func timerNotEssentialSpento(){
+        var j = 1
+        timerSpEss.invalidate()
+        timerSpNot.invalidate()
+        timerSpNot =  Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
+             if(j >= 210){
+                  j = 1
+              }
+              self.nebutton.setBackgroundImage(UIImage(named: "Verde\(j)"), for: .normal)
+                  j += 1
+                     }
+          ebutton.setBackgroundImage(UIImage(named: "Spento1"), for: .normal)
+          
+    }
+    
     
     @IBAction func essButton(_ sender: Any) {
         //change the image view to essential and delay 2 sec to see it
         let generator = UIImpactFeedbackGenerator(style: .medium)
                generator.impactOccurred()
-        if(isUpdate == "no"){
-        DatabaseHelper.istance.saveThoughtCoredata(text: finalThought, evaluation: "essential")
-        }else{
-            print(finalThought)
-            print("old: \(oldText)")
-            DatabaseHelper.istance.updateThoughts(oldText: oldText, newText: finalThought, newEvaluation: "essential")
-        }
-        performSegue(withIdentifier: "Main View", sender: self)
+        modeSelected = "essential"
+        timerEssentialSpento()
     }
     
     @IBAction func notEssButton(_ sender: Any) {
         //change the image view to not essential and delay 2 sec to see it
         let generator = UIImpactFeedbackGenerator(style: .medium)
                generator.impactOccurred()
-        if(isUpdate == "no"){
-        DatabaseHelper.istance.saveThoughtCoredata(text: finalThought, evaluation: "not-essential")
-        }else{
-            DatabaseHelper.istance.updateThoughts(oldText: oldText, newText: finalThought, newEvaluation: "not-essential")
+        modeSelected = "not-essential"
+        timerNotEssentialSpento()
+    }
+    
+    @IBAction func nextButtonFunc(_ sender: UIButton) {
+            if(isUpdate == "no"){
+                 DatabaseHelper.istance.saveThoughtCoredata(text: finalThought, evaluation: modeSelected)
+            } else{
+                DatabaseHelper.istance.updateThoughts(oldText: oldText, newText: finalThought, newEvaluation: modeSelected)
         }
         performSegue(withIdentifier: "Main View", sender: self)
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     (segue.destination as! UserThoughtsViewController).newThought = thoughtText.text
+        (segue.destination as! UserThoughtsViewController).newThought = thoughtText.text
     }
 }
