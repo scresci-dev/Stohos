@@ -30,6 +30,8 @@
 		DDDA47D624082E3A005950CF /* EditThoughtViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA47D524082E3A005950CF /* EditThoughtViewController.swift */; };
 		DDDA47E3240A974C005950CF /* Thought+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA47E1240A974C005950CF /* Thought+CoreDataClass.swift */; };
 		DDDA47E8240A99CD005950CF /* Thought+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDA47E7240A99CD005950CF /* Thought+CoreDataProperties.swift */; };
+		DDF83BF52416A6BD005D86C5 /* Stohos music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DDF83BF42416A6BD005D86C5 /* Stohos music.mp3 */; };
+		DDF83BF82416A724005D86C5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDF83BF72416A724005D86C5 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		DDDA47D524082E3A005950CF /* EditThoughtViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditThoughtViewController.swift; sourceTree = "<group>"; };
 		DDDA47E1240A974C005950CF /* Thought+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Thought+CoreDataClass.swift"; sourceTree = "<group>"; };
 		DDDA47E7240A99CD005950CF /* Thought+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Thought+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		DDF83BF42416A6BD005D86C5 /* Stohos music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Stohos music.mp3"; sourceTree = "<group>"; };
+		DDF83BF72416A724005D86C5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDF83BF82416A724005D86C5 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +93,7 @@
 				DDC2F0B023FAEAED00BD4C45 /* .gitignore */,
 				DDC2F09823FAEA9000BD4C45 /* MC3 */,
 				DDC2F09723FAEA9000BD4C45 /* Products */,
+				DDF83BF62416A724005D86C5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +110,7 @@
 			children = (
 				DDC2F09923FAEA9000BD4C45 /* AppDelegate.swift */,
 				DDC2F09B23FAEA9000BD4C45 /* SceneDelegate.swift */,
+				DDF83BF42416A6BD005D86C5 /* Stohos music.mp3 */,
 				6B653E20240D6450002578E1 /* NewYorkMedium-Regular.otf */,
 				DDC2F09F23FAEA9000BD4C45 /* Main.storyboard */,
 				DD01A8BC240F495A0032AD88 /* Tutorial View Controllers */,
@@ -148,6 +155,14 @@
 				DD45F92A24100A1800AA9521 /* WarningViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		DDF83BF62416A724005D86C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DDF83BF72416A724005D86C5 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,6 +228,7 @@
 				DDC2F0A923FAEA9200BD4C45 /* LaunchScreen.storyboard in Resources */,
 				DDC2F0A123FAEA9000BD4C45 /* Main.storyboard in Resources */,
 				6B653E23240EBB71002578E1 /* Assets.xcassets in Resources */,
+				DDF83BF52416A6BD005D86C5 /* Stohos music.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
