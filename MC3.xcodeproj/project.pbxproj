@@ -383,8 +383,9 @@
 		DDC2F0AE23FAEA9200BD4C45 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GXVS8CQ292;
+				DEVELOPMENT_TEAM = 26D7L8HUAC;
 				INFOPLIST_FILE = MC3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -393,15 +394,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = silvio.MC3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		DDC2F0AF23FAEA9200BD4C45 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GXVS8CQ292;
+				DEVELOPMENT_TEAM = 26D7L8HUAC;
 				INFOPLIST_FILE = MC3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -410,7 +412,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = silvio.MC3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
