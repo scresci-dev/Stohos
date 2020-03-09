@@ -62,11 +62,7 @@ class UserThoughtsViewController: UIViewController {
             self.collision.addBoundary(withIdentifier: "Barrier2" as NSCopying, for: UIBezierPath(rect: BarrieraTop.frame))
             self.animator.addBehavior(self.collision)
             let gestureRec = UITapGestureRecognizer(target: self, action:  #selector (self.someAction (_:)))
-            view.addGestureRecognizer(gestureRec)
-//          DoppiaPalla.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(TextAppear)))
-            
-
-        }
+            view.addGestureRecognizer(gestureRec)        }
     
     @objc func someAction(_ sender:UITapGestureRecognizer) {
         plantLabel.isHidden = true
@@ -173,10 +169,13 @@ class UserThoughtsViewController: UIViewController {
         deleteButton.isHidden = false
         editButton.isEnabled = true
         editButton.isHidden = false
+        thoughtView.isHidden = false
     }
 
     
     @IBAction func plantIsPressed(_ sender: Any) {
+        plantLabel.isHidden = false
+        thoughtView.isHidden = true
         deleteButton.isHidden = true
         deleteButton.isEnabled = false
         editButton.isEnabled = false
