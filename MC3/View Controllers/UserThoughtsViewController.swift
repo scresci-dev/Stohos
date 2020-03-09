@@ -10,8 +10,9 @@ import Foundation
 import UIKit
 import CoreData
 import CoreMotion
+import AVFoundation
 
-class UserThoughtsViewController: UIViewController {
+class UserThoughtsViewController: UIViewController, AVAudioPlayerDelegate {
 
     var currentThought: String = ""
     var newThought: String = ""
@@ -25,6 +26,8 @@ class UserThoughtsViewController: UIViewController {
     var isUpdate : String = ""
     
     var arr: [Thought] = [];
+    
+    var player: AVAudioPlayer = AVAudioPlayer()
     
     @IBOutlet weak var thoughtView: UITextView!
     @IBOutlet weak var deleteButton: UIButton!
@@ -42,6 +45,14 @@ class UserThoughtsViewController: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             overrideUserInterfaceStyle = .light
+            
+            do {
+                let audioPlayer = Bundle.main.path(forResource: "Stohos music", ofType: "mp3")
+                try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPlayer!) as URL)
+            }
+            catch {
+                //error
+            }
             start = [0, 22, 34, 43, 57, 70, 90, 104, 125, 142]
             editButton.titleLabel?.font = UIFont(name: "NewYorkMedium-Regular", size: 18)
             editButton.setTitleColor(buttonColor, for: .normal)
@@ -78,6 +89,7 @@ class UserThoughtsViewController: UIViewController {
         }
     
     override func viewWillAppear(_ animated: Bool) {
+        player.play()
         arr = DatabaseHelper.istance.getAllThoughts()
         
         for i in 0..<arr.count{
