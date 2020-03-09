@@ -34,10 +34,7 @@ class WelcomeViewController: UIViewController {
         counter += 1
         showMessages()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
+
     
     func showMessages() {
         if (counter > 3 ) {
