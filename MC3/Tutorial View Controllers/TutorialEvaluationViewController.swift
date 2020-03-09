@@ -35,14 +35,12 @@ class TutorialEvaluationViewController: UIViewController {
         nextButton.titleLabel?.font = UIFont(name: "NewYorkMedium-Regular", size: 25)
         nextButton.setTitleColor(buttonColor, for: .normal)
         nextButton.setTitle("Next", for: .normal)
-        essentialButton.setImage(UIImage(named: "Essential Reflect"), for: .normal)
-        notEssentialButton.setImage(UIImage(named: "NonEssential Reflect"), for: .normal)
         
         
     }
     
     func timerEssentialSpento(){
-        var j = 0
+        var j = 1
         timerSpNot.invalidate()
         timerSpEss.invalidate()
         timerSpEss = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
@@ -52,9 +50,12 @@ class TutorialEvaluationViewController: UIViewController {
             self.essentialButton.setBackgroundImage(UIImage(named: "Rosa\(j)"), for: .normal)
                 j += 1
                    }
+        essentialButton.setImage(UIImage(named: "Essential Reflect"), for: .normal)
+        notEssentialButton.setBackgroundImage(UIImage(named: "Spento1"), for: .normal)
+         notEssentialButton.setImage(UIImage(named: "NonEssential"), for: .normal)
     }
     func timerNotEssentialSpento(){
-        var j = 0
+        var j = 1
         timerSpEss.invalidate()
         timerSpNot.invalidate()
         timerSpNot =  Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
@@ -64,6 +65,9 @@ class TutorialEvaluationViewController: UIViewController {
               self.notEssentialButton.setBackgroundImage(UIImage(named: "Verde\(j)"), for: .normal)
                   j += 1
                      }
+        notEssentialButton.setImage(UIImage(named: "NonEssential Reflect"), for: .normal)
+          essentialButton.setBackgroundImage(UIImage(named: "Spento1"), for: .normal)
+        essentialButton.setImage(UIImage(named: "Essential"), for: .normal)
           
     }
 
