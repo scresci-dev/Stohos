@@ -35,10 +35,6 @@ class WelcomeViewController: UIViewController {
         showMessages()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-    
     func showMessages() {
         if (counter > 3 ) {
             performSegue(withIdentifier: "TutorialQuestion", sender: self)

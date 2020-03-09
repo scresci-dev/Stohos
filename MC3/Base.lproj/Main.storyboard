@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N1m-Em-c1a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N1m-Em-c1a">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -280,14 +280,14 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqY-a0-aRS">
-                                <rect key="frame" x="53" y="327" width="150" height="150"/>
+                                <rect key="frame" x="53" y="327" width="150.00000000000011" height="150.00000000000011"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="138" id="1Qo-fo-vfu"/>
                                     <constraint firstAttribute="width" constant="150" id="4uU-LT-CBq"/>
                                     <constraint firstAttribute="height" constant="149.99999999999989" id="Cl3-RM-VO9"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="147" id="FzA-Ir-HIA"/>
                                 </constraints>
-                                <state key="normal" image="Essential Reflect" backgroundImage="Spento1"/>
+                                <state key="normal" image="Essential" backgroundImage="Spento1"/>
                                 <connections>
                                     <action selector="essButton:" destination="H0d-PG-Xds" eventType="touchUpInside" id="LQm-GS-e0v"/>
                                 </connections>
@@ -297,14 +297,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vx8-mw-pcV">
-                                <rect key="frame" x="211" y="327" width="150" height="150"/>
+                                <rect key="frame" x="211" y="327" width="150.00000000000011" height="150.00000000000011"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="147" id="1ew-av-PnF"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="138" id="6No-PI-BNd"/>
                                     <constraint firstAttribute="width" constant="150" id="FAX-BW-6MU"/>
                                     <constraint firstAttribute="height" constant="149.99999999999989" id="vKo-Fu-ePE"/>
                                 </constraints>
-                                <state key="normal" image="NonEssential Reflect" backgroundImage="Spento1"/>
+                                <state key="normal" image="NonEssential" backgroundImage="Spento1"/>
                                 <connections>
                                     <action selector="notEssButton:" destination="H0d-PG-Xds" eventType="touchUpInside" id="blB-qQ-jaq"/>
                                 </connections>
@@ -437,20 +437,20 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgf-Oz-Zkq">
-                                <rect key="frame" x="54" y="336" width="150" height="150"/>
-                                <state key="normal" image="Essential Reflect" backgroundImage="Spento1"/>
+                                <rect key="frame" x="54" y="336" width="150.00000000000011" height="150.00000000000011"/>
+                                <state key="normal" image="Essential" backgroundImage="Spento1"/>
                                 <connections>
                                     <action selector="essentialButton:" destination="NOg-Fx-v7m" eventType="touchUpInside" id="H3F-YN-Hds"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4j-4h-jFK">
-                                <rect key="frame" x="214" y="336" width="150" height="150"/>
+                                <rect key="frame" x="214" y="336" width="150.00000000000011" height="150.00000000000011"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="149.99999999999989" id="W1f-7l-dwV"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="147" id="dic-rw-HJN"/>
                                     <constraint firstAttribute="width" constant="149.99999999999989" id="h29-jh-at0"/>
                                 </constraints>
-                                <state key="normal" image="NonEssential Reflect" backgroundImage="Spento1"/>
+                                <state key="normal" image="NonEssential" backgroundImage="Spento1"/>
                                 <connections>
                                     <action selector="notEssentialButton:" destination="NOg-Fx-v7m" eventType="touchUpInside" id="Zkt-0D-16P"/>
                                 </connections>
@@ -537,8 +537,8 @@
     </scenes>
     <resources>
         <image name="CIAOGIANNA" width="375" height="812"/>
-        <image name="Essential Reflect" width="94" height="39"/>
-        <image name="NonEssential Reflect" width="94" height="81"/>
+        <image name="Essential" width="94" height="39"/>
+        <image name="NonEssential" width="94" height="81"/>
         <image name="Perfect" width="321" height="221"/>
         <image name="Reflect" width="321" height="86"/>
         <image name="Spento1" width="392" height="392"/>
@@ -549,8 +549,8 @@
         <image name="questionmark" width="42" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ejv-vo-jwM"/>
-        <segue reference="EEt-KG-hBY"/>
+        <segue reference="2Y7-pF-SYi"/>
+        <segue reference="LW6-wO-WU4"/>
         <segue reference="7AL-Qv-aAv"/>
     </inferredMetricsTieBreakers>
 </document>
