@@ -401,7 +401,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 26D7L8HUAC;
+				DEVELOPMENT_TEAM = GXVS8CQ292;
 				INFOPLIST_FILE = MC3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -419,7 +419,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-2";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 26D7L8HUAC;
+				DEVELOPMENT_TEAM = GXVS8CQ292;
 				INFOPLIST_FILE = MC3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
