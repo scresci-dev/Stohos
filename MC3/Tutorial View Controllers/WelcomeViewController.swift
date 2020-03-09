@@ -16,9 +16,6 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     var counter: Int = 0
-
-//    let startPositions = [[0, 0, 0], [57, 73, 98], [13, 69, 82], [31, 0, 0]]
-//    let lengths = [[0, 0, 0], [9, 14, 13], [13, 8, 28], [17]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
