@@ -170,16 +170,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5R3-sg-Y6u">
-                                <rect key="frame" x="314" y="272" width="145" height="178"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="PlusButton">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="addButton:" destination="N1m-Em-c1a" eventType="touchUpInside" id="EFq-Zm-hRG"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="a6h-nS-OeH"/>
@@ -502,7 +492,6 @@
     <resources>
         <image name="CIAOGIANNA" width="375" height="812"/>
         <image name="Perfect" width="321" height="221"/>
-        <image name="PlusButton" width="87" height="124.66666412353516"/>
         <image name="Reflect" width="321" height="86"/>
         <image name="WellDone" width="321" height="94"/>
         <image name="plant" width="95.5" height="186"/>

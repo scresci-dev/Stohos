@@ -131,6 +131,11 @@ class UserThoughtsViewController: UIViewController {
             
                   view.addSubview(SubView)
         }
+        let addButton = UIButton()
+        addButton.frame = CGRect(x: 339, y: 337, width: 97, height: 104)
+        addButton.addTarget(self, action: #selector(addButtonFunc), for: .touchUpInside)
+        addButton.setImage(UIImage(named: "plusbutton"), for: .normal)
+        view.addSubview(addButton)
         
         motionManager.gyroUpdateInterval = 1.0 / 60.0
         motionManager.startGyroUpdates(to: OperationQueue.current!) { (data, error) in
@@ -183,7 +188,7 @@ class UserThoughtsViewController: UIViewController {
         generator.impactOccurred()
     }
     
-    @IBAction func addButton(_ sender: UIButton) {
+    @objc func addButtonFunc(_ sender: UIButton) {
         if numThoughts <= 10 {
         isUpdate = "no"
             performSegue(withIdentifier: "Edit Thought", sender: self)
