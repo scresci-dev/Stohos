@@ -178,9 +178,10 @@
                                 </state>
                                 <connections>
                                     <action selector="addButton:" destination="N1m-Em-c1a" eventType="touchUpInside" id="EFq-Zm-hRG"/>
+                                    <segue destination="uab-BE-ArT" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="GFw-gG-npK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPZ-d8-Bpp">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPZ-d8-Bpp">
                                 <rect key="frame" x="43" y="632" width="328" height="91"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -202,7 +203,7 @@
                         <outlet property="thoughtView" destination="r76-aG-CIf" id="LCs-Ka-G79"/>
                         <segue destination="HVM-I5-GwL" kind="show" identifier="Edit Thought" id="MGA-JQ-vFt"/>
                         <segue destination="g6s-sF-NGW" kind="presentation" identifier="tutorial" modalPresentationStyle="fullScreen" id="gBY-1R-ibJ"/>
-                        <segue destination="v3D-KA-RmJ" kind="presentation" identifier="feedback" id="xuA-la-65d"/>
+                        <segue destination="v3D-KA-RmJ" kind="presentation" identifier="feedback" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="xuA-la-65d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L0I-4L-YQU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -353,7 +354,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="St6-Ov-q89" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7653.6231884057979" y="30.803571428571427"/>
+            <point key="canvasLocation" x="7804" y="31"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="AXg-zF-P5l">
+            <objects>
+                <viewController id="uab-BE-ArT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fQ9-T1-bZ1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="3EJ-k5-lxa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5t0-w5-9Ic" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5050" y="-773"/>
         </scene>
         <!--Edit Thought View Controller-->
         <scene sceneID="QJy-h5-jo7">
@@ -393,7 +409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5RT-uK-pry" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6286.9565217391309" y="-702.45535714285711"/>
+            <point key="canvasLocation" x="6690" y="-698"/>
         </scene>
         <!--Tutorial Evaluation View Controller-->
         <scene sceneID="5TL-78-hH2">
@@ -518,7 +534,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="2Y7-pF-SYi"/>
-        <segue reference="EEt-KG-hBY"/>
+        <segue reference="LW6-wO-WU4"/>
         <segue reference="N1p-FE-cor"/>
     </inferredMetricsTieBreakers>
 </document>
