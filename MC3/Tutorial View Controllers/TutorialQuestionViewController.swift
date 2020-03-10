@@ -15,6 +15,7 @@ class TutorialQuestionViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var answerText: UITextView!
     @IBOutlet weak var progressView: UIImageView!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var countLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,7 @@ class TutorialQuestionViewController: UIViewController, UITextViewDelegate {
    }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText newText: String) -> Bool {
+        countLabel.text = "\(answerText.text.count + (newText.count - range.length))/250"
         return answerText.text.count + (newText.count - range.length) <= 250
     }
     
@@ -56,7 +58,8 @@ class TutorialQuestionViewController: UIViewController, UITextViewDelegate {
     }
     
     func editAnswerText() {
-        //answerText.layer.borderWidth = 1.0
+        countLabel.textColor = darkGrey
+        countLabel.font = UIFont(name: "NewYorkMedium-Regular", size: 16)
         answerText.textAlignment = .left
         answerText.textColor = lightGrey
         answerText.font = UIFont(name: "NewYorkMedium-Regular", size: 18)
