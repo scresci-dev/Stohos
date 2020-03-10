@@ -89,14 +89,14 @@ class UserThoughtsViewController: UIViewController, AVAudioPlayerDelegate {
         }
     
     override func viewWillAppear(_ animated: Bool) {
+        player.setVolume(0.1, fadeDuration: 3)
+        player.setVolume(0.5, fadeDuration: 2)
         player.play()
         arr.removeAll()
         print("ce stong")
-        arr = DatabaseHelper.istance.getAllThoughts()
+        player.numberOfLoops = -1
         for i in 0..<arr.count{
-            print(arr[i])
-        }
-        for i in 0..<arr.count{
+        
             
           let SubView = UIView()
           let button = UIButton()
@@ -173,7 +173,7 @@ class UserThoughtsViewController: UIViewController, AVAudioPlayerDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if !UserDefaults.standard.bool(forKey: "LaunchedBefore") {
-           performSegue(withIdentifier: "tutorial", sender: self)
+            performSegue(withIdentifier: "tutorial", sender: self)
         }
     }
     
