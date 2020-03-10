@@ -205,7 +205,7 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="v3D-KA-RmJ" customClass="WellDoneViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IxP-O2-gMe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WellDone" translatesAutoresizingMaskIntoConstraints="NO" id="TKz-0o-VV2">
@@ -357,7 +357,7 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="ZpB-Wn-uC7" customClass="WarningViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fjS-ve-alC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dont" translatesAutoresizingMaskIntoConstraints="NO" id="Nwg-NE-B3R">
@@ -405,7 +405,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="path"/>
                                 <connections>
-                                    <action selector="backButton:" destination="HVM-I5-GwL" eventType="touchUpInside" id="iRS-T6-Tf2"/>
+                                    <segue destination="N1m-Em-c1a" kind="show" id="x6O-DY-PcG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -551,8 +551,8 @@
         <image name="questionmark" width="42" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ejv-vo-jwM"/>
-        <segue reference="LW6-wO-WU4"/>
+        <segue reference="2Y7-pF-SYi"/>
+        <segue reference="x6O-DY-PcG"/>
         <segue reference="7AL-Qv-aAv"/>
     </inferredMetricsTieBreakers>
 </document>

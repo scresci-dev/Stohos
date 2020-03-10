@@ -51,15 +51,16 @@ class EditThoughtViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func backButton(_ sender: Any) {
-         dismiss(animated: true, completion: nil)
+//         dismiss(animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     (segue.destination as! EvaluationThoughtViewController).finalThought = editField.text
+        if(segue.identifier == "Evaluate Again"){
+        (segue.destination as! EvaluationThoughtViewController).finalThought = editField.text
         (segue.destination as! EvaluationThoughtViewController).isUpdate = isUpdate
             (segue.destination as! EvaluationThoughtViewController).oldText = editedUserThought
-
-        
+        }
+      
     }
 
 }
