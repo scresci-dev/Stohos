@@ -89,9 +89,6 @@ class UserThoughtsViewController: UIViewController, AVAudioPlayerDelegate {
         }
     
     override func viewWillAppear(_ animated: Bool) {
-        player.setVolume(0.1, fadeDuration: 3)
-        player.setVolume(0.5, fadeDuration: 2)
-        player.play()
         arr.removeAll()
         print("ce stong")
         player.numberOfLoops = -1
@@ -173,6 +170,9 @@ class UserThoughtsViewController: UIViewController, AVAudioPlayerDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if !UserDefaults.standard.bool(forKey: "LaunchedBefore") {
+            player.setVolume(0.1, fadeDuration: 3)
+            player.setVolume(0.5, fadeDuration: 2)
+            player.play()
             performSegue(withIdentifier: "tutorial", sender: self)
         }
     }
@@ -186,6 +186,7 @@ class UserThoughtsViewController: UIViewController, AVAudioPlayerDelegate {
         editButton.isEnabled = true
         editButton.isHidden = false
         thoughtView.isHidden = false
+        plantLabel.isHidden = true
     }
 
     

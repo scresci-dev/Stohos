@@ -38,6 +38,8 @@ class TutorialQuestionViewController: UIViewController, UITextViewDelegate {
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText newText: String) -> Bool {
         countLabel.text = "\(answerText.text.count + (newText.count - range.length))/250"
+        countLabel.textColor = darkGrey
+        countLabel.font = UIFont(name: "NewYorkMedium-Regular", size: 16)
         return answerText.text.count + (newText.count - range.length) <= 250
     }
     
@@ -58,8 +60,6 @@ class TutorialQuestionViewController: UIViewController, UITextViewDelegate {
     }
     
     func editAnswerText() {
-        countLabel.textColor = darkGrey
-        countLabel.font = UIFont(name: "NewYorkMedium-Regular", size: 16)
         answerText.textAlignment = .left
         answerText.textColor = lightGrey
         answerText.font = UIFont(name: "NewYorkMedium-Regular", size: 18)
