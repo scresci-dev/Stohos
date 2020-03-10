@@ -92,10 +92,11 @@ class UserThoughtsViewController: UIViewController, AVAudioPlayerDelegate {
         player.setVolume(0.1, fadeDuration: 3)
         player.setVolume(0.5, fadeDuration: 2)
         player.play()
+        arr.removeAll()
+        print("ce stong")
         player.numberOfLoops = -1
-        arr = DatabaseHelper.istance.getAllThoughts()
-        
         for i in 0..<arr.count{
+        
             
           let SubView = UIView()
           let button = UIButton()

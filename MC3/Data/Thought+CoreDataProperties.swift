@@ -19,8 +19,4 @@ extension Thought {
 
     @NSManaged public var evaluation: String?
     @NSManaged public var text: String?
-    @NSManaged public var image: String?
-    @NSManaged public var xpos: Float
-    @NSManaged public var ypos: Float
-
 }
