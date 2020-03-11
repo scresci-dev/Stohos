@@ -93,6 +93,7 @@ class UserThoughtsViewController: UIViewController, AVAudioPlayerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         arr.removeAll()
         print("ce stong")
+        arr = DatabaseHelper.istance.getAllThoughts()
         for i in 0..<arr.count{
         
             
