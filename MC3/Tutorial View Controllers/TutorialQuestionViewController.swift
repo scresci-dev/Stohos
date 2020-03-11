@@ -40,7 +40,7 @@ class TutorialQuestionViewController: UIViewController, UITextViewDelegate {
         countLabel.text = "\(answerText.text.count + (newText.count - range.length))/250"
         countLabel.textColor = darkGrey
         countLabel.font = UIFont(name: "NewYorkMedium-Regular", size: 16)
-        return answerText.text.count + (newText.count - range.length) <= 250
+        return answerText.text.count + (newText.count - range.length) <= 249
     }
     
     @IBAction func buttonPressed(_ sender: Any) {
