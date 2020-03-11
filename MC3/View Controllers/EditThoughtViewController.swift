@@ -15,6 +15,7 @@ class EditThoughtViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var editField: UITextView!
     @IBOutlet weak var doneEditButton: UIButton?
+    @IBOutlet weak var countLabel: UILabel!
     
     var isUpdate = String()
     
@@ -37,6 +38,9 @@ class EditThoughtViewController: UIViewController, UITextViewDelegate {
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText newText: String) -> Bool {
+        countLabel.text = "\(editField.text.count + (newText.count - range.length))/250"
+        countLabel.textColor = darkGrey
+        countLabel.font = UIFont(name: "NewYorkMedium-Regular", size: 16)
            return editField.text.count + (newText.count - range.length) <= 250
        }
     

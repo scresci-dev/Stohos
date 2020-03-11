@@ -110,6 +110,8 @@ class EvaluationThoughtViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "Main View") {
         (segue.destination as! UserThoughtsViewController).newThought = thoughtText.text
+        }
     }
 }

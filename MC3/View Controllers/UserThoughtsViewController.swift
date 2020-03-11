@@ -53,6 +53,12 @@ class UserThoughtsViewController: UIViewController, AVAudioPlayerDelegate {
             catch {
                 //error
             }
+            
+            player.setVolume(0.1, fadeDuration: 3)
+            player.setVolume(0.5, fadeDuration: 2)
+            player.play()
+            player.numberOfLoops = -1
+            
             start = [0, 22, 34, 43, 57, 70, 90, 104, 125, 142]
             editButton.titleLabel?.font = UIFont(name: "NewYorkMedium-Regular", size: 18)
             editButton.setTitleColor(buttonColor, for: .normal)
@@ -91,7 +97,6 @@ class UserThoughtsViewController: UIViewController, AVAudioPlayerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         arr.removeAll()
         print("ce stong")
-        player.numberOfLoops = -1
         for i in 0..<arr.count{
         
             
@@ -170,9 +175,6 @@ class UserThoughtsViewController: UIViewController, AVAudioPlayerDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if !UserDefaults.standard.bool(forKey: "LaunchedBefore") {
-            player.setVolume(0.1, fadeDuration: 3)
-            player.setVolume(0.5, fadeDuration: 2)
-            player.play()
             performSegue(withIdentifier: "tutorial", sender: self)
         }
     }
