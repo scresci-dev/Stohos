@@ -33,17 +33,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gsi-Nu-mXu">
-                                <rect key="frame" x="51" y="350" width="312" height="156"/>
+                                <rect key="frame" x="30" y="350" width="354" height="156"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="Gsi-Nu-mXu" firstAttribute="centerY" secondItem="4kC-Hi-o7V" secondAttribute="centerY" constant="-20" id="BjH-BP-Xf1"/>
-                            <constraint firstItem="Gsi-Nu-mXu" firstAttribute="top" secondItem="q56-MF-eXl" secondAttribute="top" constant="262" id="GFb-KD-YuO"/>
-                            <constraint firstItem="q56-MF-eXl" firstAttribute="bottom" secondItem="Gsi-Nu-mXu" secondAttribute="bottom" constant="356" id="Od7-Ea-5NY"/>
-                            <constraint firstItem="Gsi-Nu-mXu" firstAttribute="centerX" secondItem="4kC-Hi-o7V" secondAttribute="centerX" id="gXY-tw-Ntt"/>
-                            <constraint firstItem="Gsi-Nu-mXu" firstAttribute="leading" secondItem="q56-MF-eXl" secondAttribute="leading" constant="51" id="qNU-FA-XdJ"/>
+                            <constraint firstItem="q56-MF-eXl" firstAttribute="bottom" secondItem="Gsi-Nu-mXu" secondAttribute="bottom" constant="356" id="4OM-VA-bz7"/>
+                            <constraint firstItem="Gsi-Nu-mXu" firstAttribute="top" secondItem="q56-MF-eXl" secondAttribute="top" constant="262" id="QRB-e7-T3W"/>
+                            <constraint firstItem="Gsi-Nu-mXu" firstAttribute="centerX" secondItem="4kC-Hi-o7V" secondAttribute="centerX" id="hgc-nE-NIN"/>
+                            <constraint firstItem="Gsi-Nu-mXu" firstAttribute="leading" secondItem="q56-MF-eXl" secondAttribute="leading" constant="30" id="t02-pF-7Vb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="q56-MF-eXl"/>
                         <connections>
@@ -311,7 +310,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqY-a0-aRS">
-                                <rect key="frame" x="53" y="327" width="150.00000000000011" height="150.00000000000011"/>
+                                <rect key="frame" x="53" y="327" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="138" id="1Qo-fo-vfu"/>
                                     <constraint firstAttribute="width" constant="150" id="4uU-LT-CBq"/>
@@ -331,7 +330,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vx8-mw-pcV">
-                                <rect key="frame" x="211" y="327" width="150.00000000000011" height="150.00000000000011"/>
+                                <rect key="frame" x="211" y="327" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="147" id="1ew-av-PnF"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="138" id="6No-PI-BNd"/>
@@ -479,18 +478,18 @@
         <scene sceneID="5TL-78-hH2">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="NOg-Fx-v7m" customClass="TutorialEvaluationViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="5NL-XW-OEX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <view key="view" contentMode="scaleToFill" id="5NL-XW-OEX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpj-Zy-BQZ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpj-Zy-BQZ">
                                 <rect key="frame" x="54" y="474" width="307" height="218"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgf-Oz-Zkq">
-                                <rect key="frame" x="54" y="241" width="150.00000000000011" height="392.00000000000011"/>
+                                <rect key="frame" x="54" y="285" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="5a3-Wh-h9V"/>
                                     <constraint firstAttribute="height" constant="150" id="90f-SN-AUP"/>
@@ -506,8 +505,8 @@
                                     <constraint firstAttribute="height" constant="128" id="sXN-I4-v5l"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaQ-pN-7H5">
-                                <rect key="frame" x="158" y="732" width="340" height="46"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaQ-pN-7H5">
+                                <rect key="frame" x="158" y="732" width="98" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="tlX-oH-LG4"/>
                                 </constraints>
@@ -516,7 +515,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cfk-EN-ubv">
-                                <rect key="frame" x="334" y="0.0" width="306" height="48"/>
+                                <rect key="frame" x="334" y="44" width="60" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="PJ5-Ji-krM"/>
                                 </constraints>
@@ -525,10 +524,10 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark" translatesAutoresizingMaskIntoConstraints="NO" id="9aq-BY-Wrx">
-                                <rect key="frame" x="334" y="0.0" width="306" height="48"/>
+                                <rect key="frame" x="334" y="44" width="60" height="48"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4j-4h-jFK">
-                                <rect key="frame" x="212" y="241" width="392.00000000000011" height="392.00000000000011"/>
+                                <rect key="frame" x="212" y="285" width="150" height="150"/>
                                 <state key="normal" image="NonEssential" backgroundImage="Spento1"/>
                                 <connections>
                                     <action selector="notEssentialButton:" destination="NOg-Fx-v7m" eventType="touchUpInside" id="Zkt-0D-16P"/>

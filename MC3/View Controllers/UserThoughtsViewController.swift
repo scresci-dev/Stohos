@@ -18,7 +18,7 @@ class UserThoughtsViewController: UIViewController, AVAudioPlayerDelegate {
     var newThought: String = ""
     
     var timer = Timer()
-    
+    var flag = true
     var start : [Int] = []
     
     var numThoughts = 0
@@ -53,12 +53,7 @@ class UserThoughtsViewController: UIViewController, AVAudioPlayerDelegate {
             catch {
                 //error
             }
-            
-            player.setVolume(0.1, fadeDuration: 3)
-            player.setVolume(0.5, fadeDuration: 2)
-            player.play()
-            player.numberOfLoops = -1
-            
+        
             start = [0, 22, 34, 43, 57, 70, 90, 104, 125, 142]
             editButton.titleLabel?.font = UIFont(name: "NewYorkMedium-Regular", size: 18)
             editButton.setTitleColor(buttonColor, for: .normal)
@@ -79,7 +74,8 @@ class UserThoughtsViewController: UIViewController, AVAudioPlayerDelegate {
             self.collision.addBoundary(withIdentifier: "Barrier2" as NSCopying, for: UIBezierPath(rect: BarrieraTop.frame))
             self.animator.addBehavior(self.collision)
             let gestureRec = UITapGestureRecognizer(target: self, action:  #selector (self.someAction (_:)))
-            view.addGestureRecognizer(gestureRec)        }
+            view.addGestureRecognizer(gestureRec)
+    }
     
     @objc func someAction(_ sender:UITapGestureRecognizer) {
         plantLabel.isHidden = true
@@ -174,6 +170,12 @@ class UserThoughtsViewController: UIViewController, AVAudioPlayerDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        if UserDefaults.standard.bool(forKey: "Audio") {
+            player.setVolume(0.1, fadeDuration: 3)
+            player.setVolume(0.5, fadeDuration: 2)
+            player.play()
+            player.numberOfLoops = -1
+        }
         if !UserDefaults.standard.bool(forKey: "LaunchedBefore") {
             performSegue(withIdentifier: "tutorial", sender: self)
         }

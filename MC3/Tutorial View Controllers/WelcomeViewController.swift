@@ -18,6 +18,7 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UserDefaults.standard.set(true, forKey: "Audio")
         overrideUserInterfaceStyle = .light
         let gestureRec = UITapGestureRecognizer(target: self, action:  #selector (self.someAction (_:)))
         view.addGestureRecognizer(gestureRec)
