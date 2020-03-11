@@ -8,12 +8,26 @@
 
 import UIKit
 import CoreData
+import AVFoundation
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate {
+    
+    var player: AVAudioPlayer = AVAudioPlayer()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-            return true
+        do {
+            let audioPlayer = Bundle.main.path(forResource: "Stohos music", ofType: "mp3")
+            try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPlayer!) as URL)
+        }
+        catch {
+            //error
+        }
+        player.setVolume(0.1, fadeDuration: 3)
+        player.setVolume(0.5, fadeDuration: 2)
+        player.play()
+        player.numberOfLoops = -1
+        return true
         }
     
     

@@ -79,6 +79,7 @@
 		DD01A8BC240F495A0032AD88 /* Tutorial View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DDC2F09F23FAEA9000BD4C45 /* Main.storyboard */,
 				DDC2F09D23FAEA9000BD4C45 /* WelcomeViewController.swift */,
 				DD84143A23FD77FF00478319 /* TutorialQuestionViewController.swift */,
 				DD84143C23FED79E00478319 /* TutorialEvaluationViewController.swift */,
@@ -112,7 +113,6 @@
 				DDC2F09B23FAEA9000BD4C45 /* SceneDelegate.swift */,
 				DDF83BF42416A6BD005D86C5 /* Stohos music.mp3 */,
 				6B653E20240D6450002578E1 /* NewYorkMedium-Regular.otf */,
-				DDC2F09F23FAEA9000BD4C45 /* Main.storyboard */,
 				DD01A8BC240F495A0032AD88 /* Tutorial View Controllers */,
 				DDDA47E0240A9705005950CF /* View Controllers */,
 				DDDA47DF240A96E2005950CF /* Data */,
