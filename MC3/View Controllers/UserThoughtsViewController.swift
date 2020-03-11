@@ -45,6 +45,7 @@ class UserThoughtsViewController: UIViewController {
             overrideUserInterfaceStyle = .light
         
             start = [0, 22, 34, 43, 57, 70, 90, 104, 125, 142]
+            editButton.isHidden = true
             editButton.titleLabel?.font = UIFont(name: "NewYorkMedium-Regular", size: 18)
             editButton.setTitleColor(buttonColor, for: .normal)
             deleteButton.isHidden = true
@@ -176,8 +177,8 @@ class UserThoughtsViewController: UIViewController {
         thoughtView.text = arr[sender.tag].text
         deleteButton.isHidden = false
         deleteButton.isEnabled = true
-        editButton.isEnabled = true
         editButton.isHidden = false
+        editButton.isEnabled = true
         thoughtView.isHidden = false
         plantLabel.isHidden = true
     }
@@ -220,6 +221,7 @@ class UserThoughtsViewController: UIViewController {
         isUpdate = "yes"
         performSegue(withIdentifier: "Edit Thought", sender: self)
     }
+    
     @IBAction func deleteButton(_ sender: UIButton) {
         DatabaseHelper.istance.deleteThoughts(textThought: thoughtView.text)
         let generator = UIImpactFeedbackGenerator(style: .heavy)
