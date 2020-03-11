@@ -92,7 +92,6 @@ class UserThoughtsViewController: UIViewController, AVAudioPlayerDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         arr.removeAll()
-        print("ce stong")
         arr = DatabaseHelper.istance.getAllThoughts()
         for i in 0..<arr.count{
         
@@ -148,11 +147,15 @@ class UserThoughtsViewController: UIViewController, AVAudioPlayerDelegate {
             
                   view.addSubview(SubView)
         }
+        print(view.frame.width)
+        print(view.frame.height)
         let addButton = UIButton()
-        addButton.frame = CGRect(x: 339, y: 337, width: 97, height: 104)
+        addButton.frame = CGRect(x: view.frame.width - 77, y: view.frame.height - 559, width: view.frame.width * 0.23429952, height: view.frame.height * 0.11607143)
         addButton.addTarget(self, action: #selector(addButtonFunc), for: .touchUpInside)
         addButton.setImage(UIImage(named: "plusbutton"), for: .normal)
+
         view.addSubview(addButton)
+
         
         motionManager.gyroUpdateInterval = 1.0 / 60.0
         motionManager.startGyroUpdates(to: OperationQueue.current!) { (data, error) in
