@@ -290,11 +290,11 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="v3D-KA-RmJ" customClass="WellDoneViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IxP-O2-gMe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WellDone" translatesAutoresizingMaskIntoConstraints="NO" id="TKz-0o-VV2">
-                                <rect key="frame" x="46.666666666666657" y="401" width="321" height="94"/>
+                                <rect key="frame" x="46.666666666666657" y="374" width="321" height="94"/>
                                 <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="94" id="TZc-st-tkY"/>
@@ -316,10 +316,10 @@
             </objects>
             <point key="canvasLocation" x="5073.913043478261" y="931.47321428571422"/>
         </scene>
-        <!--View Controller-->
+        <!--Info View Controller-->
         <scene sceneID="kBl-S4-sLj">
             <objects>
-                <viewController id="d3U-u7-sOR" sceneMemberID="viewController">
+                <viewController id="d3U-u7-sOR" customClass="InfoViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B71-Ev-z4h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -453,11 +453,11 @@
             <objects>
                 <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="ZpB-Wn-uC7" customClass="WarningViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fjS-ve-alC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dont" translatesAutoresizingMaskIntoConstraints="NO" id="7nD-FX-RMc">
-                                <rect key="frame" x="46.333333333333343" y="389" width="321.33333333333326" height="118"/>
+                                <rect key="frame" x="46.333333333333343" y="362" width="321.33333333333326" height="118"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="118" id="m7E-2P-H9C"/>
                                 </constraints>
@@ -495,7 +495,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mjr-9Q-kW9">
-                                <rect key="frame" x="308" y="64" width="71" height="50"/>
+                                <rect key="frame" x="333" y="64" width="71" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="71" id="SdH-Oz-xFp"/>
                                     <constraint firstAttribute="height" constant="50" id="cgE-aH-vH6"/>
@@ -508,7 +508,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3RH-go-9FC">
-                                <rect key="frame" x="35" y="64" width="50" height="50"/>
+                                <rect key="frame" x="10" y="64" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="JmT-k6-ODN"/>
                                     <constraint firstAttribute="height" constant="50" id="hXx-5v-bJE"/>
@@ -547,13 +547,13 @@
                             <constraint firstItem="KDO-kZ-Vc6" firstAttribute="trailing" secondItem="Pyc-5O-AMc" secondAttribute="trailing" constant="285" id="CWv-XX-PtH"/>
                             <constraint firstItem="3RH-go-9FC" firstAttribute="top" secondItem="KDO-kZ-Vc6" secondAttribute="top" constant="20" id="HYZ-jm-X57"/>
                             <constraint firstItem="Kh0-5d-1IL" firstAttribute="leading" secondItem="KDO-kZ-Vc6" secondAttribute="leading" constant="35" id="Js2-Df-OLY"/>
+                            <constraint firstItem="KDO-kZ-Vc6" firstAttribute="trailing" secondItem="Mjr-9Q-kW9" secondAttribute="trailing" constant="10" id="M4M-aX-q5k"/>
                             <constraint firstItem="Mjr-9Q-kW9" firstAttribute="top" secondItem="KDO-kZ-Vc6" secondAttribute="top" constant="20" id="SaI-Z0-GzS"/>
                             <constraint firstItem="K6c-it-joj" firstAttribute="leading" secondItem="KDO-kZ-Vc6" secondAttribute="leading" constant="35" id="aK7-Tp-DDg"/>
                             <constraint firstItem="Pyc-5O-AMc" firstAttribute="top" secondItem="Kh0-5d-1IL" secondAttribute="bottom" constant="10" id="k2g-2Z-tWb"/>
-                            <constraint firstItem="KDO-kZ-Vc6" firstAttribute="trailing" secondItem="Mjr-9Q-kW9" secondAttribute="trailing" constant="35" id="rXq-6T-BqZ"/>
-                            <constraint firstItem="3RH-go-9FC" firstAttribute="leading" secondItem="KDO-kZ-Vc6" secondAttribute="leading" constant="35" id="rfI-dx-sSF"/>
                             <constraint firstItem="Pyc-5O-AMc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="K6c-it-joj" secondAttribute="trailing" constant="8" symbolic="YES" id="sod-rE-1wP"/>
                             <constraint firstItem="K6c-it-joj" firstAttribute="top" secondItem="Kh0-5d-1IL" secondAttribute="bottom" constant="10" id="tFJ-DS-xKE"/>
+                            <constraint firstItem="3RH-go-9FC" firstAttribute="leading" secondItem="KDO-kZ-Vc6" secondAttribute="leading" constant="10" id="vWt-4t-EfU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KDO-kZ-Vc6"/>
                     </view>
@@ -732,7 +732,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ejv-vo-jwM"/>
-        <segue reference="LW6-wO-WU4"/>
+        <segue reference="x6O-DY-PcG"/>
         <segue reference="N1p-FE-cor"/>
     </inferredMetricsTieBreakers>
 </document>
