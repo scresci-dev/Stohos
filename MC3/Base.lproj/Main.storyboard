@@ -27,25 +27,25 @@
         <!--Welcome View Controller-->
         <scene sceneID="MQg-fX-bCx">
             <objects>
-                <viewController storyboardIdentifier="Welcome" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Gau-gt-GGf" customClass="WelcomeViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iQp-vY-Ztw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="rW7-iM-s80"/>
+                <viewController storyboardIdentifier="Welcome" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Gau-gt-GGf" customClass="WelcomeViewController" customModule="MC3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4kC-Hi-o7V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c74-F0-c2b">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gsi-Nu-mXu">
-                                        <rect key="frame" x="51" y="240" width="312" height="156"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gsi-Nu-mXu">
+                                <rect key="frame" x="51" y="331" width="312" height="156"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Gsi-Nu-mXu" firstAttribute="top" secondItem="q56-MF-eXl" secondAttribute="top" constant="243" id="GFb-KD-YuO"/>
+                            <constraint firstItem="q56-MF-eXl" firstAttribute="bottom" secondItem="Gsi-Nu-mXu" secondAttribute="bottom" constant="375" id="Od7-Ea-5NY"/>
+                            <constraint firstItem="Gsi-Nu-mXu" firstAttribute="centerX" secondItem="4kC-Hi-o7V" secondAttribute="centerX" id="gXY-tw-Ntt"/>
+                            <constraint firstItem="Gsi-Nu-mXu" firstAttribute="leading" secondItem="q56-MF-eXl" secondAttribute="leading" constant="51" id="qNU-FA-XdJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="q56-MF-eXl"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="rW7-iM-s80" appends="YES" id="EmG-S1-vz3"/>
@@ -54,14 +54,11 @@
                     <navigationItem key="navigationItem" id="AM2-uW-ehK"/>
                     <connections>
                         <outlet property="imageView" destination="Gsi-Nu-mXu" id="lkn-Ks-rDb"/>
-                        <outlet property="initialView" destination="c74-F0-c2b" id="qUa-JU-xWM"/>
-                        <segue destination="oXI-zw-iXa" kind="show" identifier="TutorialQuestion" id="N1p-FE-cor"/>
+                        <segue destination="oXI-zw-iXa" kind="showDetail" identifier="TutorialQuestion" id="N1p-FE-cor"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iQp-vY-Ztw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="rW7-iM-s80"/>
             </objects>
-            <point key="canvasLocation" x="1073.913043478261" y="30.803571428571427"/>
+            <point key="canvasLocation" x="1072.5" y="30"/>
         </scene>
         <!--Tutorial Question View Controller-->
         <scene sceneID="5vX-Ot-g9Y">
@@ -99,7 +96,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GmB-GO-Sxp">
                                 <rect key="frame" x="34" y="486" width="64" height="47"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="64" id="psA-ln-g7p"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="psA-ln-g7p"/>
                                     <constraint firstAttribute="height" constant="47" id="yDW-A2-WfQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -109,27 +106,27 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I8x-b4-WNV">
                                 <rect key="frame" x="121" y="88" width="173" height="39"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="BLx-Ew-wAS"/>
+                                    <constraint firstAttribute="height" constant="39" id="Bcp-pw-w1H"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="I8x-b4-WNV" firstAttribute="centerX" secondItem="oRJ-xg-ct5" secondAttribute="centerX" id="4GC-ea-7Pz"/>
                             <constraint firstItem="GmB-GO-Sxp" firstAttribute="bottom" secondItem="3J3-97-7ol" secondAttribute="bottom" id="AtN-PJ-Taa"/>
                             <constraint firstItem="bei-MG-ugW" firstAttribute="trailing" secondItem="3J3-97-7ol" secondAttribute="trailing" id="B7e-gF-Qs6"/>
-                            <constraint firstItem="GxM-Ze-AOW" firstAttribute="trailing" secondItem="bei-MG-ugW" secondAttribute="trailing" id="GrS-M9-zPf"/>
-                            <constraint firstItem="GxM-Ze-AOW" firstAttribute="leading" secondItem="bei-MG-ugW" secondAttribute="leading" id="Lho-Fm-bDR"/>
-                            <constraint firstItem="I8x-b4-WNV" firstAttribute="leading" secondItem="hK7-Uh-fQk" secondAttribute="leading" constant="121" id="Nsr-M1-utA"/>
-                            <constraint firstItem="GxM-Ze-AOW" firstAttribute="top" secondItem="I8x-b4-WNV" secondAttribute="bottom" constant="37" id="PJ9-eK-zPq"/>
+                            <constraint firstItem="bei-MG-ugW" firstAttribute="leading" secondItem="GxM-Ze-AOW" secondAttribute="leading" id="L8I-dh-4Jm"/>
                             <constraint firstItem="GmB-GO-Sxp" firstAttribute="top" secondItem="bei-MG-ugW" secondAttribute="bottom" constant="8" id="Pp1-Xm-3NC"/>
                             <constraint firstItem="GxM-Ze-AOW" firstAttribute="leading" secondItem="hK7-Uh-fQk" secondAttribute="leading" constant="34" id="QFn-LM-L6x"/>
-                            <constraint firstItem="I8x-b4-WNV" firstAttribute="centerX" secondItem="oRJ-xg-ct5" secondAttribute="centerX" id="RCb-bX-9LR"/>
-                            <constraint firstItem="I8x-b4-WNV" firstAttribute="centerX" secondItem="GxM-Ze-AOW" secondAttribute="centerX" id="SUh-uz-rCP"/>
                             <constraint firstItem="bei-MG-ugW" firstAttribute="leading" secondItem="GmB-GO-Sxp" secondAttribute="leading" id="TWZ-KX-jK3"/>
                             <constraint firstItem="GmB-GO-Sxp" firstAttribute="top" secondItem="3J3-97-7ol" secondAttribute="top" id="WGD-1S-Tkn"/>
                             <constraint firstItem="bei-MG-ugW" firstAttribute="top" secondItem="GxM-Ze-AOW" secondAttribute="bottom" constant="8" id="WZj-j8-NaI"/>
-                            <constraint firstItem="I8x-b4-WNV" firstAttribute="top" secondItem="hK7-Uh-fQk" secondAttribute="top" constant="44" id="giY-1b-ffZ"/>
+                            <constraint firstItem="I8x-b4-WNV" firstAttribute="centerX" secondItem="bei-MG-ugW" secondAttribute="centerX" id="eb7-Ks-7Rh"/>
+                            <constraint firstItem="I8x-b4-WNV" firstAttribute="leading" secondItem="hK7-Uh-fQk" secondAttribute="leading" constant="121" id="hXt-vC-pYB"/>
+                            <constraint firstItem="I8x-b4-WNV" firstAttribute="top" secondItem="hK7-Uh-fQk" secondAttribute="top" constant="44" id="iZz-bE-uCT"/>
                             <constraint firstItem="hK7-Uh-fQk" firstAttribute="bottom" secondItem="GmB-GO-Sxp" secondAttribute="bottom" constant="329" id="kmE-wf-Gk4"/>
+                            <constraint firstItem="I8x-b4-WNV" firstAttribute="centerX" secondItem="GxM-Ze-AOW" secondAttribute="centerX" id="nL5-uf-Wte"/>
+                            <constraint firstItem="GxM-Ze-AOW" firstAttribute="top" secondItem="I8x-b4-WNV" secondAttribute="bottom" constant="37" id="xqS-ZO-8Cc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hK7-Uh-fQk"/>
                     </view>
@@ -140,7 +137,7 @@
                         <outlet property="nextButton" destination="3J3-97-7ol" id="0Id-dK-cgq"/>
                         <outlet property="progressView" destination="I8x-b4-WNV" id="QJH-nR-Ovy"/>
                         <outlet property="questionLabel" destination="GxM-Ze-AOW" id="snB-U4-OdE"/>
-                        <segue destination="NOg-Fx-v7m" kind="show" identifier="Evaluation Control" id="yYX-VU-WXZ"/>
+                        <segue destination="NOg-Fx-v7m" kind="showDetail" identifier="Evaluation Control" id="yYX-VU-WXZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Bj-mM-m2n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -241,8 +238,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WellDone" translatesAutoresizingMaskIntoConstraints="NO" id="TKz-0o-VV2">
-                                <rect key="frame" x="0.0" y="-86" width="414" height="1014"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="WellDone" translatesAutoresizingMaskIntoConstraints="NO" id="TKz-0o-VV2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
@@ -251,7 +248,7 @@
                         <viewLayoutGuide key="safeArea" id="Hpo-Vc-2So"/>
                     </view>
                     <connections>
-                        <segue destination="N1m-Em-c1a" kind="show" identifier="GoBack" id="EEt-KG-hBY"/>
+                        <segue destination="N1m-Em-c1a" kind="showDetail" identifier="GoBack" id="EEt-KG-hBY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQ2-dw-T5F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -392,13 +389,6 @@
                     <view key="view" contentMode="scaleToFill" id="fjS-ve-alC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dont" translatesAutoresizingMaskIntoConstraints="NO" id="Nwg-NE-B3R">
-                                <rect key="frame" x="-43" y="-99" width="501" height="1047"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="4S7-u8-Sfj"/>
                     </view>
@@ -552,7 +542,7 @@
                         <outlet property="notEssentialButton" destination="Q4j-4h-jFK" id="pRL-St-4tI"/>
                         <outlet property="textAnswer" destination="zpj-Zy-BQZ" id="suF-Ot-zHY"/>
                         <segue destination="oXI-zw-iXa" kind="show" identifier="Next Question" id="7AL-Qv-aAv"/>
-                        <segue destination="nrh-bp-NIk" kind="show" identifier="Tutorial Well Done" id="dkB-pR-tBC"/>
+                        <segue destination="nrh-bp-NIk" kind="showDetail" identifier="Tutorial Well Done" id="dkB-pR-tBC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FhY-9C-ag9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -581,7 +571,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="uhS-Ri-6El"/>
                     <connections>
-                        <segue destination="N1m-Em-c1a" kind="show" identifier="Main View" id="WkV-Ff-boc"/>
+                        <segue destination="N1m-Em-c1a" kind="showDetail" identifier="Main View" id="WkV-Ff-boc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NLR-ct-Hrd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -598,15 +588,13 @@
         <image name="Reflect" width="321" height="86"/>
         <image name="Spento1" width="392" height="392"/>
         <image name="WellDone" width="321" height="94"/>
-        <image name="dont" width="321" height="118"/>
         <image name="path" width="16.333333969116211" height="23.333333969116211"/>
         <image name="plant" width="63.666667938232422" height="124"/>
         <image name="questionmark" width="42" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yYX-VU-WXZ"/>
         <segue reference="ejv-vo-jwM"/>
-        <segue reference="x6O-DY-PcG"/>
-        <segue reference="7AL-Qv-aAv"/>
+        <segue reference="EEt-KG-hBY"/>
+        <segue reference="N1p-FE-cor"/>
     </inferredMetricsTieBreakers>
 </document>

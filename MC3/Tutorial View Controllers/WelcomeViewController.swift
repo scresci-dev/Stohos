@@ -10,7 +10,6 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
-    @IBOutlet weak var initialView: UIView!
     
 //    @IBOutlet weak var userTextView: UITextView!
     @IBOutlet weak var imageView: UIImageView!
@@ -21,7 +20,7 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         overrideUserInterfaceStyle = .light
         let gestureRec = UITapGestureRecognizer(target: self, action:  #selector (self.someAction (_:)))
-        initialView.addGestureRecognizer(gestureRec)
+        view.addGestureRecognizer(gestureRec)
         showMessages()
     }
 
