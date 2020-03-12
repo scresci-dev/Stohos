@@ -219,7 +219,7 @@ class UserThoughtsViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     @objc func addButtonFunc(_ sender: UIButton) {
-        if numThoughts <= 10 {
+        if numThoughts < 10 {
         isUpdate = "no"
             performSegue(withIdentifier: "Edit Thought", sender: self)
         }
