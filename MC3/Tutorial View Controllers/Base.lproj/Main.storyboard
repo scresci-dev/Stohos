@@ -626,13 +626,6 @@
                                     <segue destination="d3U-u7-sOR" kind="presentation" id="ejv-vo-jwM"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark" translatesAutoresizingMaskIntoConstraints="NO" id="9aq-BY-Wrx">
-                                <rect key="frame" x="344" y="44" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="HMF-Sj-rDS"/>
-                                    <constraint firstAttribute="width" constant="50" id="gCJ-b8-6CF"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4j-4h-jFK">
                                 <rect key="frame" x="214" y="259" width="180.00000000000011" height="180.00000000000011"/>
                                 <constraints>
@@ -653,14 +646,21 @@
                                     <action selector="nextButton:" destination="NOg-Fx-v7m" eventType="touchUpInside" id="USp-XG-EUC"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark" translatesAutoresizingMaskIntoConstraints="NO" id="oJM-fR-ugP">
+                                <rect key="frame" x="344" y="44" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="OmM-jF-7du"/>
+                                    <constraint firstAttribute="height" constant="50" id="UWC-t4-tGK"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="oJM-fR-ugP" firstAttribute="top" secondItem="i81-MX-V85" secondAttribute="top" id="176-9d-qc4"/>
                             <constraint firstItem="i81-MX-V85" firstAttribute="trailing" secondItem="jaQ-pN-7H5" secondAttribute="trailing" constant="158" id="9Cs-51-6Gh"/>
                             <constraint firstItem="d29-ua-3mJ" firstAttribute="top" secondItem="Cfk-EN-ubv" secondAttribute="bottom" constant="27" id="9LR-mj-dnU"/>
                             <constraint firstItem="zpj-Zy-BQZ" firstAttribute="leading" secondItem="i81-MX-V85" secondAttribute="leading" constant="35" id="9Tz-ax-9xx"/>
                             <constraint firstItem="Cfk-EN-ubv" firstAttribute="top" secondItem="i81-MX-V85" secondAttribute="top" id="B2I-vT-fpj"/>
-                            <constraint firstItem="9aq-BY-Wrx" firstAttribute="top" secondItem="i81-MX-V85" secondAttribute="top" id="BK4-Od-vRY"/>
                             <constraint firstItem="d29-ua-3mJ" firstAttribute="leading" secondItem="i81-MX-V85" secondAttribute="leading" constant="35" id="BbT-j5-kmU"/>
                             <constraint firstItem="jaQ-pN-7H5" firstAttribute="leading" secondItem="i81-MX-V85" secondAttribute="leading" constant="158" id="FnU-99-o8i"/>
                             <constraint firstItem="i81-MX-V85" firstAttribute="trailing" secondItem="Cfk-EN-ubv" secondAttribute="trailing" constant="20" id="RPy-CZ-7QQ"/>
@@ -668,9 +668,9 @@
                             <constraint firstItem="Xgf-Oz-Zkq" firstAttribute="top" secondItem="d29-ua-3mJ" secondAttribute="bottom" constant="10" id="Tgv-aC-77k"/>
                             <constraint firstItem="Q4j-4h-jFK" firstAttribute="top" secondItem="d29-ua-3mJ" secondAttribute="bottom" constant="10" id="U36-Ij-7Qg"/>
                             <constraint firstItem="i81-MX-V85" firstAttribute="trailing" secondItem="Q4j-4h-jFK" secondAttribute="trailing" constant="20" id="UDE-UQ-m8B"/>
-                            <constraint firstItem="i81-MX-V85" firstAttribute="trailing" secondItem="9aq-BY-Wrx" secondAttribute="trailing" constant="20" id="Yzb-yD-zc6"/>
                             <constraint firstItem="Xgf-Oz-Zkq" firstAttribute="leading" secondItem="i81-MX-V85" secondAttribute="leading" constant="20" id="dbk-9V-d9m"/>
                             <constraint firstItem="i81-MX-V85" firstAttribute="trailing" secondItem="zpj-Zy-BQZ" secondAttribute="trailing" constant="35" id="jug-x5-9YG"/>
+                            <constraint firstItem="i81-MX-V85" firstAttribute="trailing" secondItem="oJM-fR-ugP" secondAttribute="trailing" constant="20" id="rmh-mh-6bY"/>
                             <constraint firstItem="jaQ-pN-7H5" firstAttribute="top" secondItem="zpj-Zy-BQZ" secondAttribute="bottom" constant="-1" id="wgY-rI-ija"/>
                             <constraint firstItem="zpj-Zy-BQZ" firstAttribute="top" secondItem="Xgf-Oz-Zkq" secondAttribute="bottom" constant="10" id="x5K-kR-bjB"/>
                         </constraints>
@@ -744,7 +744,7 @@
         <image name="questionmark" width="42" height="42"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2Y7-pF-SYi"/>
+        <segue reference="ejv-vo-jwM"/>
         <segue reference="LW6-wO-WU4"/>
         <segue reference="7AL-Qv-aAv"/>
     </inferredMetricsTieBreakers>
