@@ -12,7 +12,7 @@ import CoreData
 import CoreMotion
 import AVFoundation
 
-class UserThoughtsViewController: UIViewController, AVAudioPlayerDelegate {
+class UserThoughtsViewController: UIViewController {
 
     var currentThought: String = ""
     var newThought: String = ""
@@ -26,8 +26,6 @@ class UserThoughtsViewController: UIViewController, AVAudioPlayerDelegate {
     var isUpdate : String = ""
     
     var arr: [Thought] = [];
-    
-    var player: AVAudioPlayer = AVAudioPlayer()
     
     @IBOutlet weak var thoughtView: UITextView!
     @IBOutlet weak var deleteButton: UIButton!
@@ -45,18 +43,12 @@ class UserThoughtsViewController: UIViewController, AVAudioPlayerDelegate {
         override func viewDidLoad() {
             super.viewDidLoad()
             overrideUserInterfaceStyle = .light
-            
-            do {
-                let audioPlayer = Bundle.main.path(forResource: "Stohos music", ofType: "mp3")
-                try player = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPlayer!) as URL)
-            }
-            catch {
-                //error
-            }
         
             start = [0, 22, 34, 43, 57, 70, 90, 104, 125, 142]
+            editButton.isHidden = true
             editButton.titleLabel?.font = UIFont(name: "NewYorkMedium-Regular", size: 18)
             editButton.setTitleColor(buttonColor, for: .normal)
+            deleteButton.isHidden = true
             deleteButton.titleLabel?.font = UIFont(name: "NewYorkMedium-Regular", size: 20)
             deleteButton.setTitleColor(buttonColor, for: .normal)
             thoughtView.font = UIFont(name: "NewYorkMedium-Regular", size: 18)
@@ -174,25 +166,19 @@ class UserThoughtsViewController: UIViewController, AVAudioPlayerDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if UserDefaults.standard.bool(forKey: "Audio") {
-            player.setVolume(0.1, fadeDuration: 3)
-            player.setVolume(0.5, fadeDuration: 2)
-            player.play()
-            player.numberOfLoops = -1
-        }
         if !UserDefaults.standard.bool(forKey: "LaunchedBefore") {
             performSegue(withIdentifier: "tutorial", sender: self)
         }
     }
     
     @objc func buttonClicked(_ sender: UIButton){
-        let generator = UIImpactFeedbackGenerator(style: .light)
+        let generator = UIImpactFeedbackGenerator(style: .medium)
         generator.impactOccurred()
         thoughtView.text = arr[sender.tag].text
-        deleteButton.isEnabled = true
         deleteButton.isHidden = false
-        editButton.isEnabled = true
+        deleteButton.isEnabled = true
         editButton.isHidden = false
+        editButton.isEnabled = true
         thoughtView.isHidden = false
         plantLabel.isHidden = true
     }
@@ -235,6 +221,7 @@ class UserThoughtsViewController: UIViewController, AVAudioPlayerDelegate {
         isUpdate = "yes"
         performSegue(withIdentifier: "Edit Thought", sender: self)
     }
+    
     @IBAction func deleteButton(_ sender: UIButton) {
         DatabaseHelper.istance.deleteThoughts(textThought: thoughtView.text)
         let generator = UIImpactFeedbackGenerator(style: .heavy)
