@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N1m-Em-c1a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="N1m-Em-c1a">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -186,15 +186,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ApE-7n-3hQ">
-                                <rect key="frame" x="0.0" y="387" width="414" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="414" id="HrU-DM-JW2"/>
-                                    <constraint firstAttribute="height" constant="21" id="ib6-V4-pKf"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oz4-75-Yc5">
+                                <rect key="frame" x="408" y="37" width="6" height="364"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bRK-ui-W33">
+                                <rect key="frame" x="0.0" y="44" width="6" height="357"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="abK-qH-ENf">
-                                <rect key="frame" x="0.0" y="67" width="414" height="21"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="eRp-Rk-bi6"/>
                                     <constraint firstAttribute="width" constant="414" id="l58-9q-aKh"/>
@@ -253,6 +254,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ApE-7n-3hQ">
+                                <rect key="frame" x="0.0" y="414" width="414" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="HrU-DM-JW2"/>
+                                    <constraint firstAttribute="height" constant="21" id="ib6-V4-pKf"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -265,12 +273,12 @@
                             <constraint firstItem="a6h-nS-OeH" firstAttribute="trailing" secondItem="VMG-p9-X5b" secondAttribute="trailing" constant="146" id="Exl-5n-7Ai"/>
                             <constraint firstItem="VMG-p9-X5b" firstAttribute="top" secondItem="Nw9-AB-D1t" secondAttribute="bottom" constant="1" id="Jk1-Y1-nU4"/>
                             <constraint firstItem="ata-aJ-TPD" firstAttribute="top" secondItem="VMG-p9-X5b" secondAttribute="top" id="Kjh-nx-Yqf"/>
-                            <constraint firstItem="abK-qH-ENf" firstAttribute="top" secondItem="a6h-nS-OeH" secondAttribute="top" constant="23" id="MZV-Za-jvL"/>
+                            <constraint firstItem="abK-qH-ENf" firstAttribute="top" secondItem="a6h-nS-OeH" secondAttribute="top" constant="-44" id="MZV-Za-jvL"/>
                             <constraint firstItem="bxI-DN-dqQ" firstAttribute="top" secondItem="r76-aG-CIf" secondAttribute="bottom" constant="18" id="PFB-aa-Xuz"/>
                             <constraint firstItem="r76-aG-CIf" firstAttribute="top" secondItem="NeT-jP-QX0" secondAttribute="bottom" constant="20" id="T4p-zR-WUU"/>
                             <constraint firstItem="a6h-nS-OeH" firstAttribute="trailing" secondItem="r76-aG-CIf" secondAttribute="trailing" constant="45" id="TLN-8O-Dn6"/>
                             <constraint firstItem="Nw9-AB-D1t" firstAttribute="leading" secondItem="a6h-nS-OeH" secondAttribute="leading" constant="20" id="bqA-rA-SGO"/>
-                            <constraint firstItem="ApE-7n-3hQ" firstAttribute="top" secondItem="abK-qH-ENf" secondAttribute="bottom" constant="299" id="c7i-Rw-DAc"/>
+                            <constraint firstItem="ApE-7n-3hQ" firstAttribute="top" secondItem="abK-qH-ENf" secondAttribute="bottom" constant="393" id="c7i-Rw-DAc"/>
                             <constraint firstAttribute="bottom" secondItem="ata-aJ-TPD" secondAttribute="bottom" id="cKE-cb-rGB"/>
                             <constraint firstItem="ApE-7n-3hQ" firstAttribute="leading" secondItem="a6h-nS-OeH" secondAttribute="leading" id="cTi-5n-tvU"/>
                             <constraint firstItem="a6h-nS-OeH" firstAttribute="trailing" secondItem="Nw9-AB-D1t" secondAttribute="trailing" constant="20" id="kXd-gu-eCt"/>
@@ -286,6 +294,8 @@
                     <navigationItem key="navigationItem" id="dqK-6m-OI8"/>
                     <connections>
                         <outlet property="Barriera" destination="ApE-7n-3hQ" id="eme-LO-sYA"/>
+                        <outlet property="BarrieraLeft" destination="bRK-ui-W33" id="zja-a4-cIh"/>
+                        <outlet property="BarrieraRight" destination="oz4-75-Yc5" id="hn5-Ir-xrM"/>
                         <outlet property="BarrieraTop" destination="abK-qH-ENf" id="fqe-eL-CoY"/>
                         <outlet property="deleteButton" destination="bxI-DN-dqQ" id="Upr-d8-5Lh"/>
                         <outlet property="editButton" destination="NeT-jP-QX0" id="KI6-XA-mnN"/>

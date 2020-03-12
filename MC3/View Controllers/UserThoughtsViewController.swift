@@ -20,6 +20,8 @@ class UserThoughtsViewController: UIViewController {
     var timer = Timer()
     var flag = true
     var start : [Int] = []
+    var x : CGFloat = 20
+    var y : CGFloat = 20
     
     var numThoughts = 0
     
@@ -32,6 +34,8 @@ class UserThoughtsViewController: UIViewController {
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var Barriera: UIImageView!
     @IBOutlet weak var BarrieraTop: UIImageView!
+    @IBOutlet weak var BarrieraRight: UIImageView!
+    @IBOutlet weak var BarrieraLeft: UIImageView!
     @IBOutlet weak var plantButton: UIButton!
     @IBOutlet weak var plantLabel: UILabel!
     
@@ -64,6 +68,8 @@ class UserThoughtsViewController: UIViewController {
             self.collision.translatesReferenceBoundsIntoBoundary = true
             self.collision.addBoundary(withIdentifier: "Barrier1" as NSCopying, for: UIBezierPath(rect: Barriera.frame))
             self.collision.addBoundary(withIdentifier: "Barrier2" as NSCopying, for: UIBezierPath(rect: BarrieraTop.frame))
+            self.collision.addBoundary(withIdentifier: "Barrier3" as NSCopying, for: UIBezierPath(rect: BarrieraRight.frame))
+            self.collision.addBoundary(withIdentifier: "Barrier4" as NSCopying, for: UIBezierPath(rect: BarrieraLeft.frame))
             self.animator.addBehavior(self.collision)
             let gestureRec = UITapGestureRecognizer(target: self, action:  #selector (self.someAction (_:)))
             view.addGestureRecognizer(gestureRec)
@@ -90,18 +96,44 @@ class UserThoughtsViewController: UIViewController {
             
           let SubView = UIView()
           let button = UIButton()
-            let x : CGFloat = 200
-            let y : CGFloat = 50
+            
 
           SubView.addSubview(button)
 
             if(arr[i].evaluation == "essential"){
                 numThoughts += 1
-                button.frame = CGRect(x: -15, y: -15, width: 150, height: 150)
+                button.frame = CGRect(x: -10, y: -10, width: 140, height: 140)
                 button.tag = i;
                 button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
                 
-                SubView.frame = CGRect(x: x+CGFloat(i*10), y: y+CGFloat(i*10), width: 120, height: 120)
+               if(i<3){
+                            SubView.frame = CGRect(x: x, y: y, width: 120, height: 120)
+                            x+=130
+                            print(x)
+                            print(i)
+                            if(i==2){
+                                x = 20;
+                                y = 120;
+                            }
+                        }else if(i>=3 && i<6){
+                            SubView.frame = CGRect(x: x, y: y, width: 120, height: 120)
+                            x+=130
+                            if(i==5){
+                                x = 20;
+                                y = 220;
+                            }
+                        }else if(i>=6 && i<9){
+                            SubView.frame = CGRect(x: x, y: y, width: 120, height: 120)
+                            x+=130
+                            if(i==8){
+                                x = 20;
+                                y = 320;
+                            }
+                            
+                        }else{
+                            SubView.frame = CGRect(x: x, y: y, width: 120, height: 120)
+                
+                        }
                       DispatchQueue.main.async {
                           self.collision.addItem(SubView)
                           self.gravity.addItem(SubView)
@@ -120,8 +152,35 @@ class UserThoughtsViewController: UIViewController {
                 button.frame = CGRect(x: -15, y: -15, width: 120, height: 120)
                 button.tag = i;
                 button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
-                
-                SubView.frame = CGRect(x: x+CGFloat(i*10), y: y+CGFloat(i*10), width: 90, height: 90)
+                if(i<3){
+                    SubView.frame = CGRect(x: x, y: y, width: 90, height: 90)
+                    x+=130
+                    print(x)
+                    print(i)
+                    if(i==2){
+                        x = 20;
+                        y = 120;
+                    }
+                }else if(i>=3 && i<6){
+                    SubView.frame = CGRect(x: x, y: y, width: 90, height: 90)
+                    x+=130
+                    if(i==5){
+                        x = 20;
+                        y = 220;
+                    }
+                }else if(i>=6 && i<9){
+                    SubView.frame = CGRect(x: x, y: y, width: 90, height: 90)
+                    x+=130
+                    if(i==8){
+                        x = 20;
+                        y = 320;
+                    }
+                    
+                }else{
+                    SubView.frame = CGRect(x: x, y: y, width: 90, height: 90)
+        
+                }
+
                       DispatchQueue.main.async {
                           self.collision.addItem(SubView)
                           self.gravity.addItem(SubView)
