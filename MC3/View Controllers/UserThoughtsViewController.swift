@@ -172,7 +172,7 @@ class UserThoughtsViewController: UIViewController {
     }
     
     @objc func buttonClicked(_ sender: UIButton){
-        let generator = UIImpactFeedbackGenerator(style: .light)
+        let generator = UIImpactFeedbackGenerator(style: .medium)
         generator.impactOccurred()
         thoughtView.text = arr[sender.tag].text
         deleteButton.isHidden = false
