@@ -51,6 +51,27 @@ class DatabaseHelper{
         }
     }
     
+    func searchByText(text : String) -> String{
+        
+        var arrThought = [Thought]()
+               let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Thought")
+               do{
+                   arrThought = try context.fetch(fetchRequest) as! [Thought]
+               } catch let error{
+                   print(error.localizedDescription)
+               }
+
+        var t = Thought()
+        for i in 0..<arrThought.count{
+            if(arrThought[i].text == text){
+                t = arrThought[i]
+            }
+        }
+        
+        return t.evaluation!
+        
+    }
+    
     func updateThoughts(oldText: String, newText :String, newEvaluation: String){
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
         

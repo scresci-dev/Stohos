@@ -320,11 +320,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WellDone" translatesAutoresizingMaskIntoConstraints="NO" id="TKz-0o-VV2">
-                                <rect key="frame" x="46.666666666666657" y="401" width="321" height="94"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TKz-0o-VV2">
+                                <rect key="frame" x="17" y="258" width="380" height="380"/>
                                 <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="94" id="TZc-st-tkY"/>
+                                    <constraint firstAttribute="width" constant="380" id="Cf8-uL-TZa"/>
+                                    <constraint firstAttribute="height" constant="380" id="TZc-st-tkY"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -336,6 +337,7 @@
                         <viewLayoutGuide key="safeArea" id="Hpo-Vc-2So"/>
                     </view>
                     <connections>
+                        <outlet property="img" destination="TKz-0o-VV2" id="H1i-bS-HPS"/>
                         <segue destination="N1m-Em-c1a" kind="showDetail" identifier="GoBack" id="EEt-KG-hBY"/>
                     </connections>
                 </viewController>
@@ -746,7 +748,6 @@
         <image name="Perfect" width="321" height="221"/>
         <image name="Reflect" width="321" height="86"/>
         <image name="Spento1" width="392" height="392"/>
-        <image name="WellDone" width="321" height="94"/>
         <image name="dont" width="321" height="118"/>
         <image name="info" width="321" height="702"/>
         <image name="path" width="16.333333969116211" height="23.333333969116211"/>
@@ -755,7 +756,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ejv-vo-jwM"/>
-        <segue reference="LW6-wO-WU4"/>
+        <segue reference="EEt-KG-hBY"/>
         <segue reference="7AL-Qv-aAv"/>
     </inferredMetricsTieBreakers>
 </document>

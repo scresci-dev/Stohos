@@ -16,6 +16,7 @@ class UserThoughtsViewController: UIViewController {
 
     var currentThought: String = ""
     var newThought: String = ""
+    var evaluation = String()
     
     var timer = Timer()
     var flag = true
@@ -138,7 +139,7 @@ class UserThoughtsViewController: UIViewController {
                           self.collision.addItem(SubView)
                           self.gravity.addItem(SubView)
                       }
-                  Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
+                  Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true) { timer in
                     if(self.start[button.tag] >= 211){
                                             self.start[button.tag] = 1
                                         }
@@ -186,7 +187,7 @@ class UserThoughtsViewController: UIViewController {
                           self.gravity.addItem(SubView)
                       }
                 
-                Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
+                Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true) { timer in
                    if(self.start[button.tag] >= 211){
                           self.start[button.tag] = 1
                                      }
@@ -198,8 +199,6 @@ class UserThoughtsViewController: UIViewController {
             
                   view.addSubview(SubView)
         }
-        print(view.frame.width)
-        print(view.frame.height)
         let addButton = UIButton()
         addButton.frame = CGRect(x: view.frame.width - 77, y: view.frame.height - 559, width: view.frame.width * 0.23429952, height: view.frame.height * 0.11607143)
         addButton.addTarget(self, action: #selector(addButtonFunc), for: .touchUpInside)
@@ -282,6 +281,7 @@ class UserThoughtsViewController: UIViewController {
     }
     
     @IBAction func deleteButton(_ sender: UIButton) {
+        evaluation = DatabaseHelper.istance.searchByText(text: thoughtView.text)
         DatabaseHelper.istance.deleteThoughts(textThought: thoughtView.text)
         let generator = UIImpactFeedbackGenerator(style: .heavy)
         generator.impactOccurred()
@@ -302,12 +302,14 @@ class UserThoughtsViewController: UIViewController {
                 EditThoughtViewController).editedUserThought = thoughtView.text
                 (segue.destination as!
                     EditThoughtViewController).isUpdate = isUpdate
-            }else{
+            } else{
                 (segue.destination as!
                 EditThoughtViewController).editedUserThought = ""
                 (segue.destination as!
                 EditThoughtViewController).isUpdate = isUpdate
             }
+        }else if(segue.identifier == "feedback"){
+            (segue.destination as! WellDoneViewController).evaluation = evaluation
         }
     }
 }
