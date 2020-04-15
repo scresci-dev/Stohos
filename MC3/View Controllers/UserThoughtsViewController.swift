@@ -92,6 +92,29 @@ class UserThoughtsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         arr.removeAll()
         arr = DatabaseHelper.istance.getAllThoughts()
+        
+        if isBeingPresented || isMovingToParent{
+            
+        }else{
+           plantLabel.isHidden = false
+           thoughtView.isHidden = true
+           deleteButton.isHidden = true
+           deleteButton.isEnabled = false
+           editButton.isEnabled = false
+           editButton.isHidden = true
+           plantLabel.textAlignment = .center
+           plantLabel.font = UIFont(name: "NewYorkMedium-Regular", size: 16)
+           plantLabel.textColor = lightGrey
+           if (plantCounter < 9) {
+               plantLabel.text = plantArray[plantCounter].text
+               plantCounter += 1
+           } else {
+               plantCounter = 0
+           }
+           let generator = UIImpactFeedbackGenerator(style: .light)
+           generator.impactOccurred()
+        }
+        
         for i in 0..<arr.count{
         
             
