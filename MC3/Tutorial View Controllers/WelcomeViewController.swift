@@ -13,10 +13,12 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var buttonView: UIButton!
+    @IBOutlet weak var launchscreenImg: UIImageView!
     
     var counter: Int = 0
     var timerSpEss = Timer()
     var timerSpNot = Timer()
+    var timerLaunch = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,10 +35,11 @@ class WelcomeViewController: UIViewController {
     }
     
     @objc func someAction(_ sender:UITapGestureRecognizer) {
+        if(counter != 0){
         counter += 1
         showMessages()
+        }
     }
-
     
     func showMessages() {
         if (counter > 3 ) {
@@ -45,6 +48,8 @@ class WelcomeViewController: UIViewController {
         else {
             imageView.image = UIImage(named: "\(messageArray[counter].imageName)")
             if (counter == 1) {
+                self.imageView.isHidden = false
+                self.launchscreenImg.isHidden = true
                 buttonView.isHidden = false
                 var j = 1
                 timerSpNot.invalidate()
@@ -71,7 +76,34 @@ class WelcomeViewController: UIViewController {
                 }
             }
             else {
+                if(counter == 0){
+                    self.imageView.isHidden = true
+                    self.launchscreenImg.isHidden = false
+                    var i = 0
+                    buttonView.isHidden = true
+                   timerLaunch = Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true) { timer in
+                        i += 1
+                        if(i<=100){
+                            print(i)
+                            self.launchscreenImg.image = UIImage(named: "launchscreen\(i)")
+                        }
+                        else{
+                            if UserDefaults.standard.bool(forKey: "LaunchedBefore") {
+                                self.performSegue(withIdentifier: "notFirst", sender: self)
+                            }
+                                
+                            else{
+                                self.counter += 1
+                                self.showMessages()
+                            }
+                            self.timerLaunch.invalidate()
+                        }
+                        
+                        
+                    }
+                }else{
                 buttonView.isHidden = true
+                }
             }
         }
     }
