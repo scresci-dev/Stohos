@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 import CoreMotion
-import AVFoundation
+//import AVFoundation
 
 class UserThoughtsViewController: UIViewController {
 
@@ -40,6 +40,14 @@ class UserThoughtsViewController: UIViewController {
     @IBOutlet weak var plantButton: UIButton!
     @IBOutlet weak var plantLabel: UILabel!
     
+    var frameWidth = CGFloat()
+    var frameHeight = CGFloat()
+    var blobWidth = CGFloat()
+    var blobHeight = CGFloat()
+    var plusWidth = CGFloat()
+    var plusHeight = CGFloat()
+
+    
         var collision : UICollisionBehavior!
         var animator : UIDynamicAnimator!
         var gravity: UIGravityBehavior!
@@ -48,6 +56,31 @@ class UserThoughtsViewController: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             overrideUserInterfaceStyle = .light
+            
+            //iPhone 8 and 8 plus
+            if(view.frame.height >= 667 && view.frame.height <= 736){
+                frameWidth = 90
+                frameHeight = 90
+                blobWidth = 110
+                blobHeight = 110
+                plusWidth = 65.4
+                plusHeight = 103
+            } //iPhone X and XS
+            else if(view.frame.height > 736 && view.frame.height <= 812){
+                frameWidth = 110
+                frameHeight = 110
+                blobWidth = 130
+                blobHeight = 130
+                plusWidth = 75.4
+                plusHeight = 113
+            }else{
+                frameWidth = 120
+                frameHeight = 120
+                blobWidth = 140
+                blobHeight = 140
+                plusWidth = 85.4
+                plusHeight = 123
+            }
         
             start = [0, 22, 34, 43, 57, 70, 90, 104, 125, 142]
             editButton.isHidden = true
@@ -90,6 +123,9 @@ class UserThoughtsViewController: UIViewController {
         }
     
     override func viewWillAppear(_ animated: Bool) {
+        print("width = \(view.frame.width)")
+        print("height = \(view.frame.height)")
+
         arr.removeAll()
         arr = DatabaseHelper.istance.getAllThoughts()
         
@@ -126,12 +162,12 @@ class UserThoughtsViewController: UIViewController {
 
             if(arr[i].evaluation == "essential"){
                 numThoughts += 1
-                button.frame = CGRect(x: -10, y: -10, width: 140, height: 140)
+                button.frame = CGRect(x: -10, y: -10, width: blobWidth, height: blobHeight)
                 button.tag = i;
                 button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
                 
                if(i<3){
-                            SubView.frame = CGRect(x: x, y: y, width: 120, height: 120)
+                            SubView.frame = CGRect(x: x, y: y, width: frameWidth, height: frameHeight)
                             x+=130
                             print(x)
                             print(i)
@@ -140,14 +176,14 @@ class UserThoughtsViewController: UIViewController {
                                 y = 120;
                             }
                         }else if(i>=3 && i<6){
-                            SubView.frame = CGRect(x: x, y: y, width: 120, height: 120)
+                            SubView.frame = CGRect(x: x, y: y, width: frameWidth, height: frameHeight)
                             x+=130
                             if(i==5){
                                 x = 20;
                                 y = 220;
                             }
                         }else if(i>=6 && i<9){
-                            SubView.frame = CGRect(x: x, y: y, width: 120, height: 120)
+                            SubView.frame = CGRect(x: x, y: y, width: frameWidth, height: frameHeight)
                             x+=130
                             if(i==8){
                                 x = 20;
@@ -155,7 +191,7 @@ class UserThoughtsViewController: UIViewController {
                             }
                             
                         }else{
-                            SubView.frame = CGRect(x: x, y: y, width: 120, height: 120)
+                            SubView.frame = CGRect(x: x, y: y, width: frameWidth, height: frameHeight)
                 
                         }
                       DispatchQueue.main.async {
@@ -173,27 +209,25 @@ class UserThoughtsViewController: UIViewController {
             }else{
                 numThoughts += 1
                
-                button.frame = CGRect(x: -15, y: -15, width: 120, height: 120)
+                button.frame = CGRect(x: -15, y: -15, width: blobWidth - 20, height: blobHeight - 20)
                 button.tag = i;
                 button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
                 if(i<3){
-                    SubView.frame = CGRect(x: x, y: y, width: 90, height: 90)
+                    SubView.frame = CGRect(x: x, y: y, width: frameWidth - 30, height: frameHeight - 30)
                     x+=130
-                    print(x)
-                    print(i)
                     if(i==2){
                         x = 20;
                         y = 120;
                     }
                 }else if(i>=3 && i<6){
-                    SubView.frame = CGRect(x: x, y: y, width: 90, height: 90)
+                    SubView.frame = CGRect(x: x, y: y, width: frameWidth - 30, height: frameHeight - 30)
                     x+=130
                     if(i==5){
                         x = 20;
                         y = 220;
                     }
                 }else if(i>=6 && i<9){
-                    SubView.frame = CGRect(x: x, y: y, width: 90, height: 90)
+                    SubView.frame = CGRect(x: x, y: y, width: frameWidth - 30, height: frameHeight - 30)
                     x+=130
                     if(i==8){
                         x = 20;
@@ -201,7 +235,7 @@ class UserThoughtsViewController: UIViewController {
                     }
                     
                 }else{
-                    SubView.frame = CGRect(x: x, y: y, width: 90, height: 90)
+                    SubView.frame = CGRect(x: x, y: y, width: frameWidth - 30, height: frameHeight - 30)
         
                 }
 
@@ -223,9 +257,9 @@ class UserThoughtsViewController: UIViewController {
                   view.addSubview(SubView)
         }
         let addButton = UIButton()
-        addButton.frame = CGRect(x: view.frame.width - 77, y: view.frame.height - 559, width: view.frame.width * 0.23429952, height: view.frame.height * 0.11607143)
+        addButton.frame = CGRect(x: view.frame.width / 1.15, y: view.frame.height/7.168, width: plusWidth, height: plusHeight)
         addButton.addTarget(self, action: #selector(addButtonFunc), for: .touchUpInside)
-        addButton.setImage(UIImage(named: "plusbutton"), for: .normal)
+        addButton.setImage(UIImage(named: "AddButton"), for: .normal)
 
         view.addSubview(addButton)
 
