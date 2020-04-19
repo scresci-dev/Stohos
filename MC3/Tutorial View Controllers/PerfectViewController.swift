@@ -24,5 +24,14 @@ class PerfectViewController: UIViewController {
         performSegue(withIdentifier: "Main View", sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           if (segue.identifier == "Main View") {
+              
+               (segue.destination as!
+                UserThoughtsViewController).n = 1
+               
+       }
+    }
+    
 }
 

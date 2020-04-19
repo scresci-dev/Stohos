@@ -155,4 +155,13 @@ class WelcomeViewController: UIViewController {
     @IBAction func startPressed(_ sender: UIButton) {
          performSegue(withIdentifier: "TutorialQuestion", sender: self)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+              if (segue.identifier == "notFirst") {
+                 
+                  (segue.destination as!
+                   UserThoughtsViewController).n = 1
+                  
+          }
+       }
 }

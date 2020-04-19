@@ -18,6 +18,8 @@ class UserThoughtsViewController: UIViewController {
     var newThought: String = ""
     var evaluation = String()
     
+    var n = Int()
+    
     var timer = Timer()
     var flag = true
     var start : [Int] = []
@@ -123,14 +125,11 @@ class UserThoughtsViewController: UIViewController {
         }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("width = \(view.frame.width)")
-        print("height = \(view.frame.height)")
 
         arr.removeAll()
         arr = DatabaseHelper.istance.getAllThoughts()
         
-        if isBeingPresented || isMovingToParent{
-            
+        if n == 0{
         }else{
            plantLabel.isHidden = false
            thoughtView.isHidden = true
@@ -149,6 +148,8 @@ class UserThoughtsViewController: UIViewController {
            }
            let generator = UIImpactFeedbackGenerator(style: .light)
            generator.impactOccurred()
+            
+            n = 0
         }
         
         for i in 0..<arr.count{
@@ -169,8 +170,6 @@ class UserThoughtsViewController: UIViewController {
                if(i<3){
                             SubView.frame = CGRect(x: x, y: y, width: frameWidth, height: frameHeight)
                             x+=130
-                            print(x)
-                            print(i)
                             if(i==2){
                                 x = 20;
                                 y = 120;
@@ -268,7 +267,7 @@ class UserThoughtsViewController: UIViewController {
         motionManager.startGyroUpdates(to: OperationQueue.current!) { (data, error) in
             if let _ = data
             {
-                let x = (data?.rotationRate.x ?? 0.0)
+                _ = (data?.rotationRate.x ?? 0.0)
                 let y = (data?.rotationRate.y ?? 0.0)
                 
                 
