@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import CoreData
 import CoreMotion
-//import AVFoundation
 
 class UserThoughtsViewController: UIViewController {
 
@@ -140,7 +139,7 @@ class UserThoughtsViewController: UIViewController {
            plantLabel.textAlignment = .center
            plantLabel.font = UIFont(name: "NewYorkMedium-Regular", size: 16)
            plantLabel.textColor = lightGrey
-           if (plantCounter < 9) {
+           if (plantCounter < 21) {
                plantLabel.text = plantArray[plantCounter].text
                plantCounter += 1
            } else {
@@ -302,7 +301,7 @@ class UserThoughtsViewController: UIViewController {
         plantLabel.textAlignment = .center
         plantLabel.font = UIFont(name: "NewYorkMedium-Regular", size: 16)
         plantLabel.textColor = lightGrey
-        if (plantCounter < 9) {
+        if (plantCounter < 21) {
             plantLabel.text = plantArray[plantCounter].text
             plantCounter += 1
         } else {
