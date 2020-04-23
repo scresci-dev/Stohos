@@ -258,7 +258,7 @@ class UserThoughtsViewController: UIViewController {
                   view.addSubview(SubView)
         }
         let addButton = UIButton()
-        addButton.frame = CGRect(x: view.frame.width / 1.15, y: view.frame.height/7.168, width: plusWidth, height: plusHeight)
+        addButton.frame = CGRect(x: view.frame.width / 1.16, y: view.frame.height/7.168, width: plusWidth, height: plusHeight)
         addButton.addTarget(self, action: #selector(addButtonFunc), for: .touchUpInside)
         addButton.setImage(UIImage(named: "AddButton"), for: .normal)
 

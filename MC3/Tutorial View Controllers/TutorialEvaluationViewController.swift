@@ -28,6 +28,10 @@ class TutorialEvaluationViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        if(view.frame.width == 375){
+            print("ciaone")
+            essentialButton.frame = CGRect(x: 21, y: 227, width: 150, height: 150)
+        }
         textAnswer.font = UIFont(name: "NewYorkMedium-Regular", size: 18)
         textAnswer.textAlignment = .center
         textAnswer.textColor = lightGrey
