@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import CoreData
 import CoreMotion
-//import AVFoundation
 
 class UserThoughtsViewController: UIViewController {
 
@@ -27,9 +26,11 @@ class UserThoughtsViewController: UIViewController {
     var y : CGFloat = 20
     
     var numThoughts = 0
+    var numQuotes = plantArray.count
     
     var isUpdate : String = ""
     
+    var indexes = [Int]();
     var arr: [Thought] = [];
     
     @IBOutlet weak var thoughtView: UITextView!
@@ -131,21 +132,22 @@ class UserThoughtsViewController: UIViewController {
         
         if n == 0{
         }else{
-           plantLabel.isHidden = false
-           thoughtView.isHidden = true
-           deleteButton.isHidden = true
-           deleteButton.isEnabled = false
-           editButton.isEnabled = false
-           editButton.isHidden = true
-           plantLabel.textAlignment = .center
-           plantLabel.font = UIFont(name: "NewYorkMedium-Regular", size: 16)
-           plantLabel.textColor = lightGrey
-           if (plantCounter < 9) {
-               plantLabel.text = plantArray[plantCounter].text
-               plantCounter += 1
-           } else {
-               plantCounter = 0
-           }
+            plantLabel.isHidden = false
+            thoughtView.isHidden = true
+            deleteButton.isHidden = true
+            deleteButton.isEnabled = false
+            editButton.isEnabled = false
+            editButton.isHidden = true
+            plantLabel.textAlignment = .center
+            plantLabel.font = UIFont(name: "NewYorkMedium-Regular", size: 16)
+            plantLabel.textColor = lightGrey
+            plantLabel.text = randomItem()
+//           if (plantCounter < 21) {
+//               plantLabel.text = plantArray[plantCounter].text
+//               plantCounter += 1
+//           } else {
+//               plantCounter = 0
+//           }
            let generator = UIImpactFeedbackGenerator(style: .light)
            generator.impactOccurred()
             
@@ -302,12 +304,13 @@ class UserThoughtsViewController: UIViewController {
         plantLabel.textAlignment = .center
         plantLabel.font = UIFont(name: "NewYorkMedium-Regular", size: 16)
         plantLabel.textColor = lightGrey
-        if (plantCounter < 9) {
-            plantLabel.text = plantArray[plantCounter].text
-            plantCounter += 1
-        } else {
-            plantCounter = 0
-        }
+        plantLabel.text = randomItem()
+//        if (plantCounter < 21) {
+//            plantLabel.text = plantArray[plantCounter].text
+//            plantCounter += 1
+//        } else {
+//            plantCounter = 0
+//        }
         let generator = UIImpactFeedbackGenerator(style: .light)
         generator.impactOccurred()
     }
@@ -342,6 +345,18 @@ class UserThoughtsViewController: UIViewController {
         editButton.isHidden = true
         thoughtView.isHidden = true
         performSegue(withIdentifier: "feedback", sender: self)
+    }
+    
+    func randomItem() -> String
+    {
+      if indexes.count == 0
+      {
+        print("Filling indexes array")
+        indexes = Array(0..<numQuotes)
+      }
+        let randomIndex = Int(arc4random_uniform(UInt32(indexes.count)))
+        let anIndex = indexes.remove(at: randomIndex)
+        return plantArray[anIndex].text;
     }
     
     
