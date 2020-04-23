@@ -23,10 +23,10 @@ class WelcomeViewController: UIViewController {
     var timerSpNot = Timer()
     var timerLaunch = Timer()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+                
        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture))
         swipeLeft.direction = .left
         self.view.addGestureRecognizer(swipeLeft)
@@ -78,6 +78,11 @@ class WelcomeViewController: UIViewController {
         else {
             imageView.image = UIImage(named: "\(messageArray[counter].imageName)")
             if (counter == 1) {
+                if(view.frame.width > 375){
+                                  imageView.image = UIImage(named: "EssentialWelcomeXR")
+
+                              } else{
+                              }
                 start.isHidden = true
                 imageView.isHidden = false
                 startJourney.isHidden = true
@@ -98,6 +103,11 @@ class WelcomeViewController: UIViewController {
                            }
             }
             else if (counter == 2) {
+                if(view.frame.width > 375){
+                    imageView.image = UIImage(named: "NonEssentialWelcomeXR")
+
+                } else{
+                }
                 start.isHidden = true
                 imageView.isHidden = false
                 startJourney.isHidden = true
