@@ -28,9 +28,28 @@ class TutorialEvaluationViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+
         if(view.frame.width == 375){
-            print("ciaone")
-            essentialButton.frame = CGRect(x: 21, y: 227, width: 150, height: 150)
+            for constraint in essentialButton.constraints {
+                if constraint.identifier == "essentialWidth"{
+                    constraint.constant = 150
+                }
+                if constraint.identifier == "essentialHeight"{
+                    constraint.constant = 150
+                }
+            }
+            essentialButton.layoutIfNeeded()
+            
+            for constraint in notEssentialButton.constraints {
+                if constraint.identifier == "notEssentialWidth"{
+                    constraint.constant = 150
+                }
+                if constraint.identifier == "notEssentialHeight"{
+                    constraint.constant = 150
+                }
+            }
+            notEssentialButton.layoutIfNeeded()
+
         }
         textAnswer.font = UIFont(name: "NewYorkMedium-Regular", size: 18)
         textAnswer.textAlignment = .center

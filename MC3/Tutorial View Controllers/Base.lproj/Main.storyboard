@@ -440,8 +440,8 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MqY-a0-aRS">
                                 <rect key="frame" x="21" y="230" width="180.00000000000011" height="180.00000000000011"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="TEu-wu-rf3"/>
-                                    <constraint firstAttribute="width" constant="180" id="zxG-CA-VOO"/>
+                                    <constraint firstAttribute="height" constant="180" identifier="essentialHeight" id="TEu-wu-rf3"/>
+                                    <constraint firstAttribute="width" constant="180" identifier="essentialWidth" id="zxG-CA-VOO"/>
                                 </constraints>
                                 <state key="normal" image="Essential" backgroundImage="Spento1"/>
                                 <connections>
@@ -451,9 +451,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vx8-mw-pcV">
                                 <rect key="frame" x="218" y="230" width="180.00000000000011" height="180.00000000000011"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="YZl-c8-3BP"/>
-                                    <constraint firstAttribute="width" constant="180" id="sfd-8X-vjG"/>
+                                    <constraint firstAttribute="height" constant="180" identifier="notEssentialHeight" id="YZl-c8-3BP"/>
+                                    <constraint firstAttribute="width" constant="180" identifier="notEssentialWidth" id="sfd-8X-vjG"/>
                                 </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="23"/>
                                 <state key="normal" image="NonEssential" backgroundImage="Spento1"/>
                                 <connections>
                                     <action selector="notEssButton:" destination="H0d-PG-Xds" eventType="touchUpInside" id="blB-qQ-jaq"/>
@@ -643,10 +644,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgf-Oz-Zkq">
-                                <rect key="frame" x="21" y="227" width="180.00000000000011" height="180.00000000000011"/>
+                                <rect key="frame" x="28" y="227" width="180.00000000000011" height="180.00000000000011"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="180" id="P44-rr-URb"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="180" id="u7P-J4-IPU"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="180" identifier="essentialWidth" id="P44-rr-URb"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="180" identifier="essentialHeight" id="u7P-J4-IPU"/>
                                 </constraints>
                                 <state key="normal" image="Essential" backgroundImage="Spento1"/>
                                 <connections>
@@ -670,11 +671,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4j-4h-jFK">
-                                <rect key="frame" x="218" y="228" width="180.00000000000011" height="180.00000000000011"/>
+                                <rect key="frame" x="211" y="228" width="180.00000000000011" height="180.00000000000011"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="180" id="ilS-Ua-slx"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="180" id="vAd-v9-o1H"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="180" identifier="notEssentialHeight" id="ilS-Ua-slx"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="180" identifier="notEssentialWidth" id="vAd-v9-o1H"/>
                                 </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="23"/>
                                 <state key="normal" image="NonEssential" backgroundImage="Spento1"/>
                                 <connections>
                                     <action selector="notEssentialButton:" destination="NOg-Fx-v7m" eventType="touchUpInside" id="Zkt-0D-16P"/>
@@ -719,9 +721,9 @@
                             <constraint firstItem="i81-MX-V85" firstAttribute="trailing" secondItem="d29-ua-3mJ" secondAttribute="trailing" constant="35" id="TRS-Eu-7ua"/>
                             <constraint firstItem="Xgf-Oz-Zkq" firstAttribute="top" secondItem="d29-ua-3mJ" secondAttribute="bottom" constant="15" id="Tgv-aC-77k"/>
                             <constraint firstItem="Q4j-4h-jFK" firstAttribute="top" secondItem="d29-ua-3mJ" secondAttribute="bottom" constant="16" id="U36-Ij-7Qg"/>
-                            <constraint firstItem="i81-MX-V85" firstAttribute="trailing" secondItem="Q4j-4h-jFK" secondAttribute="trailing" constant="16" id="UDE-UQ-m8B"/>
+                            <constraint firstItem="i81-MX-V85" firstAttribute="trailing" secondItem="Q4j-4h-jFK" secondAttribute="trailing" constant="23" id="UDE-UQ-m8B"/>
                             <constraint firstItem="zpj-Zy-BQZ" firstAttribute="top" secondItem="Q4j-4h-jFK" secondAttribute="bottom" constant="25" id="Y7g-iu-Oel"/>
-                            <constraint firstItem="Xgf-Oz-Zkq" firstAttribute="leading" secondItem="i81-MX-V85" secondAttribute="leading" constant="21" id="dbk-9V-d9m"/>
+                            <constraint firstItem="Xgf-Oz-Zkq" firstAttribute="leading" secondItem="i81-MX-V85" secondAttribute="leading" constant="28" id="dbk-9V-d9m"/>
                             <constraint firstItem="i81-MX-V85" firstAttribute="trailing" secondItem="zpj-Zy-BQZ" secondAttribute="trailing" constant="35" id="jug-x5-9YG"/>
                             <constraint firstItem="i81-MX-V85" firstAttribute="trailing" secondItem="oJM-fR-ugP" secondAttribute="trailing" constant="20" id="rmh-mh-6bY"/>
                             <constraint firstItem="i81-MX-V85" firstAttribute="bottom" secondItem="jaQ-pN-7H5" secondAttribute="bottom" constant="103" id="shW-W9-9LC"/>
@@ -4485,8 +4487,7 @@ uwADXb4AA13DAAAAAAAABAEAAAAAAAAAbQAAAAAAAAAAAAAAAAADXcU
         <image name="start your journey" width="251" height="62"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MGA-JQ-vFt"/>
-        <segue reference="ejv-vo-jwM"/>
+        <segue reference="2Y7-pF-SYi"/>
         <segue reference="LW6-wO-WU4"/>
         <segue reference="7AL-Qv-aAv"/>
     </inferredMetricsTieBreakers>
