@@ -15,5 +15,8 @@ class InfoViewController: UIViewController {
         super.viewDidLoad()
         overrideUserInterfaceStyle = .light
     }
+    @IBAction func dismissPress(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
     
 }

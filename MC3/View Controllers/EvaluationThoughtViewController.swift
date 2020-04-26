@@ -32,20 +32,20 @@ class EvaluationThoughtViewController: UIViewController {
         if(view.frame.width == 375){
             for constraint in ebutton.constraints {
                 if constraint.identifier == "essentialWidth"{
-                    constraint.constant = 150
+                    constraint.constant = 170
                 }
                 if constraint.identifier == "essentialHeight"{
-                    constraint.constant = 150
+                    constraint.constant = 170
                 }
             }
             ebutton.layoutIfNeeded()
             
             for constraint in nebutton.constraints {
                 if constraint.identifier == "notEssentialWidth"{
-                    constraint.constant = 150
+                    constraint.constant = 170
                 }
                 if constraint.identifier == "notEssentialHeight"{
-                    constraint.constant = 150
+                    constraint.constant = 170
                 }
             }
             nebutton.layoutIfNeeded()

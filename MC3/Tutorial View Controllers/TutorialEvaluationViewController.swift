@@ -32,20 +32,20 @@ class TutorialEvaluationViewController: UIViewController {
         if(view.frame.width == 375){
             for constraint in essentialButton.constraints {
                 if constraint.identifier == "essentialWidth"{
-                    constraint.constant = 150
+                    constraint.constant = 170
                 }
                 if constraint.identifier == "essentialHeight"{
-                    constraint.constant = 150
+                    constraint.constant = 170
                 }
             }
             essentialButton.layoutIfNeeded()
             
             for constraint in notEssentialButton.constraints {
                 if constraint.identifier == "notEssentialWidth"{
-                    constraint.constant = 150
+                    constraint.constant = 170
                 }
                 if constraint.identifier == "notEssentialHeight"{
-                    constraint.constant = 150
+                    constraint.constant = 170
                 }
             }
             notEssentialButton.layoutIfNeeded()
