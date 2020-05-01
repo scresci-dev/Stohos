@@ -8,7 +8,8 @@ class TutorialEvaluationViewController: UIViewController {
     @IBOutlet weak var notEssentialButton: UIButton!
     @IBOutlet weak var labelView: UIImageView!
     @IBOutlet weak var nextButton: UIButton!
-
+    @IBOutlet weak var info: UIButton!
+    
     var timerSpEss = Timer()
     var timerSpNot = Timer()
     var isPressed = false
@@ -30,6 +31,57 @@ class TutorialEvaluationViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
 
         if(view.frame.width == 375){
+            if(view.frame.height <= 736){
+//                iphone 8 e 8Plus
+                for constraint in essentialButton.constraints {
+                    if constraint.identifier == "essentialWidth"{
+                        constraint.constant = 160
+                    }
+                    if constraint.identifier == "essentialHeight"{
+                        constraint.constant = 160
+                    }
+                }
+                essentialButton.layoutIfNeeded()
+                
+                for constraint in notEssentialButton.constraints {
+                    if constraint.identifier == "notEssentialWidth"{
+                        constraint.constant = 160
+                    }
+                    if constraint.identifier == "notEssentialHeight"{
+                        constraint.constant = 160
+                    }
+                }
+                notEssentialButton.layoutIfNeeded()
+                
+                for constraint in nextButton.constraints {
+                    if constraint.identifier == "dio"{
+                        constraint.constant = 45
+                    }
+                }
+                nextButton.layoutIfNeeded()
+                
+                for constraint in textAnswer.constraints {
+                    if constraint.identifier == "altezza"{
+                        constraint.constant = 150
+                    }
+                }
+                textAnswer.layoutIfNeeded()
+    
+                for constraint in labelView.constraints {
+                    if constraint.identifier == "susu"{
+                        constraint.constant = 20
+                    }
+                }
+                labelView.layoutIfNeeded()
+               
+                for constraint in info.constraints {
+                    if constraint.identifier == "susu"{
+                        constraint.constant = 20
+                    }
+                }
+                info.layoutIfNeeded()
+                
+            } else{
             for constraint in essentialButton.constraints {
                 if constraint.identifier == "essentialWidth"{
                     constraint.constant = 170
@@ -49,7 +101,7 @@ class TutorialEvaluationViewController: UIViewController {
                 }
             }
             notEssentialButton.layoutIfNeeded()
-
+            }
         }
         textAnswer.font = UIFont(name: "NewYorkMedium-Regular", size: 18)
         textAnswer.textAlignment = .center

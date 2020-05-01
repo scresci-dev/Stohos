@@ -21,6 +21,7 @@ class EvaluationThoughtViewController: UIViewController {
     
     var modeSelected = String()
     
+    @IBOutlet weak var labelView: UIImageView!
     @IBOutlet weak var thoughtText: UITextView!
     @IBOutlet weak var ebutton: UIButton!
     @IBOutlet weak var nebutton: UIButton!
@@ -29,28 +30,79 @@ class EvaluationThoughtViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if(view.frame.width == 375){
-            for constraint in ebutton.constraints {
-                if constraint.identifier == "essentialWidth"{
-                    constraint.constant = 170
-                }
-                if constraint.identifier == "essentialHeight"{
-                    constraint.constant = 170
-                }
-            }
-            ebutton.layoutIfNeeded()
+                if(view.frame.width == 375){
+                    if(view.frame.height <= 736){
+        //                iphone 8 e 8Plus
+                        for constraint in ebutton.constraints {
+                            if constraint.identifier == "essentialWidth"{
+                                constraint.constant = 160
+                            }
+                            if constraint.identifier == "essentialHeight"{
+                                constraint.constant = 160
+                            }
+                        }
+                        ebutton.layoutIfNeeded()
+                        
+                        for constraint in nebutton.constraints {
+                            if constraint.identifier == "notEssentialWidth"{
+                                constraint.constant = 160
+                            }
+                            if constraint.identifier == "notEssentialHeight"{
+                                constraint.constant = 160
+                            }
+                        }
+                        nebutton.layoutIfNeeded()
+                        
+                        for constraint in nextButton.constraints {
+                            if constraint.identifier == "dio"{
+                                constraint.constant = 45
+                            }
+                        }
+                        nextButton.layoutIfNeeded()
+                        
+                        for constraint in thoughtText.constraints {
+                            if constraint.identifier == "altezza"{
+                                constraint.constant = 150
+                            }
+                        }
+                        thoughtText.layoutIfNeeded()
             
-            for constraint in nebutton.constraints {
-                if constraint.identifier == "notEssentialWidth"{
-                    constraint.constant = 170
+                        for constraint in labelView.constraints {
+                            if constraint.identifier == "susu"{
+                                constraint.constant = 20
+                            }
+                        }
+                        labelView.layoutIfNeeded()
+                       
+                        for constraint in questionmarkButton.constraints {
+                            if constraint.identifier == "susu"{
+                                constraint.constant = 20
+                            }
+                        }
+                        questionmarkButton.layoutIfNeeded()
+                        
+                    } else{
+                    for constraint in ebutton.constraints {
+                        if constraint.identifier == "essentialWidth"{
+                            constraint.constant = 170
+                        }
+                        if constraint.identifier == "essentialHeight"{
+                            constraint.constant = 170
+                        }
+                    }
+                    ebutton.layoutIfNeeded()
+                    
+                    for constraint in nebutton.constraints {
+                        if constraint.identifier == "notEssentialWidth"{
+                            constraint.constant = 170
+                        }
+                        if constraint.identifier == "notEssentialHeight"{
+                            constraint.constant = 170
+                        }
+                    }
+                    nebutton.layoutIfNeeded()
+                    }
                 }
-                if constraint.identifier == "notEssentialHeight"{
-                    constraint.constant = 170
-                }
-            }
-            nebutton.layoutIfNeeded()
-
-        }
         overrideUserInterfaceStyle = .light
         thoughtText.text = finalThought
         thoughtText.font = UIFont(name: "NewYorkMedium-Regular", size: 18)
