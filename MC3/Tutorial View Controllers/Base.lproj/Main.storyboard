@@ -36,7 +36,7 @@
                                 <rect key="frame" x="17" y="258" width="380" height="380"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="start your journey" translatesAutoresizingMaskIntoConstraints="NO" id="fzm-LT-C8s">
-                                <rect key="frame" x="20" y="342" width="373" height="62"/>
+                                <rect key="frame" x="20" y="388" width="373" height="62"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ap-y1-BXF">
                                 <rect key="frame" x="117" y="238" width="180" height="180"/>
@@ -46,7 +46,7 @@
                                 </constraints>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1l-b2-5Zn">
-                                <rect key="frame" x="150" y="450" width="114" height="51"/>
+                                <rect key="frame" x="150" y="496" width="114" height="51"/>
                                 <state key="normal" image="Startnew"/>
                                 <connections>
                                     <action selector="startPressed:" destination="Gau-gt-GGf" eventType="touchUpInside" id="qZe-MF-17x"/>
@@ -72,6 +72,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="fzm-LT-C8s" firstAttribute="top" secondItem="q56-MF-eXl" secondAttribute="top" constant="300" id="2Ij-tK-P7u"/>
                             <constraint firstItem="f4i-ij-zdR" firstAttribute="centerY" secondItem="4kC-Hi-o7V" secondAttribute="centerY" constant="22" id="3Fr-4h-Ml4"/>
                             <constraint firstItem="cbZ-rc-sVM" firstAttribute="centerY" secondItem="4kC-Hi-o7V" secondAttribute="centerY" id="8hs-fe-ptC"/>
                             <constraint firstItem="iwF-lu-9uU" firstAttribute="centerX" secondItem="4kC-Hi-o7V" secondAttribute="centerX" id="AMp-qb-Z7M"/>
@@ -80,7 +81,6 @@
                             <constraint firstItem="T1l-b2-5Zn" firstAttribute="centerX" secondItem="cbZ-rc-sVM" secondAttribute="centerX" id="CYb-UU-GVa"/>
                             <constraint firstItem="T1l-b2-5Zn" firstAttribute="top" secondItem="fzm-LT-C8s" secondAttribute="bottom" constant="46" id="FEN-GL-j4X"/>
                             <constraint firstItem="T1l-b2-5Zn" firstAttribute="leading" secondItem="q56-MF-eXl" secondAttribute="leading" constant="150" id="HQW-Dr-m3l"/>
-                            <constraint firstItem="fzm-LT-C8s" firstAttribute="top" secondItem="q56-MF-eXl" secondAttribute="top" constant="254" id="HzZ-iX-eu8"/>
                             <constraint firstItem="f4i-ij-zdR" firstAttribute="top" secondItem="7Ap-y1-BXF" secondAttribute="bottom" constant="-66" id="IqO-li-sGl"/>
                             <constraint firstItem="f4i-ij-zdR" firstAttribute="centerX" secondItem="4kC-Hi-o7V" secondAttribute="centerX" id="Mdy-cH-xQn"/>
                             <constraint firstItem="T1l-b2-5Zn" firstAttribute="centerX" secondItem="f4i-ij-zdR" secondAttribute="centerX" id="RK4-Ys-B6f"/>
