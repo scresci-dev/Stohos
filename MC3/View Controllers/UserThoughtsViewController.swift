@@ -356,7 +356,7 @@ class UserThoughtsViewController: UIViewController {
       }
         let randomIndex = Int(arc4random_uniform(UInt32(indexes.count)))
         let anIndex = indexes.remove(at: randomIndex)
-        return plantArray[anIndex].text;
+        return plantArray[anIndex].text
     }
     
     
