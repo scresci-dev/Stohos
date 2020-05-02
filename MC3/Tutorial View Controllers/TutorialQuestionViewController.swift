@@ -19,14 +19,13 @@ class TutorialQuestionViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         answerText.delegate = self
         editAnswerText()
         editButton()
         displayView()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        answerText.becomeFirstResponder()
     }
     
    func textViewDidBeginEditing(_ textView: UITextView) {

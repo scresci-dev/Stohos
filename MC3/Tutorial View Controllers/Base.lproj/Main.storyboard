@@ -45,16 +45,6 @@
                                     <constraint firstAttribute="width" constant="180" id="e3I-X5-fCT"/>
                                 </constraints>
                             </button>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="iwF-lu-9uU">
-                                <rect key="frame" x="150" y="748" width="75" height="87"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="SBZ-uh-VDz"/>
-                                    <constraint firstAttribute="height" constant="87" id="kLi-zm-b2A"/>
-                                </constraints>
-                                <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="currentPageIndicatorTintColor" red="0.31372549020000001" green="0.31372549020000001" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1l-b2-5Zn">
                                 <rect key="frame" x="150" y="450" width="114" height="51"/>
                                 <state key="normal" image="Startnew"/>
@@ -68,6 +58,16 @@
                                     <constraint firstAttribute="height" constant="236" id="NeG-80-jbX"/>
                                 </constraints>
                             </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="iwF-lu-9uU">
+                                <rect key="frame" x="169" y="751" width="75" height="87"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="SBZ-uh-VDz"/>
+                                    <constraint firstAttribute="height" constant="87" id="kLi-zm-b2A"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" red="0.31372549020000001" green="0.31372549020000001" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <gestureRecognizers/>
@@ -84,11 +84,11 @@
                             <constraint firstItem="f4i-ij-zdR" firstAttribute="centerX" secondItem="4kC-Hi-o7V" secondAttribute="centerX" id="Mdy-cH-xQn"/>
                             <constraint firstItem="T1l-b2-5Zn" firstAttribute="centerX" secondItem="f4i-ij-zdR" secondAttribute="centerX" id="RK4-Ys-B6f"/>
                             <constraint firstItem="fzm-LT-C8s" firstAttribute="trailing" secondItem="f4i-ij-zdR" secondAttribute="trailing" constant="-1" id="gDv-bu-Zgi"/>
-                            <constraint firstItem="iwF-lu-9uU" firstAttribute="leading" secondItem="q56-MF-eXl" secondAttribute="leading" constant="150" id="ifY-vD-J4S"/>
+                            <constraint firstItem="iwF-lu-9uU" firstAttribute="leading" secondItem="q56-MF-eXl" secondAttribute="leading" constant="169" id="ifY-vD-J4S"/>
                             <constraint firstItem="f4i-ij-zdR" firstAttribute="leading" secondItem="q56-MF-eXl" secondAttribute="leading" constant="20" id="l7g-Pg-4IJ"/>
                             <constraint firstItem="cbZ-rc-sVM" firstAttribute="leading" secondItem="q56-MF-eXl" secondAttribute="leading" constant="17" id="o86-dr-hPl"/>
                             <constraint firstItem="cbZ-rc-sVM" firstAttribute="top" secondItem="q56-MF-eXl" secondAttribute="top" constant="170" id="v7m-Mk-1vL"/>
-                            <constraint firstItem="iwF-lu-9uU" firstAttribute="top" secondItem="cbZ-rc-sVM" secondAttribute="bottom" constant="110" id="vZj-aT-Dqy"/>
+                            <constraint firstItem="iwF-lu-9uU" firstAttribute="top" secondItem="cbZ-rc-sVM" secondAttribute="bottom" constant="113" id="vZj-aT-Dqy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="q56-MF-eXl"/>
                         <connections>
