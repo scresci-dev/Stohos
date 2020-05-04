@@ -48,12 +48,12 @@ class TutorialQuestionViewController: UIViewController, UITextViewDelegate {
     }
 
     func exitTutorial() {
-        counter += 1
         if answerText.text.isEmpty {
             let generator = UINotificationFeedbackGenerator()
                    generator.notificationOccurred(.warning)
         }
         else {
+            counter += 1
             performSegue(withIdentifier: "Evaluation Control", sender: self)
         }
     }
@@ -85,9 +85,9 @@ class TutorialQuestionViewController: UIViewController, UITextViewDelegate {
             questionLabel.attributedText = NSAttributedString(string: questionLabel.text!, attributes: attributes1)
             questionLabel.text =  questionArray[counter].question
             progressView.image = questionArray[counter].progress
-            if (counter == 2) {
-               nextButton.setTitle("Done", for: .normal)
-            }
+//            if (counter == 2) {
+//               nextButton.setTitle("Done", for: .normal)
+//            }
             }
         }
     

@@ -111,7 +111,9 @@ class TutorialEvaluationViewController: UIViewController {
         nextButton.titleLabel?.font = UIFont(name: "NewYorkMedium-Regular", size: 25)
         nextButton.setTitleColor(buttonColor, for: .normal)
         nextButton.setTitle("Next", for: .normal)
-        
+        if (counter == 3) {
+           nextButton.setTitle("Done", for: .normal)
+        }
         
     }
     
