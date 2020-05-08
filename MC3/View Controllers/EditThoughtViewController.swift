@@ -38,10 +38,13 @@ class EditThoughtViewController: UIViewController, UITextViewDelegate {
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText newText: String) -> Bool {
+        if range.length + range.location > editField.text.count {
+            return false 
+        }
         countLabel.text = "\(editField.text.count + (newText.count - range.length))/250"
         countLabel.textColor = darkGrey
         countLabel.font = UIFont(name: "NewYorkMedium-Regular", size: 16)
-           return editField.text.count + (newText.count - range.length) <= 249
+        return editField.text.count + newText.count - range.length <= 249
        }
     
     @IBAction func donePressed(_ sender: Any) {
