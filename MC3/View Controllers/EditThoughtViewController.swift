@@ -38,13 +38,30 @@ class EditThoughtViewController: UIViewController, UITextViewDelegate {
     }
     
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText newText: String) -> Bool {
-        if range.length + range.location > editField.text.count {
-            return false 
+        var nsString:NSString = ""
+        
+        if textView.text != nil  && newText != "" {
+            nsString = textView.text! as NSString
+            nsString = nsString.replacingCharacters(in: range, with: newText) as NSString
+        }   else if (newText == "") && textView.text != ""  {
+            nsString = textView.text! as NSString
+            nsString = nsString.replacingCharacters(in: range, with: newText) as NSString
+            
+        } else if (newText == "") && textView.text == "" {
+            textView.text = ""
         }
+
+        guard textView.text != nil else { return true }
+        let currentText = nsString as NSString
         countLabel.text = "\(editField.text.count + (newText.count - range.length))/250"
         countLabel.textColor = darkGrey
         countLabel.font = UIFont(name: "NewYorkMedium-Regular", size: 16)
-        return editField.text.count + newText.count - range.length <= 249
+        
+        if currentText.length >= 249 {
+            textView.text = currentText.substring(to: 249)
+            countLabel.text = "250/250"
+        }
+        return currentText.length <= 249
        }
     
     @IBAction func donePressed(_ sender: Any) {
