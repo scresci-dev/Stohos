@@ -11,9 +11,11 @@ import UIKit
 
 class WarningViewController: UIViewController {
     
+    @IBOutlet weak var warningImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+          
         let gestureRec = UITapGestureRecognizer(target: self, action:  #selector (self.closeMessage(_:)))
         view.addGestureRecognizer(gestureRec)
     }

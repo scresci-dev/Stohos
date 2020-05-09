@@ -68,6 +68,7 @@ class UserThoughtsViewController: UIViewController {
                 blobHeight = 110
                 plusWidth = 65.4
                 plusHeight = 103
+                editButton.frame = CGRect(x: 284, y: 305, width: 65, height: 40)
             } //iPhone X and XS
             else if(view.frame.height > 736 && view.frame.height <= 812){
                 frameWidth = 110
@@ -93,8 +94,8 @@ class UserThoughtsViewController: UIViewController {
             deleteButton.titleLabel?.font = UIFont(name: "NewYorkMedium-Regular", size: 20)
             deleteButton.setTitleColor(buttonColor, for: .normal)
             thoughtView.font = UIFont(name: "NewYorkMedium-Regular", size: 18)
-             thoughtView.textAlignment = .center
-             thoughtView.textColor = lightGrey
+            thoughtView.textAlignment = .center
+            thoughtView.textColor = lightGrey
             
             // Do any additional setup after loading the view.
             animator = UIDynamicAnimator(referenceView: view)
@@ -142,12 +143,6 @@ class UserThoughtsViewController: UIViewController {
             plantLabel.font = UIFont(name: "NewYorkMedium-Regular", size: 16)
             plantLabel.textColor = lightGrey
             plantLabel.text = randomItem()
-//           if (plantCounter < 21) {
-//               plantLabel.text = plantArray[plantCounter].text
-//               plantCounter += 1
-//           } else {
-//               plantCounter = 0
-//           }
            let generator = UIImpactFeedbackGenerator(style: .light)
            generator.impactOccurred()
             
@@ -259,6 +254,11 @@ class UserThoughtsViewController: UIViewController {
         }
         let addButton = UIButton()
         addButton.frame = CGRect(x: view.frame.width / 1.165, y: view.frame.height/7.168, width: plusWidth, height: plusHeight)
+        
+        // for iPhone8 and iPhone8 Plus
+        if(view.frame.height >= 667 && view.frame.height <= 736){
+            addButton.frame = CGRect(x: view.frame.width / 1.16, y: view.frame.height/7.168, width: plusWidth, height: plusHeight)
+        }
         addButton.addTarget(self, action: #selector(addButtonFunc), for: .touchUpInside)
         addButton.setImage(UIImage(named: "AddButton"), for: .normal)
 
@@ -305,27 +305,41 @@ class UserThoughtsViewController: UIViewController {
         plantLabel.font = UIFont(name: "NewYorkMedium-Regular", size: 16)
         plantLabel.textColor = lightGrey
         plantLabel.text = randomItem()
-//        if (plantCounter < 21) {
-//            plantLabel.text = plantArray[plantCounter].text
-//            plantCounter += 1
-//        } else {
-//            plantCounter = 0
-//        }
         let generator = UIImpactFeedbackGenerator(style: .light)
         generator.impactOccurred()
     }
     
     @objc func addButtonFunc(_ sender: UIButton) {
-        if numThoughts < 10 {
-        isUpdate = "no"
-            performSegue(withIdentifier: "Edit Thought", sender: self)
+        if(view.frame.height >= 667 && view.frame.height <= 736){
+            if numThoughts < 9 {
+                isUpdate = "no"
+                performSegue(withIdentifier: "Edit Thought", sender: self)
+            }
+            else {
+                editButton.isHidden = true
+                thoughtView.isHidden = true
+                deleteButton.isHidden = true
+                plantLabel.isHidden = true
+                let generator = UINotificationFeedbackGenerator()
+                generator.notificationOccurred(.warning)
+                performSegue(withIdentifier: "WarningVC", sender: self)
+            }
         }
         else {
-            let generator = UINotificationFeedbackGenerator()
-            generator.notificationOccurred(.warning)
-            performSegue(withIdentifier: "WarningVC", sender: self)
+            if numThoughts < 10 {
+                isUpdate = "no"
+                performSegue(withIdentifier: "Edit Thought", sender: self)
+            }
+            else {
+                editButton.isHidden = true
+                thoughtView.isHidden = true
+                deleteButton.isHidden = true
+                plantLabel.isHidden = true
+                let generator = UINotificationFeedbackGenerator()
+                generator.notificationOccurred(.warning)
+                performSegue(withIdentifier: "WarningVC", sender: self)
+            }
         }
-
     }
     
     @IBAction func editButton(_ sender: Any) {

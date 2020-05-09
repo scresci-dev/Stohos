@@ -32,7 +32,7 @@ let plantMessage17 = PlantMessage(text: "“I’ve learned that minimalism is no
 let plantMessage18 = PlantMessage(text: "“Clutter steals energy and joy.” ― Monika Kristofferson")
 let plantMessage19 = PlantMessage(text: "“Instead of thinking I am losing something when I clear clutter, I dwell on what I might gain.” ― Lisa J. Shultz")
 let plantMessage20 = PlantMessage(text: "“Enjoy the peace of Nature and declutter your inner world.” ― Amit Ray")
-let plantMessage21 = PlantMessage(text: "Try to remember that decluttering your brain is as important as decluttering your personal space. If you don't declutter both, they will quickly return to their original chaos")
+let plantMessage21 = PlantMessage(text: "Try to remember that decluttering your brain is as important as decluttering your personal space. If you don't declutter both, they will quickly return to their original chaos.")
 
 let plantArray = [plantMessage1, plantMessage2, plantMessage3, plantMessage4, plantMessage5, plantMessage6, plantMessage7, plantMessage8, plantMessage9, plantMessage10, plantMessage11, plantMessage12, plantMessage13, plantMessage14, plantMessage15, plantMessage16, plantMessage17, plantMessage18, plantMessage19, plantMessage20, plantMessage21]
 
