@@ -10,6 +10,8 @@
 		6B653E1E240D0FBE002578E1 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B653E1D240D0FBD002578E1 /* DatabaseHelper.swift */; };
 		6B653E21240D6450002578E1 /* NewYorkMedium-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6B653E20240D6450002578E1 /* NewYorkMedium-Regular.otf */; };
 		6B653E23240EBB71002578E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B653E22240EBB71002578E1 /* Assets.xcassets */; };
+		6BA3B079246AA123005FE286 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BA3B078246AA123005FE286 /* Slide.xib */; };
+		6BA3B081246AA42B005FE286 /* Slide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA3B080246AA42B005FE286 /* Slide.swift */; };
 		DD45F9292410047D00AA9521 /* PlantMessageDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD45F9282410047D00AA9521 /* PlantMessageDatabase.swift */; };
 		DD45F92B24100A1800AA9521 /* WarningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD45F92A24100A1800AA9521 /* WarningViewController.swift */; };
 		DD64247B2406B1A400A07D1C /* UserThoughtsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD64247A2406B1A400A07D1C /* UserThoughtsViewController.swift */; };
@@ -39,6 +41,8 @@
 		6B653E1D240D0FBD002578E1 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 		6B653E20240D6450002578E1 /* NewYorkMedium-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NewYorkMedium-Regular.otf"; sourceTree = "<group>"; };
 		6B653E22240EBB71002578E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6BA3B078246AA123005FE286 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
+		6BA3B080246AA42B005FE286 /* Slide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slide.swift; sourceTree = "<group>"; };
 		DD45F9282410047D00AA9521 /* PlantMessageDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantMessageDatabase.swift; sourceTree = "<group>"; };
 		DD45F92A24100A1800AA9521 /* WarningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningViewController.swift; sourceTree = "<group>"; };
 		DD64247A2406B1A400A07D1C /* UserThoughtsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserThoughtsViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 				DD84143A23FD77FF00478319 /* TutorialQuestionViewController.swift */,
 				DD84143C23FED79E00478319 /* TutorialEvaluationViewController.swift */,
 				DD77D5FA240ACA51000BA7B8 /* PerfectViewController.swift */,
+				6BA3B078246AA123005FE286 /* Slide.xib */,
+				6BA3B080246AA42B005FE286 /* Slide.swift */,
 			);
 			path = "Tutorial View Controllers";
 			sourceTree = "<group>";
@@ -229,6 +235,7 @@
 				6B653E21240D6450002578E1 /* NewYorkMedium-Regular.otf in Resources */,
 				DDC2F0B123FAEAED00BD4C45 /* .gitignore in Resources */,
 				DDC2F0A923FAEA9200BD4C45 /* LaunchScreen.storyboard in Resources */,
+				6BA3B079246AA123005FE286 /* Slide.xib in Resources */,
 				DDC2F0A123FAEA9000BD4C45 /* Main.storyboard in Resources */,
 				6B653E23240EBB71002578E1 /* Assets.xcassets in Resources */,
 				DDF83BF52416A6BD005D86C5 /* Stohos music.mp3 in Resources */,
@@ -259,6 +266,7 @@
 				DD45F92B24100A1800AA9521 /* WarningViewController.swift in Sources */,
 				DDDA47E3240A974C005950CF /* Thought+CoreDataClass.swift in Sources */,
 				DDDA47D624082E3A005950CF /* EditThoughtViewController.swift in Sources */,
+				6BA3B081246AA42B005FE286 /* Slide.swift in Sources */,
 				6B653E1E240D0FBE002578E1 /* DatabaseHelper.swift in Sources */,
 				DD7FC80924197BBD00BB9A70 /* InfoViewController.swift in Sources */,
 			);
